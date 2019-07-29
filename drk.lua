@@ -41,19 +41,24 @@ function get_sets()
 end
 
 function pretarget(spell,action)
-	if spell.action_type == 'Magic' and buffactive.silence then -- Auto Use Echo Drops If You Are Silenced --
+	-- Auto Use Echo Drops If You Are Silenced --
+	if spell.action_type == 'Magic' and buffactive.silence then
 		cancel_spell()
 		send_command('input /item "Echo Drops" <me>')
-	elseif spell.english == "Berserk" and buffactive.Berserk then -- Change Berserk To Aggressor If Berserk Is On --
+	-- Change Berserk To Aggressor If Berserk Is On --
+	elseif spell.english == "Berserk" and buffactive.Berserk then
 		cancel_spell()
 		send_command('Aggressor')
-	elseif spell.english == "Seigan" and buffactive.Seigan then -- Change Seigan To Third Eye If Seigan Is On --
+	-- Change Seigan To Third Eye If Seigan Is On --
+	elseif spell.english == "Seigan" and buffactive.Seigan then
 		cancel_spell()
 		send_command('ThirdEye')
-	elseif spell.english == "Meditate" and player.tp > 2900 then -- Cancel Meditate If TP Is Above 2900 --
+	-- Cancel Meditate If TP Is Above 2900 --
+	elseif spell.english == "Meditate" and player.tp > 2900 then
 		cancel_spell()
 		add_to_chat(123, spell.name .. ' Canceled: ['..player.tp..' TP]')
-	elseif spell.type == "WeaponSkill" and spell.target.distance > target_distance and player.status == 'Engaged' then -- Cancel WS If You Are Out Of Range --
+	-- Cancel WS If You Are Out Of Range --
+	elseif spell.type == "WeaponSkill" and spell.target.distance > target_distance and player.status == 'Engaged' then
 		cancel_spell()
 		add_to_chat(123, spell.name..' Canceled: [Out of Range]')
 		return
@@ -69,7 +74,8 @@ function precast(spell,action)
 		if equipSet[AccArray[AccIndex]] then
 			equipSet = equipSet[AccArray[AccIndex]]
 		end
-		if buffactive['Reive Mark'] then -- Equip Ygnas's Resolve +1 During Reive --
+		-- Equip Ygnas's Resolve +1 During Reive --
+		if buffactive['Reive Mark'] then
 			equipSet = set_combine(equipSet,{neck="Ygnas's Resolve +1"})
 		end
 		if (spell.english == "Entropy" or spell.english == "Resolution" or spell.english == "Insurgency") and (player.tp > 2990 or buffactive.Sekkanoki) then
@@ -84,8 +90,9 @@ function precast(spell,action)
 		if sets.JA[spell.english] then
 			equip(sets.JA[spell.english])
 		end
+	-- Cancel Magic or Ninjutsu If You Are Silenced or Out of Range --
 	elseif spell.action_type == 'Magic' then
-		if buffactive.silence or spell.target.distance > 16+target_distance then -- Cancel Magic or Ninjutsu If You Are Silenced or Out of Range --
+		if buffactive.silence or spell.target.distance > 16+target_distance then
 			cancel_spell()
 			add_to_chat(123, spell.name..' Canceled: [Silenced or Out of Casting Range]')
 			return
@@ -122,8 +129,9 @@ function midcast(spell,action)
 			if equipSet[MaccArray[MaccIndex]] then
 				equipSet = equipSet[MaccArray[MaccIndex]]
 			end
+		-- Equip Hachirin-no-Obi On Darksday or Dark Weather --
 		elseif spell.english:startswith('Drain') or spell.english:startswith('Aspir') or spell.english:startswith('Bio') then
-			if world.day == "Darksday" or world.weather_element == "Dark" then -- Equip Hachirin-no-Obi On Darksday or Dark Weather --
+			if world.day == "Darksday" or world.weather_element == "Dark" then
 				equipSet = set_combine(equipSet,{waist="Hachirin-no-Obi"})
 			end
 			equipSet = 	sets.Midcast.Drain
@@ -164,7 +172,8 @@ function midcast(spell,action)
 	elseif equipSet[spell.english] then
 		equipSet = equipSet[spell.english]
 	end
-	if buffactive["Dark Seal"] and DarkSealIndex==0 then -- Equip Aug'd Fall. Burgeonet +1 When You Have Dark Seal Up --
+	 -- Equip Aug'd Fall. Burgeonet +1 When You Have Dark Seal Up --
+	if buffactive["Dark Seal"] and DarkSealIndex==0 then
 		equipSet = set_combine(equipSet,{head="Fall. Burgeonet +1",})
 	end
 	if buffactive['Dark Seal'] and buffactive['Nether Void'] and S{"Drain II","Drain III"}:contains(spell.english) and player.tp<600 then
@@ -177,11 +186,14 @@ end
 function aftercast(spell,action)
 	if spell.type == "WeaponSkill" then
 		send_command('wait 0.5;gs c TP')
-	elseif spell.english == "Arcane Circle" then -- Arcane Circle Countdown --
+	-- Arcane Circle Countdown --
+	elseif spell.english == "Arcane Circle" then
 		send_command('wait 260;input /echo '..spell.name..': [WEARING OFF IN 10 SEC.];wait 10;input /echo '..spell.name..': [OFF]')
-	elseif spell.english == "Sleep II" then -- Sleep II Countdown --
+	-- Sleep II Countdown --
+	elseif spell.english == "Sleep II" then
 		send_command('wait 60;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
-	elseif spell.english == "Sleep" then -- Sleep Countdown --
+	-- Sleep Countdown --
+	elseif spell.english == "Sleep" then
 		send_command('wait 30;input /echo Sleep Effect: [WEARING OFF IN 30 SEC.];wait 15;input /echo Sleep Effect: [WEARING OFF IN 15 SEC.];wait 10;input /echo Sleep Effect: [WEARING OFF IN 5 SEC.]')
 	end
 	status_change(player.status)
@@ -240,7 +252,8 @@ function status_change(new,old)
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
 		end
-		if buffactive['Reive Mark'] then -- Equip Ygnas's Resolve +1 During Reive --
+		 -- Equip Ygnas's Resolve +1 During Reive --
+		if buffactive['Reive Mark'] then
 			equipSet = set_combine(equipSet,{neck="Ygnas's Resolve +1"})
 		end
 		if world.area:endswith('Adoulin') then
@@ -263,7 +276,7 @@ function buff_change(buff,gain)
 			send_command('timers delete "Aftermath: Lv.3"')
 			add_to_chat(123,'AM3: [OFF]')
 		end
-	 -- Weakness Timer --
+	-- Weakness Timer --
 	elseif buff == 'weakness' then
 		if gain then
 			send_command('timers create "Weakness" 300 up')
@@ -274,7 +287,8 @@ function buff_change(buff,gain)
 		add_to_chat(123, 'Lost Samurai Roll. Switching Build.')
 		Samurai_Roll = 'Off'
 	end
-	if buff == "sleep" and gain and player.hp > 200  then -- Equip Berserker's Torque When You Are Asleep & Have 200+ HP --
+	-- Equip Berserker's Torque When You Are Asleep & Have 200+ HP --
+	if buff == "sleep" and gain and player.hp > 200  then 
 		equip({neck="Berserker's Torque"})
 	else
 		if not midaction() then
@@ -285,22 +299,27 @@ end
 
 -- In Game: //gs c (command), Macro: /console gs c (command), Bind: gs c (command) --
 function self_command(command)
-	if command == 'AccuracyToggle' then -- Accuracy Level Toggle --
+	-- Accuracy Level Toggle --
+	if command == 'AccuracyToggle' then
 		AccIndex = (AccIndex % #AccArray) + 1
 		status_change(player.status)
 		add_to_chat(158,'Accuracy Level: '..AccArray[AccIndex])
-	elseif command == 'WeaponToggle' then -- Main Weapon Toggle --
+	-- Main Weapon Toggle --
+	elseif command == 'WeaponToggle' then
 		WeaponIndex = (WeaponIndex % #WeaponArray) + 1
 		add_to_chat(158,'Main Weapon: '..WeaponArray[WeaponIndex])
 		status_change(player.status)
-	elseif command == 'MaccToggle' then -- Macc Toggle --
+	-- Macc Toggle --
+	elseif command == 'MaccToggle' then
 		MaccIndex = (MaccIndex % #MaccArray) + 1
 		add_to_chat(158,'Macc Level: '..MaccArray[MaccIndex])
 		status_change(player.status)
-	elseif command == 'RefreshGear' then -- Auto Update Gear Toggle --
+	-- Auto Update Gear Toggle --
+	elseif command == 'RefreshGear' then
 		status_change(player.status)
 		add_to_chat(158,'Auto Update Gear')
-	elseif command == 'HybridToggle' then -- Hybrid Toggle --
+	-- Hybrid Toggle --
+	elseif command == 'HybridToggle' then
 		if Armor == 'Hybrid' then
 			Armor = 'None'
 			add_to_chat(123,'Hybrid Set: [Unlocked]')
@@ -309,7 +328,8 @@ function self_command(command)
 			add_to_chat(158,'Hybrid Set: '..AccArray[AccIndex])
 		end
 		status_change(player.status)
-	elseif command == 'DarkSealToggle' then -- DarkSeal Toggle --
+	-- DarkSeal Toggle --
+	elseif command == 'DarkSealToggle' then
 		if DarkSealIndex == 1 then
 			DarkSealIndex = 0
 			add_to_chat(123,'DarkSeal Duration: [On]')
@@ -318,7 +338,8 @@ function self_command(command)
 			add_to_chat(158,'DarkSeal Potency: [On]')
 		end
 		status_change(player.status)
-	elseif command == 'PDTToggle' then -- PDT Toggle --
+	-- PDT Toggle --
+	elseif command == 'PDTToggle' then
 		if Armor == 'PDT' then
 			Armor = 'None'
 			add_to_chat(123,'PDT Set: [Unlocked]')
@@ -327,7 +348,8 @@ function self_command(command)
 			add_to_chat(158,'PDT Set: [Locked]')
 		end
 		status_change(player.status)
-	elseif command == 'MDTToggle' then -- MDT Toggle --
+	-- MDT Toggle --
+	elseif command == 'MDTToggle' then
 		if Armor == 'MDT' then
 			Armor = 'None'
 			add_to_chat(123,'MDT Set: [Unlocked]')
@@ -336,7 +358,8 @@ function self_command(command)
 			add_to_chat(158,'MDT Set: [Locked]')
 		end
 		status_change(player.status)
-	elseif command == 'ScarletToggle' then -- Scarlet Toggle --
+	-- Scarlet Toggle --
+	elseif command == 'ScarletToggle' then
 		if Armor == 'Scarlet' then
 			Armor = 'None'
 			add_to_chat(123,'Scarlet Set: [Unlocked]')
@@ -345,7 +368,8 @@ function self_command(command)
 			add_to_chat(158,'Scarlet Set: [Locked]')
 		end
 		status_change(player.status)
-	elseif command == 'TwilightToggle' then -- Twilight Toggle --
+	-- Twilight Toggle --
+	elseif command == 'TwilightToggle' then
 		if Twilight == 'Twilight' then
 			Twilight = 'None'
 			add_to_chat(123,'Twilight Set: [Unlocked]')
@@ -354,14 +378,16 @@ function self_command(command)
 			add_to_chat(158,'Twilight Set: [locked]')
 		end
 		status_change(player.status)
-	elseif command == 'DistanceToggle' then -- Distance Toggle --
+	-- Distance Toggle --
+	elseif command == 'DistanceToggle' then
 		if player.target.distance then
 			target_distance = math.floor(player.target.distance*10)/10
 			add_to_chat(158,'Distance: '..target_distance)
 		else
 			add_to_chat(123,'No Target Selected')
 		end
-	elseif command == 'IdleToggle' then -- Idle Toggle --
+	-- Idle Toggle --
+	elseif command == 'IdleToggle' then
 		IdleIndex = (IdleIndex % #IdleArray) + 1
 		status_change(player.status)
 		add_to_chat(158,'Idle Set: '..IdleArray[IdleIndex])
@@ -391,7 +417,6 @@ function set_macro_page(set,book)
 		add_to_chat(123,'Error setting macro page: Macro set ('..tostring(set)..') must be between 1 and 10.')
 		return
 	end
-	
 	if book then
 		if not tonumber(book) then
 			add_to_chat(123,'Error setting macro page: book is not a valid number ('..tostring(book)..').')
