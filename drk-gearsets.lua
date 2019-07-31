@@ -45,6 +45,7 @@ Odyssean.Feet.FC    = { name="Odyssean Greaves", augments={'Attack+20','Weapon s
 sets.Idle = {
     sub="Utu Grip",
     ammo="Ginsen",
+    head="",
     body="Lugra cloak +1",
     hands="Sulevia's Gauntlets +2",
     legs="Carmine cuisses +1",
@@ -61,7 +62,8 @@ sets.Idle = {
 -- Regen Set --
 sets.Idle.Regen = set_combine(
     sets.Idle,{
-        ring2="Chirich Ring"
+        neck="Sanctity Necklace",
+        ring2="Chirich Ring",
     }
 )
 sets.Idle.Regen.Liberator = set_combine(
@@ -161,10 +163,10 @@ sets.Idle.Regain = set_combine(
         head="Ratri Sallet",
         ammo="Ginsen",
         --hands=ValoHands.STP,
-        -- legs=OdysLegs.STP, 
+        --legs=OdysLegs.STP, 
         --feet=ValoFeet.STPACC,
         neck="Ainia Collar",
-        --body=ValoBody.STP,
+        body="Sulevia's Platemail +2",
         waist="Kentarch Belt +1",
         right_ear="Telos Earring",
         left_ear="Enervating Earring",
@@ -258,7 +260,6 @@ sets.Midcast['Dark Magic'] = {
     right_ring="Evanescence Ring",
     back="Niht Mantle",
 }
-
 -- Absorb Set --
 sets.Midcast.Absorb = {
     ammo="Pemphredo Tathlum",
@@ -292,14 +293,12 @@ sets.Midcast.Absorb.Duration = set_combine(
         legs="Black Cuisses",
     }
 )
-
 -- Absorb-TP Set --
 sets.Midcast['Absorb-TP'] = set_combine(
     sets.Midcast.Absorb,{
         hands="Heathen's Gauntlets +1",
     }
 )
-
 -- Stun Sets --
 sets.Midcast.Stun = set_combine(
     sets.Midcast['Dark Magic'],{
@@ -1007,7 +1006,7 @@ sets.TP.Apocalypse.SAM = {
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     hands="Sulevia's Gauntlets +2",
-    legs="Ignominy Flanchard +3", 
+    legs=Odyssean.Legs.DA,
     feet="Flam. Gambieras +2",
     neck="Lissome Necklace",
     body="Valorous Mail",

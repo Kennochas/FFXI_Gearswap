@@ -5,7 +5,7 @@ windower.send_command('bind f7 gs c MDTToggle')
 windower.send_command('bind f9 gs c PDTToggle')
 windower.send_command('bind f10 gs c AccuracyToggle')
 windower.send_command('bind f11 gs c MaccToggle')
-windower.send_command('bind f12 gs c ScarletToggle')
+windower.send_command('bind f12 gs c IdleToggle')
 -- windower.send_command('bind f12 gs c TwilightToggle')
 
 --[[
@@ -15,6 +15,36 @@ Things I need to add/ could use help adding are....
 2.) Add a rule that when doomed - will auto matically use holy waters w/ rings
 
 ]]--
+
+function select_default_macro_book()
+	-- Samurai subjob macro books
+	if player.sub_job == 'SAM' then
+		if WeaponArray[WeaponIndex] == 'Caladbolg' then
+			set_macro_page(3, 7)
+		elseif WeaponArray[WeaponIndex] == 'Apocalypse' then
+			set_macro_page(4, 7)
+		elseif WeaponArray[WeaponIndex] == 'Anguta' then
+			set_macro_page(4, 7)
+		elseif WeaponArray[WeaponIndex] == 'Liberator' then
+			set_macro_page(4, 7)
+		elseif WeaponArray[WeaponIndex] == 'Ragnarok' then
+			set_macro_page(3, 7)
+		end
+	-- Warrior subjob macro books
+	elseif player.sub_job == 'WAR' then
+		if WeaponArray[WeaponIndex] == 'Caladbolg' then
+			set_macro_page(1,7)
+		elseif WeaponArray[WeaponIndex] == 'Apocalypse' then
+			set_macro_page(2,7)
+		elseif WeaponArray[WeaponIndex] == 'Anguta' then
+			set_macro_page(2,7)
+		elseif WeaponArray[WeaponIndex] == 'Liberator' then
+			set_macro_page(2,7)
+		elseif WeaponArray[WeaponIndex] == 'Ragnarok' then
+			set_macro_page(1,7)
+		end
+	end
+end
 
 function get_sets()
 	-- Include the gearsets from another file. There is just so much we use two files.
@@ -178,7 +208,7 @@ function midcast(spell,action)
 	end
 	if buffactive['Dark Seal'] and buffactive['Nether Void'] and S{"Drain II","Drain III"}:contains(spell.english) and player.tp<600 then
 		equipSet = set_combine(equipSet,(sets.MAXDrain))
-		add_to_chat(100,'WARNING: Misanthropy is on now *****')
+		add_to_chat(100,'WARNING: Weapon swapped for Maximum Drain')
 	end
 	equip(equipSet)
 end
@@ -251,6 +281,7 @@ function status_change(new,old)
 		end
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
+			add_to_chat(123, 'Idlset')
 		end
 		 -- Equip Ygnas's Resolve +1 During Reive --
 		if buffactive['Reive Mark'] then
@@ -284,7 +315,7 @@ function buff_change(buff,gain)
 			send_command('timers delete "Weakness"')
 		end
 	elseif buff == "samurai roll" and not gain and Samurai_Roll == 'On' then
-		add_to_chat(123, 'Lost Samurai Roll. Switching Build.')
+		add_to_chat(123, 'Samurai Roll: [Non Perfect Roll Build]')
 		Samurai_Roll = 'Off'
 	end
 	-- Equip Berserker's Torque When You Are Asleep & Have 200+ HP --
@@ -309,6 +340,7 @@ function self_command(command)
 		WeaponIndex = (WeaponIndex % #WeaponArray) + 1
 		add_to_chat(158,'Main Weapon: '..WeaponArray[WeaponIndex])
 		status_change(player.status)
+		select_default_macro_book()
 	-- Macc Toggle --
 	elseif command == 'MaccToggle' then
 		MaccIndex = (MaccIndex % #MaccArray) + 1
@@ -432,15 +464,6 @@ function set_macro_page(set,book)
 	end
 end
 
-function select_default_macro_book()
-	-- Default macro set/book
-	if player.sub_job == 'SAM' then
-		set_macro_page(3, 7)
-	else
-		set_macro_page(1, 7)
-	end
-end
-
 function aftermath_warning(argument)
 	add_to_chat(100,'Aftermath Lv.3 : [WEARING OFF IN '..argument..' SECONDS]')
 end
@@ -459,7 +482,7 @@ windower.register_event('action',function(act)
 			end(act)
 		then
 			if act.targets[1].actions[1].param == 11 then
-				windower.add_to_chat(158,"Samurai Roll is Perfect. Switching Build.")
+				windower.add_to_chat(158,"Samurai Roll: [Perfect Roll Build]")
 				Samurai_Roll = "On"
 			end
 		end
