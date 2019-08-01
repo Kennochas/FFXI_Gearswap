@@ -48,7 +48,16 @@ end
 
 function get_sets()
 	-- Include the gearsets from another file. There is just so much we use two files.
-	include('drk-gearsets.lua')
+
+	-- This is the main lua, with sets not specific to any weapons.
+	include('gearsets/DRK/Main.lua')
+	
+	-- Weapon Specific Gearsets
+	include('gearsets/DRK/Anguta.lua')
+	include('gearsets/DRK/Apocalypse.lua')
+	include('gearsets/DRK/Caladbolg.lua')
+	include('gearsets/DRK/Liberator.lua')
+	include('gearsets/DRK/Ragnarok.lua')
 
 	-- 3 Levels Of Accuracy Sets For TP/WS/Hybrid/Stun. First Set Is LowACC. 
 	--Add More ACC Sets If Needed Then Create Your New ACC Below. 
@@ -116,6 +125,7 @@ function precast(spell,action)
 			end
 		end
 		equip(equipSet)
+	-- Equip gear, specific to job abilities
 	elseif spell.type == "JobAbility" then
 		if sets.JA[spell.english] then
 			equip(sets.JA[spell.english])
@@ -246,11 +256,11 @@ function status_change(new,old)
 		equip(sets.Scarlet)
 	elseif new == 'Engaged' then
 		equipSet = sets.TP
-		if Armor == 'Hybrid' and equipSet["Hybrid"] then
-			equipSet = equipSet["Hybrid"]
-		end
 		if equipSet[WeaponArray[WeaponIndex]] then
 			equipSet = equipSet[WeaponArray[WeaponIndex]]
+		end
+		if Armor == 'Hybrid' and equipSet["Hybrid"] then
+			equipSet = equipSet["Hybrid"]
 		end
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
@@ -281,7 +291,6 @@ function status_change(new,old)
 		end
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
-			add_to_chat(123, 'Idlset')
 		end
 		 -- Equip Ygnas's Resolve +1 During Reive --
 		if buffactive['Reive Mark'] then
