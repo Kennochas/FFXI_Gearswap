@@ -22,6 +22,12 @@ sets.Idle.Regain.Liberator = set_combine(
         main="Liberator"
     }
 )
+sets.PDT.Liberator = set_combine(
+    sets.PDT,{
+        main="Liberator",
+        sub="Utu Grip",
+    }
+)
 -- Liberator(AM3 Down) TP Sets --
 sets.TP.Liberator = {
     main="Liberator",

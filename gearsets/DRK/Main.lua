@@ -7,10 +7,10 @@ sets.Midcast = {}
 -- JA Sets --
 
 sets.JA['Diabolic Eye']		= {hands="Fallen's finger gauntlets +1"}
-sets.JA['Arcane Circle']	= {feet="Ignominy Sollerets +3"}
+sets.JA['Arcane Circle']	= {feet="Ignominy Sollerets +2"}
 sets.JA['Nether Void']		= {legs="Heath. Flanchard +1"}
 sets.JA['Souleater']		= {head="Ignominy Burgonet +2"}
-sets.JA['Weapon Bash']		= {hands="Ignominy Gauntlets +3"}
+sets.JA['Weapon Bash']		= {hands="Ignominy Gauntlets +2"}
 sets.JA['Last Resort']		= {back="Ankou's Mantle",feet="Fallen's Sollerets"}
 sets.JA['Dark Seal']		= {head="Fallen's Burgeonet +1"}
 sets.JA['Blood Weapon']		= {body="Fallen's Cuirass +1"}
@@ -34,9 +34,9 @@ Valorous.Feet   =   {}
 
 Ankou.WSDSTR    =   { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
 Ankou.DA        =	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
-Ankou.WSDVIT    =	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}}
-Ankou.ACC       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}}
-Ankou.FC        =	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
+Ankou.WSDVIT    =	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}} -- Have
+Ankou.ACC       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}} -- Have
+Ankou.FC        =	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
 Ankou.STP       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
 Ankou.INTDA     =	{ name="Ankou's Mantle", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10',}}
 Ankou.MEVA      =  	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
@@ -51,7 +51,6 @@ Odyssean.Feet.FC    = { name="Odyssean Greaves", augments={'Attack+20','Weapon s
 sets.Idle = {
     sub="Utu Grip",
     ammo="Ginsen",
-    head="",
     body="Lugra cloak +1",
     hands="Sulevia's Gauntlets +2",
     legs="Carmine cuisses +1",
@@ -115,7 +114,22 @@ sets.Twilight = set_combine(
     }
 )
 
-
+-- PDT/MDT Sets --
+sets.PDT = {
+    ammo="Ginsen",
+    head="Sulevia's Mask +2",
+    body="Valorous Mail",
+    hands="Sulevia's Gauntlets +2",
+    legs="Sulevia's Cuisses +2",
+    feet="Sulevia's Leggings +2",
+    neck="Loricate Torque +1",
+    waist="Ioskeha Belt",
+    left_ear="Cessance Earring",
+    right_ear="Telos Earring",
+    left_ring="Sulevia's Ring",
+    right_ring="Defending Ring",
+    back=Ankou.ACC,
+}
 
 -- Fastcast Set --
 sets.Precast.FastCast = {
@@ -158,7 +172,7 @@ sets.Midcast['Dark Magic'] = {
     body="Carmine Scale Mail",
     hands="Fallen's finger gauntlets +1",
     legs="Eschite cuisses",
-    feet="Ignominy Sollerets +3",
+    feet="Ignominy Sollerets +2",
     neck="Erra Pendant",
     waist="Casso sash",
     left_ear="Hermetic Earring",
@@ -190,7 +204,7 @@ sets.Midcast.Absorb.Resist = set_combine(
         left_ring="Regal Ring",
         right_ring="Stikini Ring",
         waist="Eschan Stone", 
-        feet="Ignominy Sollerets +3",
+        feet="Ignominy Sollerets +2",
         back=Ankou.FC
     }
 )
@@ -214,7 +228,7 @@ sets.Midcast.Stun = set_combine(
         left_ring="Regal Ring",
         waist="Eschan Stone",
         legs="Eschite cuisses",
-        feet="Ignominy Sollerets +3",
+        feet="Ignominy Sollerets +2",
         back=Ankou.FC,
     }
 )
@@ -253,7 +267,7 @@ sets.Midcast['Enfeebling Magic'] = {
     body="Ignominy Cuirass +3",
     hands="Leyline Gloves",
     legs="Eschite cuisses",
-    feet="Ignominy Sollerets +3",
+    feet="Ignominy Sollerets +2",
     neck="Sanctity necklace",
     waist="Eschan Stone",
     left_ear="Loquacious Earring",
@@ -270,7 +284,7 @@ sets.Midcast['Elemental Magic'] = {
     body="Carmine Scale Mail",
     hands="Leyline gloves",
     legs="Eschite Cuisses",
-    feet="Ignominy Sollerets +3",
+    feet="Ignominy Sollerets +2",
     neck="Sanctity necklace",
     waist="Eschan Stone",
     left_ear="Hecate's Earring",
@@ -345,7 +359,7 @@ sets.WS = {
     body="Ignominy Cuirass +3",
     hands="Argosy Mufflers",
     legs="Ignominy Flanchard +3",
-    feet="Argosy Sollerets +1",
+    feet="Ratri Sollerets",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Moonshade earring",
@@ -356,31 +370,31 @@ sets.WS = {
 }
 
 -- Resolution Sets --
-sets.WS.Resolution = {		
-    ammo="Knobkierrie",
+sets.WS['Resolution'] = {		
+    ammo="Seething Bomblet +1",
     head="Argosy Celata",
     body="Ignominy Cuirass +3",
     hands="Argosy Mufflers",
-    legs="Ratri Cuisses",
-    feet="Ig. Flanchard +3",
-    neck="Fotia Gorget",
+    legs="Ignominy Flanchard +3",
+    feet="Flam. Gambieras +2",
+    neck="Abyssal Beads +1",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
-    right_ear="Ishvara Earring",
+    right_ear="Brutal Earring",
     left_ring="Regal Ring",
     right_ring="Niqmaddu ring",
     back=Ankou.DA
 }
 
-sets.WS.Resolution.MidACC = set_combine(
-    sets.WS.Resolution,{
-        hands="Ignominy Gauntlets +3",
+sets.WS['Resolution'].MidACC = set_combine(
+    sets.WS['Resolution'],{
+        hands="Ignominy Gauntlets +2",
         back=Ankou.DA
     }
 )
     
-sets.WS.Resolution.HighACC = set_combine(
-    sets.WS.Resolution.MidACC,{
+sets.WS['Resolution'].HighACC = set_combine(
+    sets.WS['Resolution'].MidACC,{
         -- Stuff goes here --
     }
 )
@@ -388,7 +402,7 @@ sets.WS.Resolution.HighACC = set_combine(
 -- Torcleaver Sets --
 -- Description:	Deals triple damage. Damage varies with TP.
 -- Stat Modifier:	80% VIT fTP:	4.75	7.5	10
-sets.WS.Torcleaver = {
+sets.WS['Torcleaver'] = {
     ammo="Knobkierrie",
     head=Odyssean.Head.WSD,
     body="Ignominy Cuirass +3",
@@ -404,8 +418,8 @@ sets.WS.Torcleaver = {
     back=Ankou.WSDVIT
 }
     
-sets.WS.Torcleaver.MidACC = set_combine(
-    sets.WS.Torcleaver,{
+sets.WS['Torcleaver'].MidACC = set_combine(
+    sets.WS['Torcleaver'],{
         ammo="Knobkierrie",
         head="Ignominy Burgonet +2",
         --hands=OdysHands.WSDVITACC,
@@ -413,8 +427,8 @@ sets.WS.Torcleaver.MidACC = set_combine(
     }
 )
     
-sets.WS.Torcleaver.HighACC = set_combine(
-    sets.WS.Torcleaver.MidACC,{
+sets.WS['Torcleaver'].HighACC = set_combine(
+    sets.WS['Torcleaver'].MidACC,{
         -- Stuff goes here --
     }
 )
@@ -422,7 +436,7 @@ sets.WS.Torcleaver.HighACC = set_combine(
 -- Scourge Sets --
 --Relic Aftermath: +5% Critical Hit Rate 15 acc
 --Stat Modifier:	40% STR / 40% VIT	fTP:	3.0
-sets.WS.Scourge = {
+sets.WS['Scourge'] = {
     ammo="Knobkierrie",
     --head=OdysHead.WSD,
     body="Ignominy Cuirass +3",
@@ -438,8 +452,8 @@ sets.WS.Scourge = {
     back=Ankou.WSDSTR,
 }
     
-sets.WS.Scourge.MidACC = set_combine(
-    sets.WS.Scourge,{
+sets.WS['Scourge'].MidACC = set_combine(
+    sets.WS['Scourge'],{
         --hands=OdysHands.WSDVITACC,
         --legs=OdysLegs.WSD,
         left_ear="Cessance earring",
@@ -447,13 +461,13 @@ sets.WS.Scourge.MidACC = set_combine(
     }
 )
     
-sets.WS.Scourge.HighACC = set_combine(
-    sets.WS.Scourge.MidACC,{
+sets.WS['Scourge'].HighACC = set_combine(
+    sets.WS['Scourge'].MidACC,{
         -- Stuff goes here --
     }
 )	
 
-sets.WS.Shockwave = {
+sets.WS['Shockwave'] = {
     ammo="Pemphredo Tathlum",
     head="Carmine Mask",
     body="Carmine Scale Mail",
@@ -472,7 +486,7 @@ sets.WS.Shockwave = {
 -- Catastrophe Sets --
 --Stat Modifier:	40% STR / 40% INT	fTP:	2.75
 --Relic Aftermath: 10% Equipment Haste (+102/1024) AG 10% Ability
-sets.WS.Catastrophe = {
+sets.WS['Catastrophe'] = {
     ammo="Knobkierrie",
     head="Ratri Sallet",
     body="Ignominy Cuirass +3",
@@ -488,14 +502,14 @@ sets.WS.Catastrophe = {
     back=Ankou.WSDSTR
 }
     
-sets.WS.Catastrophe.MidACC = set_combine(
-    sets.WS.Catastrophe,{
+sets.WS['Catastrophe'].MidACC = set_combine(
+    sets.WS['Catastrophe'],{
         right_ear="Telos Earring",
     }
 )
     
-sets.WS.Catastrophe.HighACC = set_combine(
-    sets.WS.Catastrophe.MidACC,{
+sets.WS['Catastrophe'].HighACC = set_combine(
+    sets.WS['Catastrophe'].MidACC,{
         -- Stuff goes here --
     }
 )
@@ -503,11 +517,11 @@ sets.WS.Catastrophe.HighACC = set_combine(
 -- Entropy Sets --
 --Delivers a fourfold attack. Converts some of the damage into MP. Damage varies with TP.
 --Stat Modifier:	73~85% INT fTP:	0.75	1.25	2.0
-sets.WS.Entropy = {
+sets.WS['Entropy'] = {
     ammo="Pemphredo Tathlum",
     head="Ignominy Burgonet +2",
     --body=ValoBody.DA,
-    hands="Ignominy Gauntlets +3",
+    hands="Ignominy Gauntlets +2",
     legs="Ignominy Flanchard +3",
     --feet=ValoFeet.INT,
     neck="Fotia Gorget",
@@ -519,14 +533,14 @@ sets.WS.Entropy = {
     back=Ankou.INTDA,
 }
     
-sets.WS.Entropy.MidACC = set_combine(
-    sets.WS.Entropy,{
+sets.WS['Entropy'].MidACC = set_combine(
+    sets.WS['Entropy'],{
         right_ear="Telos earring",
     }
 )
     
-sets.WS.Entropy.HighACC = set_combine(
-    sets.WS.Entropy.MidACC,{
+sets.WS['Entropy'].HighACC = set_combine(
+    sets.WS['Entropy'].MidACC,{
         ammo="Seething Bomblet +1",
         body="Ignominy Cuirass +3",
     }
@@ -554,7 +568,7 @@ sets.WS['Cross Reaper'] = {
 sets.WS['Cross Reaper'].MidACC = set_combine(
     sets.WS['Cross Reaper'],{
         legs="Ignominy Flanchard +3",
-        hands="Ignominy Gauntlets +3",
+        hands="Ignominy Gauntlets +2",
     }
 )
     
@@ -568,7 +582,7 @@ sets.WS['Cross Reaper'].HighACC = set_combine(
 -- Insurgency Sets --
 --Delivers a fourfold attack. Damage varies with TP.
 --Stat Modifier:	20% STR / 20% INT fTP:	0.5	3.25	6.0
-sets.WS.Insurgency = {
+sets.WS['Insurgency'] = {
     ammo="Seething Bomblet +1",
     head="Ratri Sallet",
     body="Ignominy Cuirass +3",
@@ -584,15 +598,15 @@ sets.WS.Insurgency = {
     back=Ankou.DA,
 }
     
-sets.WS.Insurgency.MidACC = set_combine(
-    sets.WS.Insurgency,{
-        hands="Ignominy Gauntlets +3",
+sets.WS['Insurgency'].MidACC = set_combine(
+    sets.WS['Insurgency'],{
+        hands="Ignominy Gauntlets +2",
         feet="Ratri Sollerets",
     }
 )
     
-sets.WS.Insurgency.HighACC = set_combine(
-    sets.WS.Insurgency.MidACC,{
+sets.WS['Insurgency'].HighACC = set_combine(
+    sets.WS['Insurgency'].MidACC,{
         head="Ignominy Burgonet +2",
         right_ear="Telos earring",
     }
@@ -601,7 +615,7 @@ sets.WS.Insurgency.HighACC = set_combine(
 -- Quietus Sets --
 --Delivers a triple damage attack that ignores target's defense. Amount ignored varies with TP.
 --Stat Modifier:	60% STR / 60% MND Defense ignored:	10%	30%	50% fTP:	3.0
-sets.WS.Quietus = {
+sets.WS['Quietus'] = {
     ammo="Knobkierrie",
     head="Ratri Sallet",
     body="Ignominy Cuirass +3",
@@ -617,14 +631,14 @@ sets.WS.Quietus = {
     back=Ankou.WSDSTR,
 }
 
-sets.WS.Quietus.MidACC = set_combine(
-    sets.WS.Quietus, {
+sets.WS['Quietus'].MidACC = set_combine(
+    sets.WS['Quietus'], {
         right_ear="Telos Earring",
     }
 )
     
-sets.WS.Quietus.HighACC = set_combine(
-    sets.WS.Quietus.MidACC, {
+sets.WS['Quietus'].HighACC = set_combine(
+    sets.WS['Quietus'].MidACC, {
         -- Stuff goes here --
     }
 )

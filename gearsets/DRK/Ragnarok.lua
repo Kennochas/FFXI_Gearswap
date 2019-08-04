@@ -22,6 +22,12 @@ sets.Idle.Regain.Ragnarok = set_combine(
         main="Ragnarok"
     }
 )
+sets.PDT.Ragnarok = set_combine(
+    sets.PDT,{
+       main="Ragnarok",
+       sub="Utu Grip",
+    }
+)
 -- Ragnarok TP Sets --
 sets.TP.Ragnarok = {
     -- Stuff goes here --

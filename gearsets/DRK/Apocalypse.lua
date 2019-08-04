@@ -22,6 +22,12 @@ sets.Idle.Regain.Apocalypse = set_combine(
         main="Apocalypse"
     }
 )
+sets.PDT.Apocalypse = set_combine(
+    sets.PDT,{
+        main="Apocalypse",
+        sub="Utu Grip",
+    }
+)
 -- Apocalypse(AM Down) TP Sets --
 sets.TP.Apocalypse = {
     main="Apocalypse",
@@ -29,7 +35,7 @@ sets.TP.Apocalypse = {
     head="Flam. Zucchetto +2",
     hands="Sulevia's Gauntlets +2",
     legs="Ignominy Flanchard +3", 
-    feet="Flamme Gambieras +2",
+    feet="Flam. Gambieras +2",
     neck="Lissome Necklace",
     --body=ValoBody.DA,
     waist="Ioskeha belt",

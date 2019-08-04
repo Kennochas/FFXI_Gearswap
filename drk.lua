@@ -311,7 +311,7 @@ function buff_change(buff,gain)
 	-- AM3 Timer/Countdown --
 	if buff == "aftermath: lv.3" then 
 		if gain then
-			send_command('timers create "Aftermath: Lv.3" 180 down;wait 150;gs c AM30;wait 15;gs c AM15;wait 5;gs c AM10')
+			send_command('timers create "Aftermath: Lv.3" 180 down;wait 150;gs c AMWarning 30;wait 15;gs c AMWarning 15;wait 5;gs c AMWarning 10')
 		else
 			send_command('timers delete "Aftermath: Lv.3"')
 			add_to_chat(123,'AM3: [OFF]')
@@ -339,28 +339,35 @@ end
 
 -- In Game: //gs c (command), Macro: /console gs c (command), Bind: gs c (command) --
 function self_command(command)
+	local command = command
+	if type(command) == 'string' then
+		command = T(command:split(' '))
+		if #command == 0 then
+			return
+		end
+	end
 	-- Accuracy Level Toggle --
-	if command == 'AccuracyToggle' then
+	if command[1] == 'AccuracyToggle' then
 		AccIndex = (AccIndex % #AccArray) + 1
 		status_change(player.status)
 		add_to_chat(158,'Accuracy Level: '..AccArray[AccIndex])
 	-- Main Weapon Toggle --
-	elseif command == 'WeaponToggle' then
+	elseif command[1] == 'WeaponToggle' then
 		WeaponIndex = (WeaponIndex % #WeaponArray) + 1
 		add_to_chat(158,'Main Weapon: '..WeaponArray[WeaponIndex])
 		status_change(player.status)
 		select_default_macro_book()
 	-- Macc Toggle --
-	elseif command == 'MaccToggle' then
+	elseif command[1] == 'MaccToggle' then
 		MaccIndex = (MaccIndex % #MaccArray) + 1
 		add_to_chat(158,'Macc Level: '..MaccArray[MaccIndex])
 		status_change(player.status)
 	-- Auto Update Gear Toggle --
-	elseif command == 'RefreshGear' then
+	elseif command[1] == 'RefreshGear' then
 		status_change(player.status)
 		add_to_chat(158,'Auto Update Gear')
 	-- Hybrid Toggle --
-	elseif command == 'HybridToggle' then
+	elseif command[1] == 'HybridToggle' then
 		if Armor == 'Hybrid' then
 			Armor = 'None'
 			add_to_chat(123,'Hybrid Set: [Unlocked]')
@@ -370,7 +377,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- DarkSeal Toggle --
-	elseif command == 'DarkSealToggle' then
+	elseif command[1] == 'DarkSealToggle' then
 		if DarkSealIndex == 1 then
 			DarkSealIndex = 0
 			add_to_chat(123,'DarkSeal Duration: [On]')
@@ -380,7 +387,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- PDT Toggle --
-	elseif command == 'PDTToggle' then
+	elseif command[1] == 'PDTToggle' then
 		if Armor == 'PDT' then
 			Armor = 'None'
 			add_to_chat(123,'PDT Set: [Unlocked]')
@@ -390,7 +397,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- MDT Toggle --
-	elseif command == 'MDTToggle' then
+	elseif command[1] == 'MDTToggle' then
 		if Armor == 'MDT' then
 			Armor = 'None'
 			add_to_chat(123,'MDT Set: [Unlocked]')
@@ -400,7 +407,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- Scarlet Toggle --
-	elseif command == 'ScarletToggle' then
+	elseif command[1] == 'ScarletToggle' then
 		if Armor == 'Scarlet' then
 			Armor = 'None'
 			add_to_chat(123,'Scarlet Set: [Unlocked]')
@@ -410,7 +417,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- Twilight Toggle --
-	elseif command == 'TwilightToggle' then
+	elseif command[1] == 'TwilightToggle' then
 		if Twilight == 'Twilight' then
 			Twilight = 'None'
 			add_to_chat(123,'Twilight Set: [Unlocked]')
@@ -420,7 +427,7 @@ function self_command(command)
 		end
 		status_change(player.status)
 	-- Distance Toggle --
-	elseif command == 'DistanceToggle' then
+	elseif command[1] == 'DistanceToggle' then
 		if player.target.distance then
 			target_distance = math.floor(player.target.distance*10)/10
 			add_to_chat(158,'Distance: '..target_distance)
@@ -428,19 +435,15 @@ function self_command(command)
 			add_to_chat(123,'No Target Selected')
 		end
 	-- Idle Toggle --
-	elseif command == 'IdleToggle' then
+	elseif command[1] == 'IdleToggle' then
 		IdleIndex = (IdleIndex % #IdleArray) + 1
 		status_change(player.status)
 		add_to_chat(158,'Idle Set: '..IdleArray[IdleIndex])
-	elseif command == 'TP' then
+	elseif command[1] == 'TP' then
 		add_to_chat(158,'TP Return: ['..tostring(player.tp)..']')
-	elseif command == 'AM30' then
-		aftermath_warning(30)
-	elseif command == 'AM15' then
-		aftermath_warning(15)
-	elseif command == 'AM10' then
-		aftermath_warning(10)
-	elseif command:match('^SC%d$') then
+	elseif command[1] == 'AMWarning' then
+		aftermath_warning(command[2])
+	elseif command[1]:match('^SC%d$') then
 		send_command('//' .. sc_map[command])
 	end
 end

@@ -22,6 +22,23 @@ sets.Idle.Regain.Caladbolg = set_combine(
         main="Caladbolg"
     }
 )
+sets.PDT.Caladbolg = set_combine(
+    sets.PDT,{
+        ammo="Ginsen",
+        head="Sulevia's Mask +2",
+        body="Valorous Mail",
+        hands="Sulevia's Gauntlets +2",
+        legs="Sulevia's Cuisses +2",
+        feet="Sulevia's Leggings +2",
+        neck="Loricate Torque +1",
+        waist="Ioskeha Belt",
+        left_ear="Brutal earring",
+        right_ear="Cessance earring",
+        left_ring="Sulevia's Ring",
+        right_ring="Defending Ring",
+        back=Ankou.ACC,
+    }
+)
 -- Caladbolg(AM Down) TP Sets --
 sets.TP.Caladbolg = {
     ammo="Ginsen",
@@ -34,7 +51,7 @@ sets.TP.Caladbolg = {
     waist="Ioskeha Belt",
     left_ear="Cessance Earring",
     right_ear="Telos Earring",
-    left_ring="Flamma Ring",
+    left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 }		
@@ -93,7 +110,7 @@ sets.TP.Caladbolg.HighACC.STP = set_combine(
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
-        feet="Flamme Gambieras +2",
+        feet="Flam. Gambieras +2",
     }
 )
 
@@ -186,7 +203,7 @@ sets.TP.Caladbolg.HighACC.AM.STP = set_combine(
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
-        feet="Flamme Gambieras +2",
+        feet="Flam. Gambieras +2",
     }
 )
 
@@ -217,14 +234,14 @@ sets.TP.Caladbolg.SAM = {
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     body="Valorous Mail",
-    hands="Flam. Manopolas +2",
-    legs=Odyssean.Legs.DA,
+    hands="Sulevia's Gauntlets +2",
+    legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +1",
     waist="Ioskeha Belt",
     left_ear="Cessance Earring",
-    right_ear="Telos Earring",
-    left_ring="Flamma Ring",
+    right_ear="Brutal Earring",
+    left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 } 
@@ -258,20 +275,21 @@ sets.TP.Caladbolg.SAM.AM3 = set_combine(
         ammo="Ginsen",
         head="Flam. Zucchetto +2",
         body="Valorous Mail",
-		hands="Flam. Manopolas +2",
-		legs=Odyssean.Legs.DA,
+		hands="Sulevia's Gauntlets +2",
+		legs="Ignominy Flanchard +3",
 		feet="Flam. Gambieras +2",
         neck="Abyssal Beads +1",
         waist="Ioskeha belt",
         right_ear="Telos Earring",
         left_ear="Brutal earring",
-        left_ring="Niqmaddu Ring",
+        left_ring="Hetairoi Ring",
         right_ring="Petrov Ring",
         back=Ankou.ACC,
     }
 )
 sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
     sets.TP.Caladbolg.SAM.AM3,{
+        ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
         left_ear="Cessance earring",
@@ -341,7 +359,7 @@ sets.TP.Caladbolg.SAM.HighACC.STP = set_combine(
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
-        feet="Flamme Gambieras +2",
+        feet="Flam. Gambieras +2",
     }
 )
 
@@ -388,12 +406,12 @@ sets.TP.Caladbolg.SAM.AM = set_combine(
 		hands="Flam. Manopolas +2",
 		legs=Odyssean.Legs.DA,
 		feet="Flam. Gambieras +2",
-        neck="Ainia Collar",
+        neck="Abyssal Beads +1",
         body="Valorous Mail",
         waist="Ioskeha belt",
         right_ear="Telos Earring",
         left_ear="Brutal earring",
-        left_ring="Niqmaddu Ring",
+        left_ring="Hetairoi Ring",
         right_ring="Petrov Ring",
         back=Ankou.ACC,
     }
@@ -402,6 +420,7 @@ sets.TP.Caladbolg.SAM.AM = set_combine(
 --[ACC: 1184 STP: 63]--		
 sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
     sets.TP.Caladbolg.SAM.AM,{
+        body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
         left_ear="Cessance earring",
         left_ring="Chirich Ring",
@@ -454,7 +473,7 @@ sets.TP.Caladbolg.SAM.HighACC.AM.STP = set_combine(
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
-        feet="Flamme Gambieras +2",
+        feet="Flam. Gambieras +2",
     }
 )
 

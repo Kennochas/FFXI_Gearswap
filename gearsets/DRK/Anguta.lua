@@ -22,6 +22,12 @@ sets.Idle.Regain.Anguta = set_combine(
         main="Anguta"
     }
 )
+sets.PDT.Anguta = set_combine(
+    sets.PDT,{
+        main="Anguta",
+        sub="Utu Grip",
+    }
+)
 -- Anguta TP Sets --
 sets.TP.Anguta = {
     main="Anguta",
@@ -103,7 +109,7 @@ sets.TP.Anguta.SAM = {
     waist="Ioskeha belt",
     right_ear="Telos Earring",
     left_ear="Brutal earring",
-    left_ring="Niqmaddu Ring",
+    left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 }
@@ -122,7 +128,7 @@ sets.TP.Anguta.SAM.HighACC = set_combine(
         hands="Ignominy Gauntlets +3",
         legs="Ignominy Flanchard +3",
         left_ring="Regal Ring",
-        feet="Flamme Gambieras +2",
+        feet="Flam. Gambieras +2",
     }
 )
 
@@ -196,57 +202,6 @@ sets.TP.Anguta.SAM.MidACC.HighHaste.STP = set_combine(
 sets.TP.Anguta.SAM.HighACC.HighHaste.STP = set_combine(
     sets.TP.Anguta.SAM.HighACC.STP,{
         -- Stuff goes here --
-    }
-)
-
-----------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------
-
--- PDT/MDT Sets --
-sets.PDT = {
-    ammo="Ginsen",
-    head="Sulevia's Mask +2",
-    body="Valorous Mail",
-    hands="Sulevia's Gauntlets +2",
-    legs="Sulevia's Cuisses +2",
-    feet="Sulevia's Leggings +2",
-    neck="Loricate Torque +1",
-    waist="Ioskeha Belt",
-    left_ear="Cessance Earring",
-    right_ear="Telos Earring",
-    left_ring="Sulevia's Ring",
-    right_ring="Defending Ring",
-    back=Ankou.ACC,
-}
-sets.PDT.Liberator = set_combine(
-    sets.PDT,{
-        main="Liberator",
-        sub="Utu Grip",
-    }
-)
-sets.PDT.Ragnarok = set_combine(
-    sets.PDT,{
-       main="Ragnarok",
-       sub="Utu Grip",
-    }
-)
-sets.PDT.Caladbolg = set_combine(
-    sets.PDT,{
-        main="Caladbolg",
-        sub="Utu Grip",
-    }
-)
-sets.PDT.Apocalypse = set_combine(
-    sets.PDT,{
-        main="Apocalypse",
-        sub="Utu Grip",
-    }
-)
-sets.PDT.Anguta = set_combine(
-    sets.PDT,{
-        main="Anguta",
-        sub="Utu Grip",
     }
 )
 
