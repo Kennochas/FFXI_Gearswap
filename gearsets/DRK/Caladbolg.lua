@@ -24,6 +24,7 @@ sets.Idle.Regain.Caladbolg = set_combine(
 )
 sets.PDT.Caladbolg = set_combine(
     sets.PDT,{
+        main="Caladbolg",
         ammo="Ginsen",
         head="Sulevia's Mask +2",
         body="Valorous Mail",
@@ -49,8 +50,8 @@ sets.TP.Caladbolg = {
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +1",
     waist="Ioskeha Belt",
-    left_ear="Cessance Earring",
-    right_ear="Telos Earring",
+    left_ear="Telos Earring",
+    right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
@@ -60,7 +61,7 @@ sets.TP.Caladbolg.MidACC = set_combine(
     sets.TP.Caladbolg,{
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         --left_ring="Chirich Ring",
     }
 ) 
@@ -96,7 +97,7 @@ sets.TP.Caladbolg.HighACC.HighHaste = set_combine(
 -- Caladbolg(AM Down: SAM Roll) TP Sets --
 sets.TP.Caladbolg.STP = set_combine(
     sets.TP.Caladbolg,{
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         right_ring="Warp Ring",
     }
 )
@@ -153,7 +154,7 @@ sets.TP.Caladbolg.AM = set_combine(
 sets.TP.Caladbolg.MidACC.AM = set_combine(
     sets.TP.Caladbolg.AM,{
         hands="Emicho Gauntlets +1",
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
@@ -190,7 +191,7 @@ sets.TP.Caladbolg.HighACC.AM.HighHaste = set_combine(
 -- Caladbolg(AM Up: SAM Roll) TP Sets --
 sets.TP.Caladbolg.AM.STP = set_combine(
     sets.TP.Caladbolg.STP,{
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
     }
 )
 sets.TP.Caladbolg.MidACC.AM.STP = set_combine(
@@ -239,8 +240,8 @@ sets.TP.Caladbolg.SAM = {
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +1",
     waist="Ioskeha Belt",
-    left_ear="Cessance Earring",
-    right_ear="Brutal Earring",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
@@ -252,7 +253,7 @@ sets.TP.Caladbolg.SAM.MidACC = set_combine(
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
@@ -292,7 +293,7 @@ sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         -- left_ring="Chirich Ring",
     }
 )
@@ -346,7 +347,7 @@ sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste = set_combine(
 -- Caladbolg(AM Down: SAM Roll) TP Sets -- /SAM
 sets.TP.Caladbolg.SAM.STP = set_combine(
     sets.TP.Caladbolg.SAM,{
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
     }
 )
 sets.TP.Caladbolg.SAM.MidACC.STP = set_combine(
@@ -422,7 +423,7 @@ sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
     sets.TP.Caladbolg.SAM.AM,{
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
@@ -460,7 +461,7 @@ sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste = set_combine(
 -- Caladbolg(AM Up: SAM Roll) TP Sets -- /SAM
 sets.TP.Caladbolg.SAM.AM.STP = set_combine(
     sets.TP.Caladbolg.SAM.STP,{
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
     }
 )
 sets.TP.Caladbolg.SAM.MidACC.AM.STP = set_combine(

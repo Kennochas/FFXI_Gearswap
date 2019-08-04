@@ -6,14 +6,14 @@ sets.Midcast = {}
 
 -- JA Sets --
 
-sets.JA['Diabolic Eye']		= {hands="Fallen's finger gauntlets +1"}
-sets.JA['Arcane Circle']	= {feet="Ignominy Sollerets +2"}
-sets.JA['Nether Void']		= {legs="Heath. Flanchard +1"}
-sets.JA['Souleater']		= {head="Ignominy Burgonet +2"}
-sets.JA['Weapon Bash']		= {hands="Ignominy Gauntlets +2"}
-sets.JA['Last Resort']		= {back="Ankou's Mantle",feet="Fallen's Sollerets"}
-sets.JA['Dark Seal']		= {head="Fallen's Burgeonet +1"}
-sets.JA['Blood Weapon']		= {body="Fallen's Cuirass +1"}
+sets.JA['Diabolic Eye']		= { hands="Fallen's finger gauntlets +1" }
+sets.JA['Arcane Circle']	= { feet="Ignominy Sollerets +2" }
+sets.JA['Nether Void']		= { legs="Heath. Flanchard +1" }
+sets.JA['Souleater']		= { head="Ignominy Burgonet +2" }
+sets.JA['Weapon Bash']		= { hands="Ignominy Gauntlets +2" }
+sets.JA['Last Resort']		= { back="Ankou's Mantle",feet="Fallen's Sollerets" }
+sets.JA['Dark Seal']		= { head="Fallen's Burgeonet +1" }
+sets.JA['Blood Weapon']		= { body="Fallen's Cuirass +1" }
 
 -- Augmented Gear --
 Ankou = {}
@@ -33,7 +33,7 @@ Valorous.Legs   =   {}
 Valorous.Feet   =   {}
 
 Ankou.WSDSTR    =   { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
-Ankou.DA        =	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
+Ankou.DA        =	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}} -- Have
 Ankou.WSDVIT    =	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}} -- Have
 Ankou.ACC       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}} -- Have
 Ankou.FC        =	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
@@ -154,9 +154,6 @@ sets.Precast['Dark Magic'] = set_combine(
         -- Stuff goes here --
     }
 )
-
--- Midcast Base Set --
-
 
 -- Magic Haste Set --
 sets.Midcast.Haste = set_combine(
@@ -314,13 +311,13 @@ sets.Midcast['Dread Spikes'] = {
 sets.Midcast.Drain = {
     ammo="Pemphredo Tathlum",
     neck="Erra Pendant",
-    left_ear="Hermetic Earring",
-    right_ear="Hirudinea Earring",
-    head="Pixie Hairpin +1",
+    head="Fallen's Burgeonet +1",
     body="Carmine Scale Mail",
-    hands="Fallen's finger gauntlets +1",
+    hands="Flam. Manopolas +2",
     left_ring="Archon Ring",
     right_ring="Evanescence Ring",
+    left_ear="Hermetic Earring",
+    right_ear="Hirudinea Earring",
     back="Niht Mantle",
     waist="Austerity belt +1",
     legs="Eschite cuisses",

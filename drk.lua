@@ -174,7 +174,7 @@ function midcast(spell,action)
 			if world.day == "Darksday" or world.weather_element == "Dark" then
 				equipSet = set_combine(equipSet,{waist="Hachirin-no-Obi"})
 			end
-			equipSet = 	sets.Midcast.Drain
+			equipSet = sets.Midcast.Drain
 		elseif spell.english == "Stoneskin" then
 			if buffactive.Stoneskin then
 				send_command('@wait 1.7;cancel stoneskin')
