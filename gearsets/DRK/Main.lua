@@ -32,14 +32,14 @@ Valorous.Hands  =   {}
 Valorous.Legs   =   {}
 Valorous.Feet   =   {}
 
-Ankou.WSDSTR    =   { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+Ankou.WSDSTR    =   { name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}} -- Have
 Ankou.DA        =	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}} -- Have
 Ankou.WSDVIT    =	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}} -- Have
 Ankou.ACC       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}} -- Have
 Ankou.FC        =	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
 Ankou.STP       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
 Ankou.INTDA     =	{ name="Ankou's Mantle", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10',}}
-Ankou.MEVA      =  	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}
+Ankou.MEVA      =  	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
 
 Odyssean.Head.WSD   = { name="Odyssean Helm", augments={'"Mag.Atk.Bns."+13','Weapon skill damage +4%','VIT+10','Accuracy+6',}}
 Odyssean.Body.FC    = { name="Odyss. Chestplate", augments={'"Fast Cast"+5','VIT+3','Accuracy+4','Attack+13',}}
