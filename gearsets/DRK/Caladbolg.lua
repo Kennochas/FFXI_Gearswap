@@ -42,15 +42,17 @@ sets.PDT.Caladbolg = set_combine(
 )
 -- Caladbolg(AM Down) TP Sets --
 sets.TP.Caladbolg = {
+    main="Caladbolg",
+    sub="Utu Grip",
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     body="Valorous Mail",
-    hands="Flam. Manopolas +2",
-    legs="Flamma Dirs +2",
+    hands="Sulevia's Gauntlets +2",
+    legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +1",
     waist="Ioskeha Belt",
-    left_ear="Telos Earring",
+    left_ear="Brutal Earring",
     right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
@@ -135,19 +137,21 @@ sets.TP.Caladbolg.HighACC.HighHaste.STP = set_combine(
 -- Caladbolg(AM Up) TP Sets --
 sets.TP.Caladbolg.AM = set_combine(
     sets.TP.Caladbolg,{
-        ammo="Ginsen",
-        head="Flam. Zucchetto +2",
-        hands="Argosy Mufflers",
-		legs="Flamma Dirs +2",
-		feet="Flam. Gambieras +2",
-        neck="Abyssal Beads +1",
-        body="Valorous Mail",
-        waist="Ioskeha belt",
-        right_ear="Telos Earring",
-        left_ear="Brutal earring",
-        left_ring="Niqmaddu Ring",
-        right_ring="Petrov Ring",
-        back=Ankou.ACC,
+    main="Caladbolg",
+    sub="Utu Grip",
+    ammo="Ginsen",
+    head="Flam. Zucchetto +2",
+    body="Valorous Mail",
+    hands="Sulevia's Gauntlets +2",
+    legs="Ignominy Flanchard +3",
+    feet="Flam. Gambieras +2",
+    neck="Abyssal Beads +1",
+    waist="Ioskeha Belt",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",
+    back=Ankou.ACC,
     }
 )
     
@@ -161,6 +165,42 @@ sets.TP.Caladbolg.MidACC.AM = set_combine(
     
 sets.TP.Caladbolg.HighACC.AM = set_combine(
     sets.TP.Caladbolg.MidACC.AM,{
+        head="Ignominy Burgonet +2",
+        neck="Lissome Necklace",
+        body="Ignominy Cuirass +3",
+        hands="Ignominy Gauntlets +3",
+        legs="Ignominy Flanchard +3",
+        left_ring="Regal Ring",
+    }
+)
+
+sets.TP.Caladbolg.AM3 = set_combine(
+    sets.TP.Caladbolg,{
+        ammo="Ginsen",
+        head="Flam. Zucchetto +2",
+        body="Valorous Mail",
+		hands="Sulevia's Gauntlets +2",
+		legs="Ignominy Flanchard +3",
+		feet="Flam. Gambieras +2",
+        neck="Abyssal Beads +1",
+        waist="Ioskeha belt",
+        right_ear="Telos Earring",
+        left_ear="Brutal earring",
+        left_ring="Hetairoi Ring",
+        right_ring="Petrov Ring",
+        back=Ankou.ACC,
+    }
+)
+sets.TP.Caladbolg.MidACC.AM3 = set_combine(
+    sets.TP.Caladbolg.AM3,{
+        hands="Emicho Gauntlets +1",
+        right_ear="Cessance earring",
+        left_ring="Chirich Ring",
+    }
+) 
+    
+sets.TP.Caladbolg.HighACC.AM3 = set_combine(
+    sets.TP.Caladbolg.MidACC.AM3,{
         head="Ignominy Burgonet +2",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -253,14 +293,55 @@ sets.TP.Caladbolg.SAM.MidACC = set_combine(
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
+        left_ear="Telos Earring",
         right_ear="Cessance earring",
-        left_ring="Chirich Ring",
+        -- left_ring="Chirich Ring",
+        left_ring="Regal Ring",
     }
 ) 
     
 --[ACC: 1264 STP: 27]--		
 sets.TP.Caladbolg.SAM.HighACC = set_combine(
     sets.TP.Caladbolg.SAM.MidACC,{
+        head="Ignominy Burgonet +2",
+        neck="Lissome Necklace",
+        body="Ignominy Cuirass +3",
+        hands="Ignominy Gauntlets +3",
+        legs="Ignominy Flanchard +3",
+        left_ring="Regal Ring",
+    }
+)
+
+sets.TP.Caladbolg.SAM.AM = set_combine(
+    sets.TP.Caladbolg.SAM,{
+    main="Caladbolg",
+    sub="Utu Grip",
+    ammo="Ginsen",
+    head="Flam. Zucchetto +2",
+    body="Valorous Mail",
+    hands="Sulevia's Gauntlets +2",
+    legs="Ignominy Flanchard +3",
+    feet="Flam. Gambieras +2",
+    neck="Abyssal Beads +1",
+    waist="Ioskeha Belt",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
+    left_ring="Hetairoi Ring",
+    right_ring="Petrov Ring",
+    back=Ankou.ACC,
+    }
+)
+    
+sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
+    sets.TP.Caladbolg.SAM.AM,{
+        hands="Emicho Gauntlets +1",
+        right_ear="Cessance earring",
+        left_ring="Chirich Ring",
+    }
+) 
+    
+sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
+    sets.TP.Caladbolg.SAM.MidACC.AM,{
         head="Ignominy Burgonet +2",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -295,12 +376,12 @@ sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
         -- left_ring="Chirich Ring",
+        left_ring="Regal Ring",
     }
 )
 sets.TP.Caladbolg.SAM.HighACC.AM3 = set_combine(
     sets.TP.Caladbolg.SAM.MidACC.AM3,{
         head="Ignominy Burgonet +2",
-        neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
         legs="Ignominy Flanchard +3",
@@ -403,12 +484,12 @@ sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste.STP = set_combine(
 sets.TP.Caladbolg.SAM.AM = set_combine(
     sets.TP.Caladbolg.SAM,{
         ammo="Ginsen",
-		head="Flam. Zucchetto +2",
-		hands="Flam. Manopolas +2",
-		legs=Odyssean.Legs.DA,
+        head="Flam. Zucchetto +2",
+        body="Valorous Mail",
+		hands="Sulevia's Gauntlets +2",
+		legs="Ignominy Flanchard +3",
 		feet="Flam. Gambieras +2",
         neck="Abyssal Beads +1",
-        body="Valorous Mail",
         waist="Ioskeha belt",
         right_ear="Telos Earring",
         left_ear="Brutal earring",

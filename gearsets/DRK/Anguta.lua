@@ -26,6 +26,7 @@ sets.PDT.Anguta = set_combine(
     sets.PDT,{
         main="Anguta",
         sub="Utu Grip",
+        feet="Flam. Gambieras +2",
     }
 )
 -- Anguta TP Sets --
@@ -101,14 +102,14 @@ sets.TP.Anguta.SAM = {
     main="Anguta",
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
-    hands="Flam. Manopolas +2",
-    legs="Flamma Dirs +2",
+    hands="Sulevia's Gauntlets +2",
+    legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +1",
     body="Valorous Mail",
     waist="Ioskeha belt",
-    right_ear="Telos Earring",
-    left_ear="Brutal earring",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,

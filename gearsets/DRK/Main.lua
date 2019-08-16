@@ -50,14 +50,14 @@ Odyssean.Feet.FC    = { name="Odyssean Greaves", augments={'Attack+20','Weapon s
 
 sets.Idle = {
     sub="Utu Grip",
-    ammo="Ginsen",
+    ammo="Staunch Tathlum",
     body="Lugra cloak +1",
     hands="Sulevia's Gauntlets +2",
     legs="Carmine cuisses +1",
     feet="Sulev. Leggings +2",
     neck="Loricate Torque +1",
-    waist="Ioskeha Belt",
-    left_ear="Cessance Earring",
+    waist="Flume Belt",
+    left_ear="Genmei Earring",
     right_ear="Telos Earring",
     left_ring="Sulevia's Ring",
     right_ring="Defending Ring",
@@ -410,7 +410,7 @@ sets.WS['Torcleaver'] = {
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
     right_ear="Ishvara Earring",
-    left_ring="Flamma Ring",
+    left_ring="Regal Ring",
     right_ring="Petrov Ring",
     back=Ankou.WSDVIT
 }
@@ -507,6 +507,34 @@ sets.WS['Catastrophe'].MidACC = set_combine(
     
 sets.WS['Catastrophe'].HighACC = set_combine(
     sets.WS['Catastrophe'].MidACC,{
+        -- Stuff goes here --
+    }
+)
+
+sets.WS['Catastrophe'].PDT = {
+    ammo="Knobkierrie",
+    head="Sulevia's Mask +2",
+    body="Ignominy Cuirass +3",
+    hands="Sulev. Gauntlets +2",
+    legs="Sulev. Cuisses +2",
+    feet="Sulev. Leggings +2",
+    neck="Fotia Gorget",
+    waist="Flume Belt",
+    left_ear="Brutal Earring",
+    right_ear="Ishvara Earring",
+    left_ring="Sulevia's Ring",
+    right_ring="Defending Ring",
+    back=Ankou.WSDSTR
+}
+    
+sets.WS['Catastrophe'].MidACC.PDT = set_combine(
+    sets.WS['Catastrophe'].PDT,{
+        -- Stuff goes here --
+    }
+)
+    
+sets.WS['Catastrophe'].HighACC.PDT = set_combine(
+    sets.WS['Catastrophe'].MidACC.PDT,{
         -- Stuff goes here --
     }
 )

@@ -26,6 +26,8 @@ sets.PDT.Apocalypse = set_combine(
     sets.PDT,{
         main="Apocalypse",
         sub="Utu Grip",
+        ammo="Staunch Tathlum",
+        feet="Flam. Gambieras +2",
     }
 )
 -- Apocalypse(AM Down) TP Sets --
@@ -34,14 +36,14 @@ sets.TP.Apocalypse = {
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     hands="Sulevia's Gauntlets +2",
-    legs="Ignominy Flanchard +3", 
+    legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
-    neck="Lissome Necklace",
-    --body=ValoBody.DA,
+    neck="Abyssal Beads +1",
+    body="Valorous Mail",
     waist="Ioskeha belt",
-    right_ear="Telos Earring",
-    left_ear="Cessance earring",
-    left_ring="Niqmaddu Ring",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
+    left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 } 
@@ -195,14 +197,14 @@ sets.TP.Apocalypse.SAM = {
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     hands="Sulevia's Gauntlets +2",
-    legs=Odyssean.Legs.DA,
+    legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
-    neck="Lissome Necklace",
+    neck="Abyssal Beads +1",
     body="Valorous Mail",
     waist="Ioskeha belt",
-    right_ear="Telos Earring",
-    left_ear="Cessance earring",
-    left_ring="Niqmaddu Ring",
+    left_ear="Brutal Earring",
+    right_ear="Cessance Earring",
+    left_ring="Hetairoi Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 } 
@@ -210,6 +212,7 @@ sets.TP.Apocalypse.SAM = {
 sets.TP.Apocalypse.SAM.MidACC = set_combine(
     sets.TP.Apocalypse.SAM,{
         ammo="Seething Bomblet +1",
+        body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
     }
 )

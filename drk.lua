@@ -113,6 +113,9 @@ function precast(spell,action)
 		if equipSet[AccArray[AccIndex]] then
 			equipSet = equipSet[AccArray[AccIndex]]
 		end
+		if Armor == 'PDT' then
+			equipSet = equipSet['PDT']
+		end
 		-- Equip Ygnas's Resolve +1 During Reive --
 		if buffactive['Reive Mark'] then
 			equipSet = set_combine(equipSet,{neck="Ygnas's Resolve +1"})
@@ -329,6 +332,7 @@ function buff_change(buff,gain)
 	end
 	-- Equip Berserker's Torque When You Are Asleep & Have 200+ HP --
 	if buff == "sleep" and gain and player.hp > 200  then 
+		add_to_chat(123,'Sleep: [Waking up]')
 		equip({neck="Berserker's Torque"})
 	else
 		if not midaction() then
@@ -491,7 +495,7 @@ windower.register_event('action',function(act)
 					end
 				end
 				return false
-			end(act)
+			end
 		then
 			if act.targets[1].actions[1].param == 11 then
 				windower.add_to_chat(158,"Samurai Roll: [Perfect Roll Build]")
