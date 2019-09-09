@@ -118,13 +118,13 @@ sets.TP.Anguta.SAM.MidACC = set_combine(
     sets.TP.Anguta.SAM,{
         neck="Lissome Necklace",
         --hands=ValoHands.STP,
-        left_ear="Cessance earring",
+        right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 )
 sets.TP.Anguta.SAM.HighACC = set_combine(
     sets.TP.Anguta.SAM.MidACC,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
         legs="Ignominy Flanchard +3",
@@ -156,8 +156,8 @@ sets.TP.Anguta.SAM.STP = set_combine(
         ammo="Ginsen",
         head="Flam. Zucchetto +2",
         neck="Ganesha's Mala",
-        left_ear="Cessance Earring",
-        right_ear="Brutal Earring",
+		left_ear="Brutal Earring",
+        right_ear="Cessance Earring",
         body="Valorous Mail",
         --hands=OdysHands.QA,
         left_ring="Niqmaddu Ring",
@@ -175,7 +175,7 @@ sets.TP.Anguta.SAM.MidACC.STP = set_combine(
         --legs=OdysLegs.STP,
         neck="Ainia Collar",
         --body=ValoBody.DA,
-        right_ear="Telos Earring",
+        left_ear="Telos Earring",
     }
 )
 sets.TP.Anguta.SAM.HighACC.STP = set_combine(

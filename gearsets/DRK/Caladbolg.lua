@@ -70,7 +70,7 @@ sets.TP.Caladbolg.MidACC = set_combine(
     
 sets.TP.Caladbolg.HighACC = set_combine(
     sets.TP.Caladbolg.MidACC,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
@@ -165,7 +165,7 @@ sets.TP.Caladbolg.MidACC.AM = set_combine(
     
 sets.TP.Caladbolg.HighACC.AM = set_combine(
     sets.TP.Caladbolg.MidACC.AM,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
@@ -184,8 +184,8 @@ sets.TP.Caladbolg.AM3 = set_combine(
 		feet="Flam. Gambieras +2",
         neck="Abyssal Beads +1",
         waist="Ioskeha belt",
-        right_ear="Telos Earring",
-        left_ear="Brutal earring",
+        left_ear="Telos Earring",
+        right_ear="Brutal earring",
         left_ring="Hetairoi Ring",
         right_ring="Petrov Ring",
         back=Ankou.ACC,
@@ -201,7 +201,7 @@ sets.TP.Caladbolg.MidACC.AM3 = set_combine(
     
 sets.TP.Caladbolg.HighACC.AM3 = set_combine(
     sets.TP.Caladbolg.MidACC.AM3,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
@@ -303,12 +303,13 @@ sets.TP.Caladbolg.SAM.MidACC = set_combine(
 --[ACC: 1264 STP: 27]--		
 sets.TP.Caladbolg.SAM.HighACC = set_combine(
     sets.TP.Caladbolg.SAM.MidACC,{
-        head="Ignominy Burgonet +2",
-        neck="Lissome Necklace",
+        head="Ignominy Burgonet +3",
+        neck="Abyssal Beads +1",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
         legs="Ignominy Flanchard +3",
         left_ring="Regal Ring",
+		right_ring="Flamma Ring",
     }
 )
 
@@ -342,7 +343,7 @@ sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
     
 sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
     sets.TP.Caladbolg.SAM.MidACC.AM,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
@@ -362,8 +363,8 @@ sets.TP.Caladbolg.SAM.AM3 = set_combine(
 		feet="Flam. Gambieras +2",
         neck="Abyssal Beads +1",
         waist="Ioskeha belt",
-        right_ear="Telos Earring",
-        left_ear="Brutal earring",
+        left_ear="Telos Earring",
+        right_ear="Brutal earring",
         left_ring="Hetairoi Ring",
         right_ring="Petrov Ring",
         back=Ankou.ACC,
@@ -381,7 +382,7 @@ sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
 )
 sets.TP.Caladbolg.SAM.HighACC.AM3 = set_combine(
     sets.TP.Caladbolg.SAM.MidACC.AM3,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
         legs="Ignominy Flanchard +3",
@@ -439,7 +440,7 @@ sets.TP.Caladbolg.SAM.MidACC.STP = set_combine(
 sets.TP.Caladbolg.SAM.HighACC.STP = set_combine(
     sets.TP.Caladbolg.SAM.HighACC,{
         ammo="Seething Bomblet +1",
-        neck="Lissome Necklace",
+        -- neck="Lissome Necklace",
         ear1="Mache Earring",
         feet="Flam. Gambieras +2",
     }
@@ -491,8 +492,8 @@ sets.TP.Caladbolg.SAM.AM = set_combine(
 		feet="Flam. Gambieras +2",
         neck="Abyssal Beads +1",
         waist="Ioskeha belt",
-        right_ear="Telos Earring",
-        left_ear="Brutal earring",
+        left_ear="Telos Earring",
+        right_ear="Brutal earring",
         left_ring="Hetairoi Ring",
         right_ring="Petrov Ring",
         back=Ankou.ACC,
@@ -512,7 +513,7 @@ sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
 --[ACC: 1264 STP: 27]--		
 sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
     sets.TP.Caladbolg.SAM.MidACC.AM,{
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",

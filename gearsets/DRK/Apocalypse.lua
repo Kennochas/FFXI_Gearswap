@@ -58,7 +58,7 @@ sets.TP.Apocalypse.MidACC = set_combine(
 sets.TP.Apocalypse.HighACC = set_combine(
     sets.TP.Apocalypse.MidACC,{
         ammo="Ginsen",
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         body="Ignominy Cuirass +3",
         legs="Ignominy Flanchard +3",
         left_ring="Regal Ring",
@@ -214,13 +214,14 @@ sets.TP.Apocalypse.SAM.MidACC = set_combine(
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
+        left_ring="Regal Ring",
     }
 )
     
 sets.TP.Apocalypse.SAM.HighACC = set_combine(
     sets.TP.Apocalypse.SAM.MidACC,{
         ammo="Ginsen",
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         body="Ignominy Cuirass +3",
         legs="Ignominy Flanchard +3",
         left_ring="Regal Ring",

@@ -9,8 +9,8 @@ sets.Midcast = {}
 sets.JA['Diabolic Eye']		= { hands="Fallen's finger gauntlets +1" }
 sets.JA['Arcane Circle']	= { feet="Ignominy Sollerets +2" }
 sets.JA['Nether Void']		= { legs="Heath. Flanchard +1" }
-sets.JA['Souleater']		= { head="Ignominy Burgonet +2" }
-sets.JA['Weapon Bash']		= { hands="Ignominy Gauntlets +2" }
+sets.JA['Souleater']		= { head="Ignominy Burgonet +3" }
+sets.JA['Weapon Bash']		= { hands="Ignominy Gauntlets +3" }
 sets.JA['Last Resort']		= { back="Ankou's Mantle",feet="Fallen's Sollerets" }
 sets.JA['Dark Seal']		= { head="Fallen's Burgeonet +1" }
 sets.JA['Blood Weapon']		= { body="Fallen's Cuirass +1" }
@@ -57,8 +57,8 @@ sets.Idle = {
     feet="Sulev. Leggings +2",
     neck="Loricate Torque +1",
     waist="Flume Belt",
-    left_ear="Genmei Earring",
-    right_ear="Telos Earring",
+	left_ear="Telos Earring",
+    right_ear="Genmei Earring",
     left_ring="Sulevia's Ring",
     right_ring="Defending Ring",
     back=Ankou.ACC,
@@ -98,8 +98,8 @@ sets.Idle.Regain = set_combine(
         neck="Ainia Collar",
         body="Sulevia's Platemail +2",
         waist="Kentarch Belt +1",
-        right_ear="Telos Earring",
-        left_ear="Enervating Earring",
+        left_ear="Telos Earring",
+        right_ear="Enervating Earring",
         left_ring="Chirich Ring",
         right_ring="Petrov Ring",
         back=Ankou.STP,
@@ -124,8 +124,8 @@ sets.PDT = {
     feet="Sulevia's Leggings +2",
     neck="Loricate Torque +1",
     waist="Ioskeha Belt",
-    left_ear="Cessance Earring",
-    right_ear="Telos Earring",
+	left_ear="Telos Earring",
+    right_ear="Cessance Earring",
     left_ring="Sulevia's Ring",
     right_ring="Defending Ring",
     back=Ankou.ACC,
@@ -165,7 +165,7 @@ sets.Midcast.Haste = set_combine(
 -- Dark Magic Set --
 sets.Midcast['Dark Magic'] = {
     ammo="Pemphredo Tathlum",
-    head="Ignominy Burgonet +2",
+    head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
     hands="Fallen's finger gauntlets +1",
     legs="Eschite cuisses",
@@ -181,7 +181,7 @@ sets.Midcast['Dark Magic'] = {
 -- Absorb Set --
 sets.Midcast.Absorb = {
     ammo="Pemphredo Tathlum",
-    head="Ignominy Burgonet +2",
+    head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
     legs="Eschite cuisses",
     feet="Ratri Sollerets",
@@ -243,7 +243,7 @@ sets.Midcast.Stun.Duration = set_combine(
 
 -- Endark Set --
 sets.Midcast['Endark II'] = {
-    head="Ignominy Burgonet +2",
+    head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
     -- hands="Fallen's finger gauntlets +1",
     legs="Eschite cuisses",
@@ -331,8 +331,7 @@ sets.Midcast.Aspir = set_combine(
 )
 
 sets.MAXDrain = {
-    -- main="Misanthropy",
-    main="Dacnomania",
+    main="Misanthropy",
 }
 
 sets.MDT = set_combine(
@@ -359,8 +358,8 @@ sets.WS = {
     feet="Ratri Sollerets",
     neck="Fotia Gorget",
     waist="Fotia Belt",
-    left_ear="Moonshade earring",
-    right_ear="Telos earring",
+	left_ear="Telos earring",
+    right_ear="Moonshade earring",
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
     back=Ankou.WSDSTR,
@@ -385,7 +384,7 @@ sets.WS['Resolution'] = {
 
 sets.WS['Resolution'].MidACC = set_combine(
     sets.WS['Resolution'],{
-        hands="Ignominy Gauntlets +2",
+        hands="Ignominy Gauntlets +3",
         back=Ankou.DA
     }
 )
@@ -418,9 +417,9 @@ sets.WS['Torcleaver'] = {
 sets.WS['Torcleaver'].MidACC = set_combine(
     sets.WS['Torcleaver'],{
         ammo="Knobkierrie",
-        head="Ignominy Burgonet +2",
+        head="Ignominy Burgonet +3",
         --hands=OdysHands.WSDVITACC,
-        right_ear="Telos Earring",
+        left_ear="Telos Earring",
     }
 )
     
@@ -453,8 +452,9 @@ sets.WS['Scourge'].MidACC = set_combine(
     sets.WS['Scourge'],{
         --hands=OdysHands.WSDVITACC,
         --legs=OdysLegs.WSD,
-        left_ear="Cessance earring",
-        right_ear="Telos Earring",
+		left_ear="Telos Earring",
+        right_ear="Cessance earring",
+
     }
 )
     
@@ -473,8 +473,8 @@ sets.WS['Shockwave'] = {
     feet="Ignominy Sollerets +3",
     neck="Erra Pendant",
     waist="Eschan Stone",
-    left_ear="Hermetic Earring",
-    right_ear="Telos Earring",
+    left_ear="Telos Earring",
+	right_ear="Hermetic Earring",
     left_ring="Regal Ring",
     right_ring="Stikini Ring",
     back=Ankou.INTDA,
@@ -501,7 +501,7 @@ sets.WS['Catastrophe'] = {
     
 sets.WS['Catastrophe'].MidACC = set_combine(
     sets.WS['Catastrophe'],{
-        right_ear="Telos Earring",
+        left_ear="Telos Earring",
     }
 )
     
@@ -544,9 +544,9 @@ sets.WS['Catastrophe'].HighACC.PDT = set_combine(
 --Stat Modifier:	73~85% INT fTP:	0.75	1.25	2.0
 sets.WS['Entropy'] = {
     ammo="Pemphredo Tathlum",
-    head="Ignominy Burgonet +2",
+    head="Ignominy Burgonet +3",
     --body=ValoBody.DA,
-    hands="Ignominy Gauntlets +2",
+    hands="Ignominy Gauntlets +3",
     legs="Ignominy Flanchard +3",
     --feet=ValoFeet.INT,
     neck="Fotia Gorget",
@@ -560,7 +560,7 @@ sets.WS['Entropy'] = {
     
 sets.WS['Entropy'].MidACC = set_combine(
     sets.WS['Entropy'],{
-        right_ear="Telos earring",
+        left_ear="Telos earring",
     }
 )
     
@@ -593,14 +593,14 @@ sets.WS['Cross Reaper'] = {
 sets.WS['Cross Reaper'].MidACC = set_combine(
     sets.WS['Cross Reaper'],{
         legs="Ignominy Flanchard +3",
-        hands="Ignominy Gauntlets +2",
+        hands="Ignominy Gauntlets +3",
     }
 )
     
 sets.WS['Cross Reaper'].HighACC = set_combine(
     sets.WS['Cross Reaper'].MidACC,{
-        head="Ignominy Burgonet +2",
-        right_ear="Telos earring",
+        head="Ignominy Burgonet +3",
+        left_ear="Telos earring",
     }
 )							
 
@@ -625,15 +625,15 @@ sets.WS['Insurgency'] = {
     
 sets.WS['Insurgency'].MidACC = set_combine(
     sets.WS['Insurgency'],{
-        hands="Ignominy Gauntlets +2",
+        hands="Ignominy Gauntlets +3",
         feet="Ratri Sollerets",
     }
 )
     
 sets.WS['Insurgency'].HighACC = set_combine(
     sets.WS['Insurgency'].MidACC,{
-        head="Ignominy Burgonet +2",
-        right_ear="Telos earring",
+        head="Ignominy Burgonet +3",
+        left_ear="Telos earring",
     }
 )
 
@@ -658,7 +658,7 @@ sets.WS['Quietus'] = {
 
 sets.WS['Quietus'].MidACC = set_combine(
     sets.WS['Quietus'], {
-        right_ear="Telos Earring",
+        left_ear="Telos Earring",
     }
 )
     
