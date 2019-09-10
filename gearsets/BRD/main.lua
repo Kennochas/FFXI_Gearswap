@@ -88,7 +88,7 @@ sets.precast.FC.BardSong = {
     back=Intarabus.FC,
     waist="Witful Belt",
     legs="Ayanmo Cosciales +2",
-    feet="Bihu Slippers"
+    feet="Bihu Slippers +1"
 }
 
 sets.precast.FC['Honor March'] = {
@@ -106,7 +106,7 @@ sets.precast.FC['Honor March'] = {
     back=Intarabus.FC,
     waist="Witful Belt",
     legs="Ayanmo Cosciales +2",
-    feet="Bihu Slippers"
+    feet="Bihu Slippers +1"
 }
 
 -- set_combine(sets.precast.FC.BardSong, {range="Marsyas",})
@@ -122,9 +122,9 @@ sets.precast.FC.Daurdabla = set_combine(
 
 -- Precast sets to enhance JAs
 
-sets.precast.JA['Nightingale'] = {feet={ name="Bihu Slippers"}}
+sets.precast.JA['Nightingale'] = {feet={ name="Bihu Slippers +1"}}
 sets.precast.JA['Troubadour'] = {body={ name="Bihu Justaucorps +1"}}
-sets.precast.JA['Soul Voice'] = {legs={ name="Bihu Cannions"}}
+sets.precast.JA['Soul Voice'] = {legs={ name="Bihu Cannions +1"}}
 
 -- Waltz set (chr and vit)
 -- sets.precast.Waltz = {range=Linos.FC,
@@ -577,7 +577,7 @@ sets.midcast['Foe Requiem'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -596,12 +596,12 @@ sets.midcast['Foe Lullaby'] = {
     main=Kali.D,
     sub="Ammurapi Shield",
     range="Gjallarhorn",
-    head="Brioso Roundlet +1",
+    head="Aya. Zucchetto +1",
     neck="Moonbow Whistle",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
-    body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    body="Ayanmo Corazza +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -619,7 +619,7 @@ sets.midcast['Horde Lullaby'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1", 
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -638,7 +638,7 @@ sets.midcast['Battlefield Elegy'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -659,7 +659,7 @@ sets.midcast['Fire Threnody'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -693,7 +693,7 @@ sets.midcast["Maiden's Virelai"] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -711,7 +711,7 @@ sets.midcast['Magic Finale'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -729,7 +729,7 @@ sets.midcast['Pining Nocturne'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -773,7 +773,7 @@ sets.midcast.Stoneskin = {
     ear1="Earthcry Earring",
     ear2="Gifted Earring",
     body="Inyanga Jubbah +2",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back="Pahtli Cape",
@@ -797,7 +797,7 @@ sets.midcast['Enhancing Magic'] = {
     back=Intarabus.FC,
     waist="Luminary Sash",
     legs="Ayanmo Cosciales +2",
-    feet="Bihu Slippers"
+    feet="Bihu Slippers +1"
 }
     
 sets.midcast.Cursna = {
@@ -809,13 +809,13 @@ sets.midcast.Cursna = {
     ear1="Etiolation Earring",
     ear2="Gifted Earring",
     body="Inyanga Jubbah +2",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
     waist="Luminary Sash",
     legs="Chironic Hose",
-    feet="Bihu Slippers"
+    feet="Bihu Slippers +1"
 }
 
 sets.midcast['Enfeebling Magic'] = {
@@ -827,7 +827,7 @@ sets.midcast['Enfeebling Magic'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Just. +1",
-    hands="Brioso Cuffs +1",
+    hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,

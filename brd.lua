@@ -28,7 +28,6 @@ function get_sets()
     include('Mote-Globals.lua')
 end
 
-
 -- Setup vars that are user-independent.  state.Buff vars initialized here will automatically be tracked.
 function job_setup()
     state.ExtraSongsMode = M{['description']='Extra Songs', 'None', 'Dummy', 'FullLength'}
@@ -45,6 +44,8 @@ end
 
 -- Setup vars that are user-dependent.  Can override this function in a sidecar file.
 function user_setup()
+    areas.AdoulinCity = S{'Eastern Adoulin','Western Adoulin','Mog Garden','Celennia Memorial Library'}
+
     state.OffenseMode:options('None', 'Normal')
     state.CastingMode:options('Normal')
     state.IdleMode:options('Normal', 'PDT', 'CP')
@@ -58,7 +59,7 @@ function user_setup()
     info.ExtraSongs = 1
     
     -- Set this to false if you don't want to use custom timers.
-    state.UseCustomTimers = M(true, 'Use Custom Timers')
+    state.UseCustomTimers = M(false, 'Use Custom Timers')
     
     -- Additional local binds
     send_command('bind ^` gs c cycle ExtraSongsMode')
@@ -66,13 +67,11 @@ function user_setup()
     select_default_macro_book()
 end
 
-
 -- Called when this job file is unloaded (eg: job change)
 function user_unload()
     send_command('unbind ^`')
     send_command('unbind !`')
 end
-
 
 -- Define sets and vars used by this job file.
 function init_gear_sets()
@@ -164,10 +163,13 @@ function customize_idle_set(idleSet)
     if player.mpp < 51 then
         idleSet = set_combine(idleSet, sets.latent_refresh)
     end
-    
+
+    if areas.AdoulinCity:contains(world.area) then
+        idleSet = set_combine(idleSet, {body="Councilor's Garb"})
+    end
+
     return idleSet
 end
-
 
 -- Function to display the current relevant user state when doing an update.
 function display_current_job_state(eventArgs)
@@ -178,6 +180,7 @@ end
 -------------------------------------------------------------------------------------------------------------------
 -- Utility functions specific to this job.
 -------------------------------------------------------------------------------------------------------------------
+
 
 -- Determine the custom class to use for the given song.
 function get_song_class(spell)
@@ -345,3 +348,7 @@ end
 
 windower.raw_register_event('zone change',reset_timers)
 windower.raw_register_event('logout',reset_timers)
+
+windower.register_event('zone change', function()
+    status_change(player.status)
+end)
