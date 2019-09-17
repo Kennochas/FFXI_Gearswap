@@ -22,7 +22,7 @@
 -- Initialization function for this job file.
 function get_sets()
     mote_include_version = 2
-    
+
     -- Load and initialize the include file.
     include('Mote-Include.lua')
     include('Mote-Globals.lua')
@@ -33,6 +33,8 @@ function job_setup()
     state.ExtraSongsMode = M{['description']='Extra Songs', 'None', 'Dummy', 'FullLength'}
 
     state.Buff['Pianissimo'] = buffactive['pianissimo'] or false
+
+    send_command('bind f10 gs c cycle idlemode')
 
     -- For tracking current recast timers via the Timers plugin.
     custom_timers = {}
@@ -46,11 +48,11 @@ end
 function user_setup()
     areas.AdoulinCity = S{'Eastern Adoulin','Western Adoulin','Mog Garden','Celennia Memorial Library'}
 
-    state.OffenseMode:options('None', 'Normal')
-    state.CastingMode:options('Normal')
+    state.OffenseMode:options('Normal','Acc')
+    state.CastingMode:options('Normal','Resistant','AoE')
     state.IdleMode:options('Normal', 'PDT', 'CP')
 
-    brd_daggers = S{'Carnwenhan'}
+    brd_daggers = S{'Tauret'}
     pick_tp_weapon()
     
     -- Adjust this if using the Terpander (new +song instrument)
@@ -99,6 +101,11 @@ function job_precast(spell, action, spellMap, eventArgs)
             end
         end
     end
+    if spell.action_type == 'Magic' then
+		if not sets.precast.FC[spell.english] and (spell.type == 'BardSong' and spell.targets.Enemy) then
+			classes.CustomClass = 'SongDebuff'
+		end
+	end
 end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
