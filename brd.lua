@@ -52,7 +52,7 @@ function user_setup()
     state.CastingMode:options('Normal','Resistant','AoE')
     state.IdleMode:options('Normal', 'PDT', 'CP')
 
-    brd_daggers = S{'Tauret'}
+    brd_daggers = S{'Tauret', 'Kali'}
     pick_tp_weapon()
     
     -- Adjust this if using the Terpander (new +song instrument)
@@ -101,11 +101,11 @@ function job_precast(spell, action, spellMap, eventArgs)
             end
         end
     end
-    if spell.action_type == 'Magic' then
-		if not sets.precast.FC[spell.english] and (spell.type == 'BardSong' and spell.targets.Enemy) then
-			classes.CustomClass = 'SongDebuff'
-		end
-	end
+    --if spell.action_type == 'Magic' then
+	--	if not sets.precast.FC[spell.english] and (spell.type == 'BardSong' and spell.targets.Enemy) then
+	--		classes.CustomClass = 'SongDebuff'
+	--	end
+	--end
 end
 
 -- Set eventArgs.handled to true if we don't want any automatic gear equipping to be done.
@@ -194,9 +194,17 @@ function get_song_class(spell)
     -- Can't use spell.targets:contains() because this is being pulled from resources
     if set.contains(spell.targets, 'Enemy') then
         if state.CastingMode.value == 'Resistant' then
-            return 'ResistantSongDebuff'
+            if spell.english:contains('Lullaby') then
+                return 'ResistantLullaby'
+            else
+                return 'ResistantSongDebuff'
+            end
         else
-            return 'SongDebuff'
+            if spell.english:contains('Lullaby') then
+                return 'Lullaby'
+            else
+                return 'SongDebuff'
+            end
         end
     elseif state.ExtraSongsMode.value == 'Dummy' then
         return 'DaurdablaDummy'
@@ -326,8 +334,8 @@ end
 function pick_tp_weapon()
     if brd_daggers:contains(player.equipment.main) then
         state.CombatWeapon:set('Dagger')
-        
-        if S{'NIN','DNC'}:contains(player.sub_job) and brd_daggers:contains(player.equipment.sub) then
+       
+        if S{'NIN','DNC'}:contains(player.sub_job) then
             state.CombatForm:set('DW')
         else
             state.CombatForm:reset()

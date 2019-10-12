@@ -144,14 +144,17 @@ sets.midcast.Mazurka =  {range="Marsyas"}
 
 
 -- Lullaby Customizations
-sets.midcast.Lullaby = {range="Marsyas"}
-sets.midcast.Lullaby.Resistant = {range="Blurred Harp +1"}
-sets.midcast['Horde Lullaby'] = {range="Marsyas"}
-sets.midcast['Horde Lullaby'].Resistant = {range="Blurred Harp +1"}
-sets.midcast['Horde Lullaby'].AoE = {range="Blurred Harp +1"}
-sets.midcast['Horde Lullaby II'] = {range="Marsyas"}
-sets.midcast['Horde Lullaby II'].Resistant = {range="Blurred Harp +1"}
-sets.midcast['Horde Lullaby II'].AoE = {range="Blurred Harp +1"}
+-- sets.midcast.Lullaby = {range="Marsyas"}
+-- sets.midcast.Lullaby.Resistant = {range="Blurred Harp +1"}
+
+sets.midcast['Horde Lullaby'] = {range="Terpander"}
+sets.midcast['Horde Lullaby II'] = sets.midcast['Horde Lullaby']
+
+--sets.midcast['Horde Lullaby'].Resistant = {range="Blurred Harp +1"}
+--sets.midcast['Horde Lullaby'].AoE = {range="Blurred Harp +1"}
+--sets.midcast['Horde Lullaby II'] = {range="Marsyas"}
+--sets.midcast['Horde Lullaby II'].Resistant = {range="Blurred Harp +1"}
+--sets.midcast['Horde Lullaby II'].AoE = {range="Blurred Harp +1"}
 
 sets.midcast.SongEffect = {
     main=Kali.D,
@@ -179,27 +182,25 @@ sets.midcast.SongDebuff = {
     neck="Moonbow Whistle +1",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
-    body="Brioso Just. +1",
+    body="Brioso Justau. +2",
     hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
     waist="Luminary Sash",
-    legs="Inyanga Shalwar +2",
+    legs="Brioso Cannions +2",
     feet="Brioso Slippers +2"
 }
 
-
-
-sets.midcast['Foe Lullaby'] = {
+sets.midcast.Lullaby = {
     main=Kali.D,
-    sub="Ammurapi Shield",
+    sub="Genmei Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
     neck="Moonbow Whistle +1",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
-    body="Ayanmo Corazza +1",
+    body="Fili Hongreline +1",
     hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
@@ -208,25 +209,6 @@ sets.midcast['Foe Lullaby'] = {
     legs="Inyanga Shalwar +2",
     feet="Brioso Slippers +2"
 }
-sets.midcast['Foe Lullaby II'] = sets.midcast['Foe Lullaby']
-sets.midcast['Horde Lullaby'] = {
-    main=Kali.D,
-    sub="Ammurapi Shield",
-    range="Gjallarhorn",
-    head="Brioso Roundlet +2",
-    neck="Moonbow Whistle +1",
-    ear1="Lempo Earring",
-    ear2="Hermetic Earring",
-    body="Brioso Just. +1", 
-    hands="Brioso Cuffs +2",
-    ring1="Stikini Ring",
-    ring2="Stikini Ring",
-    back=Intarabus.FC,
-    waist="Luminary Sash",
-    legs="Inyanga Shalwar +2",
-    feet="Brioso Slippers +2"
-}
-sets.midcast['Horde Lullaby II'] = sets.midcast['Horde Lullaby']
 
 -- Other general spells and classes.
 sets.midcast.Cure = {
@@ -311,7 +293,7 @@ sets.midcast['Enfeebling Magic'] = {
     neck="Moonbow Whistle +1",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
-    body="Brioso Just. +1",
+    body="Brioso Justau. +2",
     hands="Brioso Cuffs +2",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
@@ -326,7 +308,7 @@ sets.idle = {
     main=Kali.C,
     sub="Genmei Shield",
     range="Terpander",
-    head="Inyanga Tiara +1",
+    head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
     ear2="Genmei Earring",
@@ -336,7 +318,7 @@ sets.idle = {
     ring2="Inyanga Ring",
     back=Intarabus.Idle,
     waist="Flume Belt",
-    legs="Assiduity Pants +1",
+    legs="Brioso Cannions +2",
     feet="Fili Cothurnes +1"
 }
 
@@ -360,13 +342,14 @@ sets.idle.PDT = {
     legs="Ayanmo Cosciales +2",
     feet="Fili Cothurnes +1"
 }
-sets.idle.CP = {
+
+sets.idle.CP = {  
     main=Kali.C,
     sub="Genmei Shield",
     range="Terpander",
-    head="Inyanga Tiara +1",
+    head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
-    ear1="Infused Earring",
+    ear1="Etiolation Earring",
     ear2="Genmei Earring",
     body="Inyanga Jubbah +2",
     hands="Inyan. Dastanas +2",
@@ -374,7 +357,7 @@ sets.idle.CP = {
     ring2="Inyanga Ring",
     back="Mecisto. Mantle",
     waist="Flume Belt",
-    legs="Assiduity Pants +1",
+    legs="Brioso Cannions +2",
     feet="Fili Cothurnes +1"
 }
 
@@ -395,7 +378,6 @@ sets.latent_refresh = {waist="Fucho-no-obi"}
 
 -- Basic set for if no TP weapon is defined.
 sets.engaged = {
-    main="Tauret",
     range=Linos.MA,
     head="Ayanmo Zucchetto +1",
     neck="Sanctity Necklace",
@@ -407,15 +389,46 @@ sets.engaged = {
     ring2="Hetairoi Ring",
     back="Xucau Mantle",
     waist="Grunfeld Rope",
-    legs="Ayanmo Cosciales +2",
+    legs="Jokushu Haidate",
     feet="Ayanmo Gambieras +1"
 }
 
 -- -- Sets with weapons defined.
--- sets.engaged.Dagger = {}
+sets.engaged.Dagger = {
+    main="Tauret",
+    range=Linos.MA,
+    head="Ayanmo Zucchetto +1",
+    neck="Sanctity Necklace",
+    ear1="Cessance Earring",
+    ear2="Telos Earring",
+    body="Ayanmo Corazza +1",
+    hands="Ayanmo Manopolas +1",
+    ring1="Petrov Ring",
+    ring2="Hetairoi Ring",
+    back="Atheling Mantle",
+    waist="Grunfeld Rope",
+    legs="Jokushu Haidate",
+    feet="Ayanmo Gambieras +1"
+}
 
 -- -- Set if dual-wielding
--- sets.engaged.DW = {}
+sets.engaged.DW = {
+    main="Tauret",
+    sub="Taming Sari",
+    range=Linos.MA,
+    head="Ayanmo Zucchetto +1",
+    neck="Lissome Necklace",
+    ear1="Cessance Earring",
+    ear2="Telos Earring",
+    body="Ayanmo Corazza +1",
+    hands="Ayanmo Manopolas +1",
+    ring1="Petrov Ring",
+    ring2="Hetairoi Ring",
+    back="Atheling Mantle",
+    waist="Reiki Yotai",
+    legs="Jokushu Haidate",
+    feet="Ayanmo Gambieras +1"
+}
 
 -- Weaponskill sets
 -- Default set for any weaponskill that isn't any more specifically defined
