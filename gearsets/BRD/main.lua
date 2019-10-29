@@ -38,7 +38,7 @@ sets.precast.FC = {
     sub="Genmei Shield", 
     range=Linos.FC,
     head=Vanya.Head.D, 
-    neck="Voltsurge Torque",
+    neck="Orunmila's Torque",
     ear1="Etiolation Earring",
     ear2="Loquacious Earring",
     body="Inyanga Jubbah +2",
@@ -78,7 +78,7 @@ sets.precast.FC.BardSong = {
     sub="Genmei Shield",
     range=Linos.FC,
     head="Fili Calot +1",
-    neck="Voltsurge Torque",
+    neck="Orunmila's Torque",
     ear1="Aoidos' Earring",
     ear2="Loquacious Earring",
     body="Inyanga Jubbah +2",
@@ -96,7 +96,7 @@ sets.precast.FC['Honor March'] = {
     sub="Genmei Shield",
     range="Marsyas",
     head="Fili Calot +1",
-    neck="Voltsurge Torque",
+    neck="Orunmila's Torque",
     ear1="Aoidos' Earring",
     ear2="Loquacious Earring",
     body="Inyanga Jubbah +2",
@@ -140,14 +140,14 @@ sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 sets.midcast.Minne  =   {}
 sets.midcast.Carol  =   {}
 sets.midcast.Paeon =    {}
-sets.midcast.Mazurka =  {range="Marsyas"}
+sets.midcast.Mazurka =  { range="Marsyas "}
 
 
 -- Lullaby Customizations
 -- sets.midcast.Lullaby = {range="Marsyas"}
 -- sets.midcast.Lullaby.Resistant = {range="Blurred Harp +1"}
 
-sets.midcast['Horde Lullaby'] = {range="Terpander"}
+sets.midcast['Horde Lullaby'] = { range="Terpander" }
 sets.midcast['Horde Lullaby II'] = sets.midcast['Horde Lullaby']
 
 --sets.midcast['Horde Lullaby'].Resistant = {range="Blurred Harp +1"}
@@ -299,7 +299,7 @@ sets.midcast['Enfeebling Magic'] = {
     ring2="Stikini Ring",
     back=Intarabus.FC,
     waist="Luminary Sash",
-    legs="Brioso Cannions +1",
+    legs="Brioso Cannions +2",
     feet="Brioso Slippers +2"
 }
 
@@ -307,7 +307,7 @@ sets.midcast['Enfeebling Magic'] = {
 sets.idle = {
     main=Kali.C,
     sub="Genmei Shield",
-    range="Terpander",
+    range="Gjallarhorn",
     head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
@@ -328,13 +328,13 @@ sets.idle = {
 sets.idle.PDT = {
     main=Kali.C,
     sub="Genmei Shield",
-    range="Terpander",
-    head="Ayanmo Zucchetto +1",
+    range="Gjallarhorn",
+    head="Ayanmo Zucchetto +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
     ear2="Odnowa Earring +1",
-    body="Ayanmo Corazza +1",
-    hands="Ayanmo Manopolas +1",
+    body="Ayanmo Corazza +2",
+    hands="Ayanmo Manopolas +2",
     ring1="Defending Ring",
     ring2="Vocane Ring",
     back=Intarabus.TP,
@@ -346,7 +346,7 @@ sets.idle.PDT = {
 sets.idle.CP = {  
     main=Kali.C,
     sub="Genmei Shield",
-    range="Terpander",
+    range="Gjallarhorn",
     head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
@@ -379,36 +379,36 @@ sets.latent_refresh = {waist="Fucho-no-obi"}
 -- Basic set for if no TP weapon is defined.
 sets.engaged = {
     range=Linos.MA,
-    head="Ayanmo Zucchetto +1",
+    head="Ayanmo Zucchetto +2",
     neck="Sanctity Necklace",
     ear1="Cessance Earring",
     ear2="Telos Earring",
-    body="Ayanmo Corazza +1",
-    hands="Ayanmo Manopolas +1",
+    body="Ayanmo Corazza +2",
+    hands="Ayanmo Manopolas +2",
     ring1="Petrov Ring",
     ring2="Hetairoi Ring",
     back="Xucau Mantle",
     waist="Grunfeld Rope",
     legs="Jokushu Haidate",
-    feet="Ayanmo Gambieras +1"
+    feet="Ayanmo Gambieras +2"
 }
 
 -- -- Sets with weapons defined.
 sets.engaged.Dagger = {
     main="Tauret",
     range=Linos.MA,
-    head="Ayanmo Zucchetto +1",
+    head="Ayanmo Zucchetto +2",
     neck="Sanctity Necklace",
     ear1="Cessance Earring",
     ear2="Telos Earring",
-    body="Ayanmo Corazza +1",
-    hands="Ayanmo Manopolas +1",
+    body="Ayanmo Corazza +2",
+    hands="Ayanmo Manopolas +2",
     ring1="Petrov Ring",
     ring2="Hetairoi Ring",
     back="Atheling Mantle",
     waist="Grunfeld Rope",
     legs="Jokushu Haidate",
-    feet="Ayanmo Gambieras +1"
+    feet="Ayanmo Gambieras +2"
 }
 
 -- -- Set if dual-wielding
@@ -416,36 +416,36 @@ sets.engaged.DW = {
     main="Tauret",
     sub="Taming Sari",
     range=Linos.MA,
-    head="Ayanmo Zucchetto +1",
+    head="Ayanmo Zucchetto +2",
     neck="Lissome Necklace",
     ear1="Cessance Earring",
     ear2="Telos Earring",
-    body="Ayanmo Corazza +1",
-    hands="Ayanmo Manopolas +1",
+    body="Ayanmo Corazza +2",
+    hands="Ayanmo Manopolas +2",
     ring1="Petrov Ring",
     ring2="Hetairoi Ring",
     back="Atheling Mantle",
     waist="Reiki Yotai",
     legs="Jokushu Haidate",
-    feet="Ayanmo Gambieras +1"
+    feet="Ayanmo Gambieras +2"
 }
 
 -- Weaponskill sets
 -- Default set for any weaponskill that isn't any more specifically defined
 sets.precast.WS = {
     range=Linos.WSD,
-    head="Aya. Zucchetto +1",
+    head="Ayanmo Zucchetto +2",
     neck="Fotia Gorget",
     ear1="Moonshade Earring",
     ear2="Ishvara Earring",
-    body="Ayanmo Corazza +1",
-    hands="Ayanmo Manopolas +1",
+    body="Ayanmo Corazza +2",
+    hands="Ayanmo Manopolas +2",
     ring1="Apate Ring",
     ring2="Hetairoi Ring",
     back=Intarabus.WSD,
     waist="Fotia Belt",
-    legs="Aya. Cosciales +2",
-    feet="Aya. Gambieras +1",
+    legs="Ayanmo Cosciales +2",
+    feet="Ayanmo Gambieras +2",
 }
 
 
@@ -464,32 +464,32 @@ sets.precast.WS = {
 
 -- sets.precast.WS['Requiescat'] = {
 --     range=Linos.WSD,
---     head="Ayanmo Zucchetto +1",
+--     head="Ayanmo Zucchetto +2",
 --     neck="Fotia Gorget",
 --     ear1="Moonshade Earring",
 --     ear2="Brutal Earring",
---     body="Ayanmo Corazza +1",
---     hands="Ayanmo Manopolas +1",
+--     body="Ayanmo Corazza +2",
+--     hands="Ayanmo Manopolas +2",
 --     ring1="Apate Ring",
 --     ring2="Thundersoul Ring",
 --     back="Atheling Mantle",
 --     waist="Fotia Belt",
 --     legs="Querkening Brais",
---     feet="Ayanmo Gambieras +1"
+--     feet="Ayanmo Gambieras +2"
 -- }
 
 --sets.precast.WS['Savage Blade'] = {
 --    range=Linos.WSD,
---    head="Ayanmo Zucchetto +1",
+--    head="Ayanmo Zucchetto +2",
 --    neck="Fotia Gorget",
 --    ear1="Moonshade Earring",
 --    ear2="Brutal Earring",
 --    body="Bihu Justaucorps +1",
---    hands="Ayanmo Manopolas +1",
+--    hands="Ayanmo Manopolas +2",
 --    ring1="Apate Ring",
 --    ring2="Thundersoul Ring",
 --    back="Atheling Mantle",
 --    waist="Fotia Belt",
 --    legs="Querkening Brais",
---    feet="Ayanmo Gambieras +1"
+--    feet="Ayanmo Gambieras +2"
 --}
