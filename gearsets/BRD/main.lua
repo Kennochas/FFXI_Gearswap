@@ -10,6 +10,7 @@ Linos = {}
 Linos.FC = {name="Linos", augments={'All Songs+2','"Fast Cast"+4','Singing skill +10',}} -- Fast Cast
 Linos.MA = {name="Linos", augments={'Accuracy+13 Attack+13','"Dbl.Atk."+2','DEX+7',}} -- Multi-Attack TP
 Linos.WSD = {name="Linos", augments={'Accuracy+12 Attack+12','Weapon skill damage +2%',}} -- WS DMG
+Linos.PDT = { name="Linos", augments={'Phys. dmg. taken -3%',}} -- PDT
 
 Kali = {}
 
@@ -29,6 +30,15 @@ Vanya.Head.D = {name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%'
 Vanya.Hands.B = {name="Vanya Cuffs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}}
 
 Vanya.Feet.B = {name="Vanya Clogs", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}}
+
+Telchine = {}
+Telchine.Head = {}
+Telchine.Body = {}
+Telchine.Hands = {}
+Telchine.Legs = {}
+Telchine.Feet = {}
+
+Telchine.Feet.BardSong = {name="Telchine Pigaches", augments={'Song spellcasting time -5%',}}
 
 -- Precast Sets
 
@@ -88,7 +98,7 @@ sets.precast.FC.BardSong = {
     back=Intarabus.FC,
     waist="Witful Belt",
     legs="Ayanmo Cosciales +2",
-    feet="Bihu Slippers +1"
+    feet=Telchine.Feet.BardSong
 }
 
 sets.precast.FC['Honor March'] = {
@@ -106,7 +116,7 @@ sets.precast.FC['Honor March'] = {
     back=Intarabus.FC,
     waist="Witful Belt",
     legs="Ayanmo Cosciales +2",
-    feet="Bihu Slippers +1"
+    feet=Telchine.Feet.BardSong
 }
 
 -- set_combine(sets.precast.FC.BardSong, {range="Marsyas",})
@@ -140,14 +150,14 @@ sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 sets.midcast.Minne  =   {}
 sets.midcast.Carol  =   {}
 sets.midcast.Paeon =    {}
-sets.midcast.Mazurka =  { range="Marsyas "}
+sets.midcast.Mazurka =  { range="Marsyas" }
 
 
 -- Lullaby Customizations
 -- sets.midcast.Lullaby = {range="Marsyas"}
 -- sets.midcast.Lullaby.Resistant = {range="Blurred Harp +1"}
 
-sets.midcast['Horde Lullaby'] = { range="Terpander" }
+sets.midcast['Horde Lullaby'] = { range="Daurdabla" }
 sets.midcast['Horde Lullaby II'] = sets.midcast['Horde Lullaby']
 
 --sets.midcast['Horde Lullaby'].Resistant = {range="Blurred Harp +1"}
@@ -165,7 +175,7 @@ sets.midcast.SongEffect = {
     ear1="Etiolation Earring",
     ear2="Genmei Earring",
     body="Fili Hongreline +1",
-    hands="Inyan. Dastanas +2",
+    hands="Fili Manchettes +1",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -212,8 +222,8 @@ sets.midcast.Lullaby = {
 
 -- Other general spells and classes.
 sets.midcast.Cure = {
-    main="Serenity",
-    sub="Clerisy Strap",
+    main="Daybreak",
+    sub="Genmei Shield",
     range=Linos.FC,
     head=Vanya.Head.A,
     neck="Incanter's Torque",
@@ -305,9 +315,9 @@ sets.midcast['Enfeebling Magic'] = {
 
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 sets.idle = {
-    main=Kali.C,
+    main="Daybreak",
     sub="Genmei Shield",
-    range="Gjallarhorn",
+    range=Linos.PDT,
     head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
@@ -322,13 +332,10 @@ sets.idle = {
     feet="Fili Cothurnes +1"
 }
 
--- "Aptitude Mantle"
--- Intarabus.TP
-
 sets.idle.PDT = {
-    main=Kali.C,
+    main="Daybreak",
     sub="Genmei Shield",
-    range="Gjallarhorn",
+    range=Linos.PDT,
     head="Ayanmo Zucchetto +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
@@ -344,9 +351,9 @@ sets.idle.PDT = {
 }
 
 sets.idle.CP = {  
-    main=Kali.C,
+    main="Daybreak",
     sub="Genmei Shield",
-    range="Gjallarhorn",
+    range=Linos.PDT,
     head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
