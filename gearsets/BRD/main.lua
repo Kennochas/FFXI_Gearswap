@@ -181,7 +181,7 @@ sets.midcast.SongEffect = {
     back=Intarabus.FC,
     waist="Flume Belt",
     legs="Inyanga Shalwar +2",
-    feet="Brioso Slippers +2"
+    feet="Brioso Slippers +3"
 }
 
 sets.midcast.SongDebuff = {
@@ -199,7 +199,7 @@ sets.midcast.SongDebuff = {
     back=Intarabus.FC,
     waist="Luminary Sash",
     legs="Brioso Cannions +2",
-    feet="Brioso Slippers +2"
+    feet="Brioso Slippers +3"
 }
 
 sets.midcast.Lullaby = {
@@ -217,7 +217,7 @@ sets.midcast.Lullaby = {
     back=Intarabus.FC,
     waist="Luminary Sash",
     legs="Inyanga Shalwar +2",
-    feet="Brioso Slippers +2"
+    feet="Brioso Slippers +3"
 }
 
 -- Other general spells and classes.
@@ -256,7 +256,7 @@ sets.midcast.Stoneskin = {
     back="Pahtli Cape",
     waist="Siegel Sash",
     legs="Inyanga Shalwar +2",
-    feet="Brioso Slippers +2"
+    feet="Brioso Slippers +3"
 }
     
 sets.midcast['Enhancing Magic'] = {
@@ -310,7 +310,7 @@ sets.midcast['Enfeebling Magic'] = {
     back=Intarabus.FC,
     waist="Luminary Sash",
     legs="Brioso Cannions +2",
-    feet="Brioso Slippers +2"
+    feet="Brioso Slippers +3"
 }
 
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
