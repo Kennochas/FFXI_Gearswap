@@ -100,10 +100,19 @@ end
 -- Custom spell mapping. Detects weather/effects for specific cure equipment.
 function job_get_spell_map(spell, default_spell_map)
     if spell.action_type == 'Magic' then
+        -- AOE Cures
+        if default_spell_map == 'Curaga' then
+            if player.status == 'Engaged' then
+                return "CureMelee"
+            elseif (state.Buff['Aurorastorm'] or world.weather_element == 'Light' or world.day_element == 'Light') then
+                return "CuragaAura"
+            else
+                return "CuragaNormal"
+            end
+        end
+        -- Single Target Cures
         if (default_spell_map == 'Cure' or default_spell_map == 'Curaga') and player.status == 'Engaged' then
             return "CureMelee"
-		elseif default_spell_map == 'Cure' and aoe_cure:contains(spell.english) and (state.Buff['Aurorastorm'] or world.weather_element == 'Light' or world.day_element == 'Light') then
-            return "CuragaAura"
         elseif default_spell_map == 'Cure' and state.Buff['Afflatus Solace'] and (state.Buff['Aurorastorm'] or world.weather_element == 'Light' or world.day_element == 'Light') then
             return "CureAuraSolace"
         elseif default_spell_map == 'Cure' and not state.Buff['Afflatus Solace'] and (state.Buff['Aurorastorm'] or world.weather_element == 'Light' or world.day_element == 'Light') then
@@ -111,7 +120,7 @@ function job_get_spell_map(spell, default_spell_map)
 		elseif default_spell_map == 'Cure' and state.Buff['Afflatus Solace'] then
             return "CureSolace"
 		elseif default_spell_map == 'Cure' and not state.Buff['Afflatus Solace'] then
-            return "Cure"
+            return "CureNormal"
         elseif spell.skill == "Enfeebling Magic" then
             if spell.type == "WhiteMagic" then
                 return "MndEnfeebles"

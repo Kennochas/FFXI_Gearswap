@@ -111,7 +111,7 @@ sets.TP.Anguta.SAM = {
     left_ear="Brutal Earring",
     right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
-    right_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
     back=Ankou.ACC,
 }
 sets.TP.Anguta.SAM.MidACC = set_combine(

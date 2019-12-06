@@ -283,7 +283,7 @@ sets.TP.Caladbolg.SAM = {
     left_ear="Brutal Earring",
     right_ear="Cessance Earring",
     left_ring="Hetairoi Ring",
-    right_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
     back=Ankou.ACC,
 } 
     
@@ -315,21 +315,7 @@ sets.TP.Caladbolg.SAM.HighACC = set_combine(
 
 sets.TP.Caladbolg.SAM.AM = set_combine(
     sets.TP.Caladbolg.SAM,{
-    main="Caladbolg",
-    sub="Utu Grip",
-    ammo="Ginsen",
-    head="Flam. Zucchetto +2",
-    body="Valorous Mail",
-    hands="Sulevia's Gauntlets +2",
-    legs="Ignominy Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Abyssal Beads +1",
-    waist="Ioskeha Belt",
-    left_ear="Brutal Earring",
-    right_ear="Cessance Earring",
-    left_ring="Hetairoi Ring",
-    right_ring="Petrov Ring",
-    back=Ankou.ACC,
+        -- Stuff goes here --
     }
 )
     
@@ -355,19 +341,7 @@ sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
 -- Caladbolg(AM3 Up) /SAM TP Sets --
 sets.TP.Caladbolg.SAM.AM3 = set_combine(
     sets.TP.Caladbolg.SAM,{
-        ammo="Ginsen",
-        head="Flam. Zucchetto +2",
-        body="Valorous Mail",
-		hands="Sulevia's Gauntlets +2",
-		legs="Ignominy Flanchard +3",
-		feet="Flam. Gambieras +2",
-        neck="Abyssal Beads +1",
-        waist="Ioskeha belt",
-        left_ear="Telos Earring",
-        right_ear="Brutal earring",
-        left_ring="Hetairoi Ring",
-        right_ring="Petrov Ring",
-        back=Ankou.ACC,
+        -- Stuff goes here --
     }
 )
 sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
@@ -484,19 +458,7 @@ sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste.STP = set_combine(
 --[ACC: 1150 STP: 61]--
 sets.TP.Caladbolg.SAM.AM = set_combine(
     sets.TP.Caladbolg.SAM,{
-        ammo="Ginsen",
-        head="Flam. Zucchetto +2",
-        body="Valorous Mail",
-		hands="Sulevia's Gauntlets +2",
-		legs="Ignominy Flanchard +3",
-		feet="Flam. Gambieras +2",
-        neck="Abyssal Beads +1",
-        waist="Ioskeha belt",
-        left_ear="Telos Earring",
-        right_ear="Brutal earring",
-        left_ring="Hetairoi Ring",
-        right_ring="Petrov Ring",
-        back=Ankou.ACC,
+        -- Stuff goes here --
     }
 )
     
@@ -534,6 +496,23 @@ sets.TP.Caladbolg.SAM.MidACC.AM.HighHaste = set_combine(
     }
 )
 sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste = set_combine(
+    sets.TP.Caladbolg.SAM.HighACC.AM,{
+        ammo="Seething Bomblet +1",
+        waist="Kentarch Belt +1",
+    }
+)
+-- Caladbolg(AM Up: High Haste) TP Sets -- /SAM
+sets.TP.Caladbolg.SAM.AM3.HighHaste = set_combine(
+    sets.TP.Caladbolg.SAM.AM,{
+        waist="Windbuffet Belt +1",
+    }
+)
+sets.TP.Caladbolg.SAM.MidACC.AM3.HighHaste = set_combine(
+    sets.TP.Caladbolg.SAM.MidACC.AM,{
+        waist="Windbuffet Belt +1",
+    }
+)
+sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste = set_combine(
     sets.TP.Caladbolg.SAM.HighACC.AM,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",

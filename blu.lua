@@ -7,17 +7,17 @@ function get_sets()
     send_command('bind f10 gs c toggle TP set')
 
     function file_unload()
-    send_command('unbind ^f9')
-    send_command('unbind ^f10')
-    send_command('unbind ^f12')
+        send_command('unbind ^f9')
+        send_command('unbind ^f10')
+        send_command('unbind ^f12')
 
-    send_command('unbind !f9')
-    send_command('unbind !f10')
-    send_command('unbind !f12')
+        send_command('unbind !f9')
+        send_command('unbind !f10')
+        send_command('unbind !f12')
 
-    send_command('unbind f9')
-    send_command('unbind f10')
-    send_command('unbind f12')
+        send_command('unbind f9')
+        send_command('unbind f10')
+        send_command('unbind f12')
     end	  
             
     sets.JA = {}
@@ -435,13 +435,13 @@ function get_sets()
         main="Tanmogayi",
         sub="Kaja Sword",
         ammo="Ginsen",
-        head="Adhemar Bonnet +1",
-        body="Adhemar Jacket +1",
-        hands="Adhemar Wrist. +1",
-        legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
-        feet="Herculean Boots",
+        head="Aya. Zucchetto +2",
+        body="Ayanmo Corazza +2",
+        hands="Aya. Manopolas +2",
+        legs="Samnuha Tights",
+        feet="Malignance Boots",
         neck="Lissome Necklace",
-        waist="Windbuffet Belt +1",
+        waist="Reiki Yotai",
         left_ear="Telos Earring",
         right_ear="Cessance Earring",
         left_ring="Epona's Ring",

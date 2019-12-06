@@ -133,18 +133,16 @@ sets.PDT = {
 
 -- Fastcast Set --
 sets.Precast.FastCast = {
-    -- ammo="Seeth. Bomblet +1",
     head="Carmine Mask",
+    neck="Orunmila's Torque",
     body=Odyssean.Body.FC,
-    -- hands={ name="Fall. Fin. Gaunt. +1", augments={'Enhances "Diabolic Eye" effect',}},
+    hands="Leyline Gloves",
     legs="Eschite Cuisses",
     feet=Odyssean.Feet.FC,
-    -- neck="Incanter's Torque",
-    -- waist="Ioskeha Belt",
     left_ear="Malignance Earring",
     right_ear="Loquacious Earring",
     left_ring="Kishar Ring",
-    -- right_ring="Evanescence Ring",
+    right_ring="Prolix Ring",
     back=Ankou.FC,
 }
 
@@ -410,7 +408,7 @@ sets.WS['Torcleaver'] = {
     left_ear="Moonshade Earring",
     right_ear="Ishvara Earring",
     left_ring="Regal Ring",
-    right_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
     back=Ankou.WSDVIT
 }
     

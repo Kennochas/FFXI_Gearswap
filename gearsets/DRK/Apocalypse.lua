@@ -204,8 +204,8 @@ sets.TP.Apocalypse.SAM = {
     waist="Ioskeha belt",
     left_ear="Brutal Earring",
     right_ear="Cessance Earring",
-    left_ring="Hetairoi Ring",
-    right_ring="Petrov Ring",
+    left_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
     back=Ankou.ACC,
 } 
     

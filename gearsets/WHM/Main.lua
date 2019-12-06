@@ -316,7 +316,7 @@ sets.midcast.CureAura = {
     feet="Vanya Clogs"
 }
     
-sets.midcast.Cure = {
+sets.midcast.CureNormal = {
     main="Queller Rod",
     sub="Sors Shield",
     ammo="Sapience Orb",
@@ -334,7 +334,7 @@ sets.midcast.Cure = {
     feet="Vanya Clogs"
 }
 
-sets.midcast.Curaga = {
+sets.midcast.CuragaNormal = {
     main="Queller Rod",
     sub="Sors Shield",
     ammo="Sapience Orb",
@@ -624,7 +624,7 @@ sets.idle = {
     ring1="Defending Ring",
     ring2="Renaye Ring",
     back=Alaunus.DT,
-    waist="Gishdubar Sash",
+    waist="Luminary Sash",
     legs="Inyanga Shalwar +2",
     feet="Inyanga Crackows +2"
 }
@@ -642,7 +642,7 @@ sets.idle.PDT = {
     ring1="Defending Ring",
     ring2="Purity Ring",
     back=Alaunus.DT,
-    waist="Gishdubar Sash",
+    waist="Luminary Sash",
     legs="Inyanga Shalwar +2",
     feet="Inyanga Crackows +2"
 } --50% PDT/MDT || +758 (808) MEva || +25% Resist Silence (10% all others)
@@ -655,12 +655,12 @@ sets.idle.Town = {
     neck="Loricate Torque +1",
     ear1="Genmei Earring",
     ear2="Etiolation Earring",
-    body="Volte Doublet",
+    body="Piety Briault +1",
     hands="Inyanga Dastanas +2",
     ring1="Defending Ring",
     ring2="Renaye Ring",
     back=Alaunus.DT,
-    waist="Gishdubar Sash",
+    waist="Luminary Sash",
     legs="Inyanga Shalwar +2",
     feet="Herald's Gaiters"
 }
@@ -673,7 +673,7 @@ sets.idle.Weak = {
     neck="Loricate Torque +1",
     ear1="Genmei Earring",
     ear2="Etiolation Earring",
-    body="Volte Doublet",
+    body="Piety Briault +1",
     hands="Inyanga Dastanas +2",
     ring1="Defending Ring",
     ring2="Vocane Ring",
@@ -686,21 +686,21 @@ sets.idle.Weak = {
 -- Defense sets
 
 sets.defense.PDT = {
-    main="Bolelabunga", 
+    main="Malignance Pole", 
     sub="Genmei Shield",
     ammo="Staunch Tathlum",
-    head="Ayanmo Zucchetto +2",
+    head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
-    ear1="Ethereal Earring",
-    ear2="Loquacious Earring",
+    ear1="Genmei Earring",
+    ear2="Etiolation Earring",
     body="Volte Doublet",
-    hands="Ayanmo Manopolas +2",
+    hands="Inyanga Dastanas +2",
     ring1="Defending Ring",
-    ring2="Warden's Ring",
+    ring2="Purity Ring",
     back=Alaunus.DT,
-    waist="Latria Sash",
+    waist="Luminary Sash",
     legs="Inyanga Shalwar +2",
-    feet="Ayanmo Gambieras +2"
+    feet="Inyanga Crackows +2"
 }
 
 sets.defense.MDT = {

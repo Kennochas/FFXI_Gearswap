@@ -70,6 +70,8 @@ sets.precast.FC.Cure = set_combine(
 
 sets.precast.FC.Curaga = sets.precast.FC.Cure
 
+sets.precast.FC.Dispelga = set_combine({main="Daybreak", sub="Ammurapi Shield"}, sets.precast.FC)
+
 sets.precast.FC.Stoneskin = set_combine(
     sets.precast.FC, {
         head="Umuthi Hat",
@@ -186,14 +188,14 @@ sets.midcast.SongEffect = {
 
 sets.midcast.SongDebuff = {
     main=Kali.D,
-    sub="Genmei Shield",
+    sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
     neck="Moonbow Whistle +1",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Justau. +2",
-    hands="Brioso Cuffs +2",
+    hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -204,14 +206,14 @@ sets.midcast.SongDebuff = {
 
 sets.midcast.Lullaby = {
     main=Kali.D,
-    sub="Genmei Shield",
+    sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +2",
     neck="Moonbow Whistle +1",
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Fili Hongreline +1",
-    hands="Brioso Cuffs +2",
+    hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -250,7 +252,7 @@ sets.midcast.Stoneskin = {
     ear1="Earthcry Earring",
     ear2="Gifted Earring",
     body="Inyanga Jubbah +2",
-    hands="Brioso Cuffs +2",
+    hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back="Pahtli Cape",
@@ -286,7 +288,7 @@ sets.midcast.Cursna = {
     ear1="Etiolation Earring",
     ear2="Gifted Earring",
     body="Inyanga Jubbah +2",
-    hands="Brioso Cuffs +2",
+    hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -304,7 +306,7 @@ sets.midcast['Enfeebling Magic'] = {
     ear1="Lempo Earring",
     ear2="Hermetic Earring",
     body="Brioso Justau. +2",
-    hands="Brioso Cuffs +2",
+    hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
@@ -343,16 +345,16 @@ sets.idle.PDT = {
     body="Ayanmo Corazza +2",
     hands="Ayanmo Manopolas +2",
     ring1="Defending Ring",
-    ring2="Vocane Ring",
+    ring2="Ayanmo Ring",
     back=Intarabus.TP,
     waist="Flume Belt",
     legs="Ayanmo Cosciales +2",
     feet="Fili Cothurnes +1"
 }
 
-sets.idle.CP = {  
-    main="Daybreak",
-    sub="Genmei Shield",
+sets.idle.DPS = {  
+    main="Tauret",
+    sub="Taming Sari",
     range=Linos.PDT,
     head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
@@ -362,7 +364,7 @@ sets.idle.CP = {
     hands="Inyan. Dastanas +2",
     ring1="Defending Ring",
     ring2="Inyanga Ring",
-    back="Mecisto. Mantle",
+    back=Intarabus.Idle,
     waist="Flume Belt",
     legs="Brioso Cannions +2",
     feet="Fili Cothurnes +1"
@@ -385,6 +387,7 @@ sets.latent_refresh = {waist="Fucho-no-obi"}
 
 -- Basic set for if no TP weapon is defined.
 sets.engaged = {
+    main="Tauret",
     range=Linos.MA,
     head="Ayanmo Zucchetto +2",
     neck="Sanctity Necklace",

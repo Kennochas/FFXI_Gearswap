@@ -50,7 +50,7 @@ function user_setup()
 
     state.OffenseMode:options('Normal','Acc')
     state.CastingMode:options('Normal','Resistant','AoE')
-    state.IdleMode:options('Normal', 'PDT', 'CP')
+    state.IdleMode:options('Normal', 'PDT', 'DPS')
 
     brd_daggers = S{'Tauret', 'Kali'}
     pick_tp_weapon()
