@@ -150,7 +150,7 @@ sets.midcast.Minuet =   { body="Fili Hongreline +1" }
 sets.midcast.March  =   { hands="Fili Manchettes +1" }
 sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
 sets.midcast.Minne  =   {}
-sets.midcast.Carol  =   {}
+sets.midcast.Carol  =   { hands="Mousai Gages"}
 sets.midcast.Paeon =    {}
 sets.midcast.Mazurka =  { range="Marsyas" }
 
@@ -178,8 +178,8 @@ sets.midcast.SongEffect = {
     ear2="Genmei Earring",
     body="Fili Hongreline +1",
     hands="Fili Manchettes +1",
-    ring1="Stikini Ring",
-    ring2="Stikini Ring",
+    ring1="Defending Ring",
+    ring2="Gelatinous Ring +1",
     back=Intarabus.FC,
     waist="Flume Belt",
     legs="Inyanga Shalwar +2",
@@ -190,17 +190,17 @@ sets.midcast.SongDebuff = {
     main=Kali.D,
     sub="Ammurapi Shield",
     range="Gjallarhorn",
-    head="Brioso Roundlet +2",
+    head="Brioso Roundlet +3",
     neck="Moonbow Whistle +1",
-    ear1="Lempo Earring",
-    ear2="Hermetic Earring",
+    ear1="Digni. Earring",
+    ear2="Regal Earring",
     body="Brioso Justau. +2",
     hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
     waist="Luminary Sash",
-    legs="Brioso Cannions +2",
+    legs="Brioso Cannions +3",
     feet="Brioso Slippers +3"
 }
 
@@ -208,10 +208,10 @@ sets.midcast.Lullaby = {
     main=Kali.D,
     sub="Ammurapi Shield",
     range="Gjallarhorn",
-    head="Brioso Roundlet +2",
+    head="Brioso Roundlet +3",
     neck="Moonbow Whistle +1",
-    ear1="Lempo Earring",
-    ear2="Hermetic Earring",
+    ear1="Digni. Earring",
+    ear2="Regal Earring",
     body="Fili Hongreline +1",
     hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
@@ -301,23 +301,23 @@ sets.midcast['Enfeebling Magic'] = {
     main=Kali.D,
     sub="Ammurapi Shield",
     range=Linos.FC,
-    head="Brioso Roundlet +2",
+    head="Brioso Roundlet +3",
     neck="Moonbow Whistle +1",
-    ear1="Lempo Earring",
-    ear2="Hermetic Earring",
+    ear1="Digni. Earring",
+    ear2="Regal Earring",
     body="Brioso Justau. +2",
     hands="Brioso Cuffs +3",
     ring1="Stikini Ring",
     ring2="Stikini Ring",
     back=Intarabus.FC,
     waist="Luminary Sash",
-    legs="Brioso Cannions +2",
+    legs="Brioso Cannions +3",
     feet="Brioso Slippers +3"
 }
 
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 sets.idle = {
-    main="Daybreak",
+    main="Sangoma",
     sub="Genmei Shield",
     range=Linos.PDT,
     head="Inyanga Tiara +2",
@@ -330,7 +330,7 @@ sets.idle = {
     ring2="Inyanga Ring",
     back=Intarabus.Idle,
     waist="Flume Belt",
-    legs="Brioso Cannions +2",
+    legs="Brioso Cannions +3",
     feet="Fili Cothurnes +1"
 }
 
@@ -366,7 +366,7 @@ sets.idle.DPS = {
     ring2="Inyanga Ring",
     back=Intarabus.Idle,
     waist="Flume Belt",
-    legs="Brioso Cannions +2",
+    legs="Brioso Cannions +3",
     feet="Fili Cothurnes +1"
 }
 

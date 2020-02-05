@@ -33,7 +33,7 @@ sets.PDT.Apocalypse = set_combine(
 -- Apocalypse(AM Down) TP Sets --
 sets.TP.Apocalypse = {
     main="Apocalypse",
-    ammo="Ginsen",
+    ammo="Focal Orb",
     head="Flam. Zucchetto +2",
     hands="Sulevia's Gauntlets +2",
     legs="Ignominy Flanchard +3",
