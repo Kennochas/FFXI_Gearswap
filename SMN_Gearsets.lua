@@ -243,13 +243,13 @@ function get_sets()
         neck="Adad Amulet",
         lear="Gelos Earring",
         rear="Lugalbanda Earring",
-        body="Convoker's Doublet +3",
+        body="Apogee Dalmatica +1",
         hands={ name="Merlinic Dastanas", augments={'Pet: Mag. Acc.+20','Blood Pact Dmg.+10',}},
 		lring={name="Varar Ring +1", bag="wardrobe1"},
 		rring={name="Varar Ring +1", bag="wardrobe2"},
         back={ name="Campestres's Cape", augments={'Pet: M.Acc.+20 Pet: M.Dmg.+20','Pet: Magic Damage+10','"Fast Cast"+10',}},
         waist="Regal Belt",
-        legs={ name="Apogee Slacks +1", augments={'MP+80','Pet: "Mag.Atk.Bns."+35','Blood Pact Dmg.+8',}},
+        legs="Enticer's Pants",
         feet={ name="Apogee Pumps +1", augments={'MP+80','Pet: "Mag.Atk.Bns."+35','Blood Pact Dmg.+8',}}
     })
     sets.avatar.mb = set_combine(sets.avatar.mab,{hands="Glyphic Bracers +1"})

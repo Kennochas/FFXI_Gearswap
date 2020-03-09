@@ -35,7 +35,8 @@
 		['Garuda']='Hastega II', 
 		['Ramuh']='Rolling Thunder',
         ['Fenrir']='Ecliptic Growl', 
-		['Shiva']='Crystal Blessing',
+        ['Shiva']='Crystal Blessing',
+        ['Siren']='Katabatic Blades',
 	}
     pacts.buffdefense = {
 		['Carbuncle']='Shining Ruby', 
@@ -45,7 +46,8 @@
         ['Ramuh']='Lightning Armor', 
 		['Fenrir']='Ecliptic Howl', 
 		['Diabolos']='Noctoshield', 
-		['Cait Sith']='Reraise II',
+        ['Cait Sith']='Reraise II',
+        ['Siren']="Wind's Blessing",
 	}
     pacts.buffspecial = {
 		['Ifrit']='Howl', 
@@ -54,7 +56,8 @@
 		['Diabolos']='Dream Shroud',
         ['Carbuncle']='Soothing Ruby', 
 		['Fenrir']='Heavenward Howl', 
-		['Cait Sith']='Raise II',
+        ['Cait Sith']='Raise II',
+        ['Siren']='Chinook',
 	}
     pacts.debuff1 = {
 		['Shiva']='Diamond Storm', 
@@ -62,14 +65,16 @@
 		['Leviathan']='Tidal Roar', 
 		['Fenrir']='Lunar Cry',
         ['Diabolos']='Pavor Nocturnus', 
-		['Cait Sith']='Eerie Eye'
+        ['Cait Sith']='Eerie Eye',
+        ['Siren']='Lunatic Voice',
 	}
     pacts.debuff2 = {
 		['Shiva']='Sleepga', 
 		['Leviathan']='Slowga', 
 		['Fenrir']='Lunar Roar', 
 		['Diabolos']='Somnolence', 
-		['Ramuh']='Thunderspark',
+        ['Ramuh']='Thunderspark',
+        ['Siren']='Bitter Elegy',
 	}
     pacts.sleep = {
 		['Shiva']='Sleepga', 
@@ -82,7 +87,8 @@
 		['Garuda']='Aero II', 
 		['Titan']='Stone II',
         ['Ramuh']='Thunder II', 
-		['Leviathan']='Water II',
+        ['Leviathan']='Water II',
+        ['Siren']='Sonic Buffet',
 	}
     pacts.nuke4 = {
 		['Ifrit']='Fire IV', 
@@ -90,7 +96,8 @@
 		['Garuda']='Aero IV', 
 		['Titan']='Stone IV',
         ['Ramuh']='Thunder IV', 
-		['Leviathan']='Water IV',
+        ['Leviathan']='Water IV',
+        ['Siren']='Tornado II',
 	}
     pacts.bp70 = {
 		['Ifrit']='Flaming Crush', 
@@ -102,7 +109,8 @@
 		['Carbuncle']='Meteorite', 
 		['Fenrir']='Eclipse Bite',
         ['Diabolos']='Nether Blast',
-		['Cait Sith']='Regal Gash',
+        ['Cait Sith']='Regal Gash',
+        ['Siren']='Hysteric Assault',
 	}
     pacts.bp75 = {
 		['Ifrit']='Meteor Strike', 
@@ -133,38 +141,39 @@
 		['Carbuncle']='Searing Light', 
 		['Fenrir']='Howling Moon',
         ['Diabolos']='Ruinous Omen', 
-		['Cait Sith']="Altana's Favor",
+        ['Cait Sith']="Altana's Favor",
+        ['Siren']='Clarsach Call',
 	}
 
 --		
 		
-bp_physical=S{	'Punch','Rock Throw','Barracuda Dive','Claw','Axe Kick','Shock Strike','Camisado','Regal Scratch','Poison Nails',
-				'Moonlit Charge','Crescent Fang','Rock Buster','Tail Whip','Double Punch','Megalith Throw','Double Slap','Eclipse Bite',
-				'Mountain Buster','Spinning Dive','Predator Claws','Rush','Chaotic Strike','Crag Throw','Volt Strike'}
-
-bp_hybrid=S{	'Burning Strike','Flaming Crush'}
-
-bp_magical=S{	'Inferno','Earthen Fury','Tidal Wave','Aerial Blast','Diamond Dust','Judgment Bolt','Searing Light','Howling Moon',
-				'Ruinous Omen','Fire II','Stone II','Water II','Aero II','Blizzard II','Thunder II','Thunderspark','Somnolence',
-				'Meteorite','Fire IV','Stone IV','Water IV','Aero IV','Blizzard IV','Thunder IV','Nether Blast','Meteor Strike',
-				'Geocrush','Grand Fall','Wind Blade','Heavenly Strike','Thunderstorm','Level ? Holy','Holy Mist','Lunar Bay',
-				'Night Terror','Conflagration Strike', 'Zantetsuken'}
-				
-bp_debuff=S{	'Lunar Cry','Mewing Lullaby','Nightmare','Lunar Roar','Slowga','Ultimate Terror','Sleepga','Eerie Eye','Tidal Roar',
-				'Diamond Storm','Shock Squall','Pavor Nocturnus'}
-				
-bp_buff=S{		'Shining Ruby','Frost Armor','Rolling Thunder','Crimson Howl','Lightning Armor','Ecliptic Growl','Hastega','Noctoshield',
-				'Ecliptic Howl','Dream Shroud','Earthen Armor','Fleet Wind','Inferno Howl','Soothing Ruby','Heavenward Howl',
-				'Soothing Current','Hastega II','Crystal Blessing'}
-
-bp_other=S{		'Healing Ruby','Raise II','Aerial Armor','Reraise II','Whispering Wind','Glittering Ruby','Earthen Ward','Spring Water','Healing Ruby II'} 
-
-AvatarList=S{	'Shiva','Ramuh','Garuda','Leviathan','Diabolos','Titan','Fenrir','Ifrit','Carbuncle','Fire Spirit','Air Spirit','Ice Spirit',
-				'Thunder Spirit','Light Spirit','Dark Spirit','Earth Spirit','Water Spirit','Cait Sith','Alexander','Odin','Atomos'}
-				
+bp_physical=S{  'Welt','Roundhouse','Hysteric Assault','Punch','Rock Throw','Barracuda Dive','Claw','Axe Kick','Shock Strike','Camisado','Regal Scratch','Poison Nails',
+                'Moonlit Charge','Crescent Fang','Rock Buster','Tail Whip','Double Punch','Megalith Throw','Double Slap','Eclipse Bite',
+                'Mountain Buster','Spinning Dive','Predator Claws','Rush','Chaotic Strike','Crag Throw','Volt Strike'}
+  
+bp_hybrid=S{    'Burning Strike','Flaming Crush'}
+  
+bp_magical=S{   'Sonic Buffet','Tornado II','Clarsach Call','Inferno','Earthen Fury','Tidal Wave','Aerial Blast','Diamond Dust','Judgment Bolt','Searing Light','Howling Moon',
+                'Ruinous Omen','Fire II','Stone II','Water II','Aero II','Blizzard II','Thunder II','Thunderspark','Somnolence',
+                'Meteorite','Fire IV','Stone IV','Water IV','Aero IV','Blizzard IV','Thunder IV','Nether Blast','Meteor Strike',
+                'Geocrush','Grand Fall','Wind Blade','Heavenly Strike','Thunderstorm','Level ? Holy','Holy Mist','Lunar Bay',
+                'Night Terror','Conflagration Strike', 'Zantetsuken'}
+                  
+bp_debuff=S{    'Biter Elegy','Lunatic Voice','Lunar Cry','Mewing Lullaby','Nightmare','Lunar Roar','Slowga','Ultimate Terror','Sleepga','Eerie Eye','Tidal Roar',
+                'Diamond Storm','Shock Squall','Pavor Nocturnus'}
+                  
+bp_buff=S{      "Wind's Blessing",'Chinook','Katabatic Blades','Shining Ruby','Frost Armor','Rolling Thunder','Crimson Howl','Lightning Armor','Ecliptic Growl','Hastega','Noctoshield',
+                'Ecliptic Howl','Dream Shroud','Earthen Armor','Fleet Wind','Inferno Howl','Soothing Ruby','Heavenward Howl',
+                'Soothing Current','Hastega II','Crystal Blessing'}
+  
+bp_other=S{     'Healing Ruby','Raise II','Aerial Armor','Reraise II','Whispering Wind','Glittering Ruby','Earthen Ward','Spring Water','Healing Ruby II'} 
+  
+AvatarList=S{   'Siren','Shiva','Ramuh','Garuda','Leviathan','Diabolos','Titan','Fenrir','Ifrit','Carbuncle','Fire Spirit','Air Spirit','Ice Spirit',
+                'Thunder Spirit','Light Spirit','Dark Spirit','Earth Spirit','Water Spirit','Cait Sith','Alexander','Odin','Atomos'}
+                  
 spirit_element={Fire='Fire Spirit',Earth='Earth Spirit',Water='Water Spirit',Wind='Air Spirit',Ice='Ice Spirit',Lightning='Thunder Spirit',
-				Light='Light Spirit',Dark='Dark Spirit'}spirit_conflict={Fire='Ice',Earth='Lightning',Water='Fire',Wind='Earth',Ice='Wind',
-				Lightning='Water',Light='Dark',Dark='Light'}
+                Light='Light Spirit',Dark='Dark Spirit'}spirit_conflict={Fire='Ice',Earth='Lightning',Water='Fire',Wind='Earth',Ice='Wind',
+                Lightning='Water',Light='Dark',Dark='Light'}
 				
 -- Set Macros for your SMN's macro page, book.
 function set_macros(sheet,book)
