@@ -25,14 +25,14 @@ function get_sets()
         ammo="Sancus Sachet +1",
         head="Beckoner's Horn +1",
         neck="Loricate Torque +1",
-        lear="Evans Earring",
-        rear="Caller's Earring",
+        lear="Etiolation Earring",
+        rear="Cath Palug Earring",
         body="Apogee Dalmatica +1",
         hands="Asteria Mitts +1",
         lring="Renaye Ring",
-        rring="Evoker's Ring",
+        rring="Defending Ring",
         back={ name="Campestres's Cape", augments={'Pet: Acc.+20 Pet: R.Acc.+20 Pet: Atk.+20 Pet: R.Atk.+20','Eva.+20 /Mag. Eva.+20','Pet: Attack+10 Pet: Rng.Atk.+10','Pet: "Regen"+10',}},
-        waist="Lucidity Sash",
+        waist="Regal Belt",
         legs="Assiduity Pants +1",
         feet="Herald's Gaiters"
     }
@@ -71,7 +71,7 @@ function get_sets()
         head="Beckoner's Horn +1",
         neck="Caller's Pendant",
         lear="Evans Earring",
-        rear="Caller's Earring",
+        rear="Cath Palug Earring",
         body="Apogee Dalmatica +1",
         hands="Glyphic Bracers +1",
         lring={name="Varar Ring +1", bag="wardrobe1"},
@@ -255,12 +255,11 @@ function get_sets()
     sets.avatar.mb = set_combine(sets.avatar.mab,{hands="Glyphic Bracers +1"})
 
 	sets.avatar.hybrid = set_combine(sets.avatar.skill,{
-        -- main={name="Was", bag="wardrobe3"},
 		main="Nirvana",
         sub="elan strap +1",
         -- ranged="",
         ammo="Sancus Sachet +1",
-        head={ name="Apogee Crown +1", augments={'MP+80','Pet: "Mag.Atk.Bns."+35','Blood Pact Dmg.+8',}},
+        head="Cath Palug Crown",
         neck="Shulmanu Collar",
         lear="Gelos Earring",
         rear="Lugalbanda Earring",

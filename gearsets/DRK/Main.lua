@@ -6,13 +6,13 @@ sets.Midcast = {}
 
 -- JA Sets --
 
-sets.JA['Diabolic Eye']		= { hands="Fallen's finger gauntlets +1" }
+sets.JA['Diabolic Eye']		= { hands="Fallen's finger gauntlets +3" }
 sets.JA['Arcane Circle']	= { feet="Ignominy Sollerets +2" }
 sets.JA['Nether Void']		= { legs="Heath. Flanchard +1" }
 sets.JA['Souleater']		= { head="Ignominy Burgonet +3" }
 sets.JA['Weapon Bash']		= { hands="Ignominy Gauntlets +3" }
 sets.JA['Last Resort']		= { back="Ankou's Mantle",feet="Fallen's Sollerets" }
-sets.JA['Dark Seal']		= { head="Fallen's Burgeonet +1" }
+sets.JA['Dark Seal']		= { head="Fallen's Burgeonet +3" }
 sets.JA['Blood Weapon']		= { body="Fallen's Cuirass +1" }
 
 -- Augmented Gear --
@@ -37,11 +37,11 @@ Ankou.DA        =	{ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attac
 Ankou.WSDVIT    =	{ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','VIT+10','Weapon skill damage +10%',}} -- Have
 Ankou.ACC       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Damage taken-5%',}} -- Have
 Ankou.FC        =	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
-Ankou.STP       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10',}}
+Ankou.STP       =	{ name="Ankou's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}
 Ankou.INTDA     =	{ name="Ankou's Mantle", augments={'INT+20','Accuracy+20 Attack+20','INT+10','"Dbl.Atk."+10',}}
 Ankou.MEVA      =  	{ name="Ankou's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}} -- Have
 
-Odyssean.Head.WSD   = { name="Odyssean Helm", augments={'"Mag.Atk.Bns."+13','Weapon skill damage +4%','VIT+10','Accuracy+6',}}
+Odyssean.Head.WSD   = { name="Odyssean Helm", augments={'Accuracy+23','STR+6','Weapon skill damage +5%','Accuracy+1 Attack+1','Mag. Acc.+6 "Mag.Atk.Bns."+6',}}
 Odyssean.Body.FC    = { name="Odyss. Chestplate", augments={'"Fast Cast"+5','VIT+3','Accuracy+4','Attack+13',}}
 Odyssean.Hands.WSD  = { name="Odyssean Gauntlets", augments={'Accuracy+10','Weapon skill damage +4%','VIT+5','Attack+2',}}
 Odyssean.Legs.DA    = { name="Odyssean Cuisses", augments={'Accuracy+28','"Dbl.Atk."+3',}}
@@ -51,7 +51,8 @@ Odyssean.Feet.FC    = { name="Odyssean Greaves", augments={'Attack+20','Weapon s
 sets.Idle = {
     sub="Utu Grip",
     ammo="Staunch Tathlum",
-    body="Lugra cloak +1",
+    head="Sulevia's Mask +2",
+    body="Makora Meikogai",
     hands="Sulevia's Gauntlets +2",
     legs="Carmine cuisses +1",
     feet="Sulev. Leggings +2",
@@ -165,11 +166,11 @@ sets.Midcast['Dark Magic'] = {
     ammo="Pemphredo Tathlum",
     head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
-    hands="Fallen's finger gauntlets +1",
+    hands="Fallen's finger gauntlets +3",
     legs="Eschite cuisses",
     feet="Ignominy Sollerets +2",
     neck="Erra Pendant",
-    waist="Casso sash",
+    --waist="Casso sash",
     left_ear="Hermetic Earring",
     right_ear="Dark Earring",
     left_ring="Stikini Ring",
@@ -181,10 +182,10 @@ sets.Midcast.Absorb = {
     ammo="Pemphredo Tathlum",
     head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
-    legs="Eschite cuisses",
-    feet="Ratri Sollerets",
+    legs="Fallen's flanchard +3",
+    feet="Ratri Sollerets +1",
     neck="Erra Pendant",
-    waist="Casso Sash",
+    -- waist="Casso Sash",
     left_ear="Hermetic Earring",
     right_ear="Dark Earring",
     right_ring="Kishar Ring",
@@ -235,7 +236,7 @@ sets.Midcast.Stun.Resist = set_combine(
 sets.Midcast.Stun.Duration = set_combine(
     sets.Midcast.Stun,{
         left_ring="Stikini Ring",
-        feet="Ratri Sollerets",
+        feet="Ratri Sollerets +1",
     }
 )
 
@@ -243,16 +244,16 @@ sets.Midcast.Stun.Duration = set_combine(
 sets.Midcast['Endark II'] = {
     head="Ignominy Burgonet +3",
     body="Carmine Scale Mail",
-    -- hands="Fallen's finger gauntlets +1",
-    legs="Eschite cuisses",
-    feet="Ratri Sollerets",
+    hands="Fallen's finger gauntlets +3",
+    legs="Heath. Flanchard +1",
+    feet="Ratri Sollerets +1",
     neck="Erra Pendant",
     -- waist="Casso sash",
     left_ear="Dark Earring",
     right_ear="Loquacious Earring",
     left_ring="Stikini Ring",
     right_ring="Evanescence Ring", 
-    --back="Niht Mantle",
+    back="Niht Mantle",
 }
 
 -- Enfeebling Magic Set --
@@ -296,9 +297,9 @@ sets.Midcast['Dread Spikes'] = {
     body="Heathen's Cuirass +1",
     hands="Ratri Gadlings",
     legs="Ratri Cuisses",
-    feet="Ratri Sollerets",
+    feet="Ratri Sollerets +1",
     neck="Sanctity necklace",
-    waist="Eschan Stone",
+    waist="Bronze Mog. Belt",
     left_ear="Odnowa Earring",
     right_ear="Odnowa Earring +1",
     left_ring="Meridian Ring",
@@ -309,17 +310,17 @@ sets.Midcast['Dread Spikes'] = {
 sets.Midcast.Drain = {
     ammo="Pemphredo Tathlum",
     neck="Erra Pendant",
-    head="Fallen's Burgeonet +1",
+    head="Fallen's Burgeonet +3",
     body="Carmine Scale Mail",
-    hands="Flam. Manopolas +2",
+    hands="Fall. Fin. Gaunt. +3",
     left_ring="Archon Ring",
     right_ring="Evanescence Ring",
     left_ear="Hermetic Earring",
-    right_ear="Hirudinea Earring",
+    right_ear="Nehalennia Earring",
     back="Niht Mantle",
     waist="Austerity belt +1",
-    legs="Eschite cuisses",
-    feet="Ratri Sollerets",
+    legs="Fallen's flanchard +3",
+    feet="Ratri Sollerets +1",
 } 
 
 sets.Midcast.Aspir = set_combine(
@@ -353,7 +354,7 @@ sets.WS = {
     body="Ignominy Cuirass +3",
     hands="Argosy Mufflers",
     legs="Ignominy Flanchard +3",
-    feet="Ratri Sollerets",
+    feet="Ratri Sollerets +1",
     neck="Fotia Gorget",
     waist="Fotia Belt",
 	left_ear="Telos earring",
@@ -366,12 +367,12 @@ sets.WS = {
 -- Resolution Sets --
 sets.WS['Resolution'] = {		
     ammo="Seething Bomblet +1",
-    head="Argosy Celata",
-    body="Ignominy Cuirass +3",
-    hands="Argosy Mufflers",
-    legs="Ignominy Flanchard +3",
+    head="Flam. Zucchetto +2",
+    body="Emicho Haubert +1",
+    hands="Emicho Gauntlets +1",
+    legs="Fallen's flanchard +3",
     feet="Flam. Gambieras +2",
-    neck="Abyssal Beads +1",
+    neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
     right_ear="Brutal Earring",
@@ -401,9 +402,9 @@ sets.WS['Torcleaver'] = {
     head=Odyssean.Head.WSD,
     body="Ignominy Cuirass +3",
     hands=Odyssean.Hands.WSD,
-    legs="Ratri Cuisses",
+    legs="Fallen's flanchard +3",
     feet="Sulev. Leggings +2",
-    neck="Abyssal Beads +1",
+    neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade Earring",
     right_ear="Thrud Earring",
@@ -468,7 +469,7 @@ sets.WS['Shockwave'] = {
     body="Carmine Scale Mail",
     hands="Leyline Gloves",
     legs="Eschite cuisses",
-    feet="Ignominy Sollerets +3",
+    feet="Ignominy Sollerets +2",
     neck="Erra Pendant",
     waist="Eschan Stone",
     left_ear="Telos Earring",
@@ -487,10 +488,10 @@ sets.WS['Catastrophe'] = {
     body="Ignominy Cuirass +3",
     hands="Ratri Gadlings",
     legs="Ratri Cuisses",
-    feet="Sulev. Leggings +2",
-    neck="Fotia Gorget",
-    waist="Fotia Belt",
-    left_ear="Brutal Earring",
+    feet="Rat. Sollerets +1",
+    neck="Abyssal Beads +2",
+    waist="Sailfi Belt +1",
+    left_ear="Lugra Earring +1",
     right_ear="Thrud Earring",
     left_ring="Regal Ring",
     right_ring="Niqmaddu ring",
@@ -542,15 +543,15 @@ sets.WS['Catastrophe'].HighACC.PDT = set_combine(
 --Stat Modifier:	73~85% INT fTP:	0.75	1.25	2.0
 sets.WS['Entropy'] = {
     ammo="Pemphredo Tathlum",
-    head="Ignominy Burgonet +3",
-    --body=ValoBody.DA,
+    head="Hjarrandi Helm",
+    body="Ignominy Cuirass +3",
     hands="Ignominy Gauntlets +3",
     legs="Ignominy Flanchard +3",
-    --feet=ValoFeet.INT,
-    neck="Fotia Gorget",
+    feet="Rat. Sollerets +1",
+    neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade earring",
-    right_ear="Brutal Earring",
+    right_ear="Lugra Earring +1",
     left_ring="Shiva Ring",
     right_ring="Shiva Ring",
     back=Ankou.INTDA,
@@ -578,8 +579,8 @@ sets.WS['Cross Reaper'] = {
     body="Ignominy Cuirass +3",
     hands="Ratri Gadlings",
     legs="Ratri Cuisses",
-    feet="Ratri Sollerets",
-    neck="Fotia Gorget",
+    feet="Ratri Sollerets +1",
+    neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade earring",
     right_ear="Thrud earring",
@@ -606,13 +607,13 @@ sets.WS['Cross Reaper'].HighACC = set_combine(
 --Delivers a fourfold attack. Damage varies with TP.
 --Stat Modifier:	20% STR / 20% INT fTP:	0.5	3.25	6.0
 sets.WS['Insurgency'] = {
-    ammo="Seething Bomblet +1",
+    ammo="Knobkierrie",
     head="Ratri Sallet",
     body="Ignominy Cuirass +3",
-    hands="Argosy Mufflers",
-    legs="Ignominy Flanchard +3",
-    feet="Argosy Sollerets",
-    neck="Fotia Gorget",
+    hands="Ratri Gadlings",
+    legs="Ratri Cuisses",
+    feet="Ratri Sollerets +1",
+    neck="Abyssal Beads +2",
     waist="Fotia Belt",
     left_ear="Moonshade earring",
     right_ear="Brutal earring",
@@ -624,7 +625,7 @@ sets.WS['Insurgency'] = {
 sets.WS['Insurgency'].MidACC = set_combine(
     sets.WS['Insurgency'],{
         hands="Ignominy Gauntlets +3",
-        feet="Ratri Sollerets",
+        feet="Ratri Sollerets +1",
     }
 )
     
@@ -644,11 +645,11 @@ sets.WS['Quietus'] = {
     body="Ignominy Cuirass +3",
     hands="Ratri Gadlings",
     legs="Ratri Cuisses",
-    feet="Ratri Sollerets",
+    feet="Ratri Sollerets +1",
     neck="Fotia Gorget",
     waist="Fotia Belt",
     left_ear="Moonshade earring",
-    right_ear="Ishvara earring",
+    right_ear="Thrud earring",
     left_ring="Regal Ring",
     right_ring="Niqmaddu Ring",
     back=Ankou.WSDSTR,
@@ -666,6 +667,37 @@ sets.WS['Quietus'].HighACC = set_combine(
     }
 )
 
+sets.WS['Upheavel'] = {
+    ammo="Knobkierrie",
+    head=Odyssean.Head.WSD,
+    body="Ignominy Cuirass +3",
+    hands=Odyssean.Hands.WSD,
+    legs="Ratri Cuisses",
+    feet="Sulev. Leggings +2",
+    neck="Abyssal Beads +2",
+    waist="Fotia Belt",
+    left_ear="Moonshade Earring",
+    right_ear="Thrud Earring",
+    left_ring="Regal Ring",
+    right_ring="Niqmaddu Ring",
+    back=Ankou.WSDVIT
+}
+
+sets.WS['Upheavel'].MidACC = set_combine(
+    sets.WS['Upheavel'], {
+        ammo="Knobkierrie",
+        head="Ignominy Burgonet +3",
+        --hands=OdysHands.WSDVITACC,
+        left_ear="Telos Earring",
+    }
+)
+    
+sets.WS['Upheavel'].HighACC = set_combine(
+    sets.WS['Upheavel'].MidACC, {
+        -- Stuff goes here --
+    }
+)
+
 -----------------------------------------------------------------------------------------------------------------
 -- works in motes based, not sure how to get it to work here
 sets.Item = {HolyWater}
@@ -674,52 +706,52 @@ sets.Item['Holy Water'] = {
     ring2="Blenmot's Ring",
 }
 
---react sets
-sets.Meva = {
-    ammo="Staunch Tathlum",
-    head="Ratri Sallet",
-    neck="Warder's Charm",
-    left_ear="Hearty Earring",
-    right_ear="Eabani Earring",
-    left_ring="Defending Ring",
-    right_ring="Shadow Ring",
-    legs="Ratri Cuisses",
-    feet="Ratri Sollerets",
-    hands="Ratri Gadlings",
-    waist="Asklepian Belt",
-    back=Ankou.MEVA,
-}
-sets.CurePotencyRecieved = {
-    waist="Gishdubar sash", 
-    neck="Phalaina Locket", 
-    ring1="Kunaji Ring", 
-    hands="Buremte Gloves",
-}
-sets.PhalanxRecieved = {
-    --legs=OdysLegs.ENM, 
-    --hands=OdysHands.PHALANX,
-}
-sets.RefreshRecieved = {
-    waist="Gishdubar sash",
-}
-sets.CursnaRecieved = {
-    waist="Gishdubar sash", 
-    legs="Shabti Cuisses +1", 
-    ring1="Eshmun's Ring", 
-    ring2="Eshmun's Ring"
-}
-sets.ResistStun = set_combine(
-    sets.Meva, {
-        right_ear="Arete del Luna", 
-        left_ear="Hearty Earring", 
-        body="Onca Suit", 
-    }
-)
-sets.ProShellRecieved = {
-    ear1="Brachyura Earring",
-}
-sets.ResistTerror = set_combine(
-    sets.Meva,{
-        feet="Founder's Greaves",
-    }
-)
+-- react sets
+-- sets.Meva = {
+--     ammo="Staunch Tathlum",
+--     head="Ratri Sallet",
+--     neck="Warder's Charm +1",
+--     left_ear="Hearty Earring",
+--     right_ear="Eabani Earring",
+--     left_ring="Defending Ring",
+--     right_ring="Shadow Ring",
+--     legs="Ratri Cuisses",
+--     feet="Ratri Sollerets +1",
+--     hands="Ratri Gadlings",
+--     waist="Asklepian Belt",
+--     back=Ankou.MEVA,
+-- }
+-- sets.CurePotencyRecieved = {
+--     waist="Gishdubar sash", 
+--     neck="Phalaina Locket", 
+--     ring1="Kunaji Ring", 
+--     hands="Buremte Gloves",
+-- }
+-- sets.PhalanxRecieved = {
+--     --legs=OdysLegs.ENM, 
+--     --hands=OdysHands.PHALANX,
+-- }
+-- sets.RefreshRecieved = {
+--     waist="Gishdubar sash",
+-- }
+-- sets.CursnaRecieved = {
+--     waist="Gishdubar sash", 
+--     legs="Shabti Cuisses +1", 
+--     ring1="Eshmun's Ring", 
+--     ring2="Eshmun's Ring"
+-- }
+-- sets.ResistStun = set_combine(
+--     sets.Meva, {
+--         right_ear="Arete del Luna", 
+--         left_ear="Hearty Earring", 
+--         body="Onca Suit", 
+--     }
+-- )
+-- sets.ProShellRecieved = {
+--     ear1="Brachyura Earring",
+-- }
+-- sets.ResistTerror = set_combine(
+--     sets.Meva,{
+--         feet="Founder's Greaves",
+--     }
+-- )

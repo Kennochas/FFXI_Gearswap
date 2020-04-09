@@ -1,6 +1,7 @@
 include('organizer-lib')
 
 windower.send_command('bind f5 gs c WeaponToggle')
+windower.send_command('bind f6 gs c HybridToggle')
 windower.send_command('bind f7 gs c MDTToggle')
 windower.send_command('bind f9 gs c PDTToggle')
 windower.send_command('bind f10 gs c AccuracyToggle')
@@ -16,6 +17,11 @@ Things I need to add/ could use help adding are....
 
 ]]--
 
+function file_unload()
+	send_command('unbind f5')
+	send_command('unbind f6')
+end
+
 function select_default_macro_book()
 	-- Samurai subjob macro books
 	if player.sub_job == 'SAM' then
@@ -29,6 +35,8 @@ function select_default_macro_book()
 			set_macro_page(4, 7)
 		elseif WeaponArray[WeaponIndex] == 'Ragnarok' then
 			set_macro_page(3, 7)
+		elseif WeaponArray[WeaponIndex] == 'Lycurgos' then
+			set_macro_page(5, 7)
 		end
 	-- Warrior subjob macro books
 	elseif player.sub_job == 'WAR' then
@@ -47,6 +55,9 @@ function select_default_macro_book()
 end
 
 function get_sets()
+	-- Debug Variable that is used to print out gear when in debugmode
+	GearDebug = false
+
 	-- Include the gearsets from another file. There is just so much we use two files.
 
 	-- This is the main lua, with sets not specific to any weapons.
@@ -56,8 +67,9 @@ function get_sets()
 	include('gearsets/DRK/Anguta.lua')
 	include('gearsets/DRK/Apocalypse.lua')
 	include('gearsets/DRK/Caladbolg.lua')
-	include('gearsets/DRK/Liberator.lua')
-	include('gearsets/DRK/Ragnarok.lua')
+	-- include('gearsets/DRK/Liberator.lua')
+	-- include('gearsets/DRK/Ragnarok.lua')
+	include('gearsets/DRK/Lycurgos.lua')
 
 	-- 3 Levels Of Accuracy Sets For TP/WS/Hybrid/Stun. First Set Is LowACC. 
 	--Add More ACC Sets If Needed Then Create Your New ACC Below. 
@@ -68,7 +80,7 @@ function get_sets()
 
 	--Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Caladbolg","Apocalypse","Anguta"} --,"Liberator","Ragnarok",
+	WeaponArray = {"Caladbolg","Apocalypse","Anguta","Lycurgos"} --,"Liberator","Ragnarok",
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -107,14 +119,18 @@ end
 function precast(spell,action)
 	if spell.type == "WeaponSkill" then
 		equipSet = sets.WS
+		setname = "sets.WS"
 		if equipSet[spell.english] then
 			equipSet = equipSet[spell.english]
+			setname = setname .. '.' .. spell.english
 		end
 		if equipSet[AccArray[AccIndex]] then
 			equipSet = equipSet[AccArray[AccIndex]]
+			setname = setname .. '.' .. AccArray[AccIndex]
 		end
 		if Armor == 'PDT' then
 			equipSet = equipSet['PDT']
+			setname = setname .. '.PDT'
 		end
 		-- Equip Ygnas's Resolve +1 During Reive --
 		if buffactive['Reive Mark'] then
@@ -127,11 +143,13 @@ function precast(spell,action)
 				equipSet = set_combine(equipSet,{ear1="Ishvara Earring"})
 			end
 		end
-		equip(equipSet)
 	-- Equip gear, specific to job abilities
 	elseif spell.type == "JobAbility" then
-		if sets.JA[spell.english] then
-			equip(sets.JA[spell.english])
+		equipSet = sets.JA
+		setname = "sets.JA"
+		if equipSet[spell.english] then
+			equipSet = equipSet[spell.english]
+			setname = setname .. '.' .. spell.english
 		end
 	-- Cancel Magic or Ninjutsu If You Are Silenced or Out of Range --
 	elseif spell.action_type == 'Magic' then
@@ -146,31 +164,37 @@ function precast(spell,action)
 					add_to_chat(123, spell.name .. ' Canceled: [3 Images]')
 					return
 				else
-					equip(sets.Precast.FastCast)
+					equipSet = sets.Precast.FastCast
+					setname = "sets.Precast.FastCast"
 				end
 			elseif sets.Precast[spell.skill] then
-				equip(sets.Precast[spell.skill])
+				equipSet = sets.Precast[spell.skill]
+				setname = "sets.Precast." .. spell.skill
 			else
-				equip(sets.Precast.FastCast)
+				equipSet = sets.Precast.FastCast
+				setname = "sets.Precast.FastCast"
 			end
 		end
-	elseif spell.english == 'Spectral Jig' and buffactive.Sneak then
-		cast_delay(0.2)
-		send_command('cancel Sneak')
 	end
 	if Twilight == 'Twilight' then
-		equip(sets.Twilight)
+		equipSet = sets.Twilight
+		setname = "sets.Twilight"
 	end
+	equipgearset()
 end
 
 function midcast(spell,action)
 	equipSet = {}
+	setname = ""
 	if spell.action_type == 'Magic' then
 		equipSet = sets.Midcast
+		setname = 'sets.Midcast'
 		if spell.english:startswith('Absorb') and spell.english ~= "Absorb-TP" then
 			equipSet = sets.Midcast.Absorb
+			setname = setname .. '.Absorb' 
 			if equipSet[MaccArray[MaccIndex]] then
 				equipSet = equipSet[MaccArray[MaccIndex]]
+				setname = setname .. '.' .. MaccArray[MaccIndex]
 			end
 		-- Equip Hachirin-no-Obi On Darksday or Dark Weather --
 		elseif spell.english:startswith('Drain') or spell.english:startswith('Aspir') or spell.english:startswith('Bio') then
@@ -178,52 +202,63 @@ function midcast(spell,action)
 				equipSet = set_combine(equipSet,{waist="Hachirin-no-Obi"})
 			end
 			equipSet = sets.Midcast.Drain
+			setname = setname .. '.Drain' 
 		elseif spell.english == "Stoneskin" then
 			if buffactive.Stoneskin then
 				send_command('@wait 1.7;cancel stoneskin')
 			end
 			equipSet = equipSet.Stoneskin
+			setname = setname .. '.Stoneskin' 
 		elseif spell.english == "Sneak" then
 			if spell.target.name == player.name and buffactive['Sneak'] then
 				send_command('cancel sneak')
 			end
 			equipSet = equipSet.Haste
+			setname = setname .. '.Haste'
 		elseif spell.english:startswith('Utsusemi') then
 			if spell.english == 'Utsusemi: Ichi' and (buffactive['Copy Image'] or buffactive['Copy Image (2)'] or buffactive['Copy Image (3)']) then
 				send_command('@wait 1.7;cancel Copy Image*')
 			end
 			equipSet = equipSet.Haste
+			setname = setname .. '.Haste'
 		elseif spell.english == 'Monomi: Ichi' then
 			if buffactive['Sneak'] then
 				send_command('@wait 1.7;cancel sneak')
 			end
 			equipSet = equipSet.Haste
+			setname = setname .. '.Haste'
 		else
 			if equipSet[spell.english] then
 				equipSet = equipSet[spell.english]
+				setname = setname .. '.' .. spell.english
 			end
 			if equipSet[MaccArray[MaccIndex]] then
 				equipSet = equipSet[MaccArray[MaccIndex]]
+				setname = setname .. '.' .. MaccArray[MaccIndex]
 			end
 			if equipSet[spell.skill] then
 				equipSet = equipSet[spell.skill]
+				setname = setname .. '.' .. spell.skill
 			end
 			if equipSet[spell.type] then
 				equipSet = equipSet[spell.type]
+				setname = setname .. '.' .. spell.type
 			end
 		end
 	elseif equipSet[spell.english] then
 		equipSet = equipSet[spell.english]
+		setname = setname .. '.' .. spell.english
+		add_to_chat(100,'odd')
 	end
 	 -- Equip Aug'd Fall. Burgeonet +1 When You Have Dark Seal Up --
 	if buffactive["Dark Seal"] and DarkSealIndex==0 then
-		equipSet = set_combine(equipSet,{head="Fall. Burgeonet +1",})
+		equipSet = set_combine(equipSet,{head="Fall. Burgeonet +3",})
 	end
-	if buffactive['Dark Seal'] and buffactive['Nether Void'] and S{"Drain II","Drain III"}:contains(spell.english) and player.tp<600 then
+	if buffactive['Dark Seal'] and buffactive['Nether Void'] and S{"Drain II","Drain III"}:contains(spell.english) and player.tp<1000 then
 		equipSet = set_combine(equipSet,(sets.MAXDrain))
 		add_to_chat(100,'WARNING: Weapon swapped for Maximum Drain')
 	end
-	equip(equipSet)
+	equipgearset()
 end
 
 function aftercast(spell,action)
@@ -245,55 +280,70 @@ end
 function status_change(new,old)
 	if Armor == 'PDT' then
 		equipSet = sets.PDT
+		setname = "sets.PDT"
 		if equipSet[WeaponArray[WeaponIndex]] then
 			equipSet = equipSet[WeaponArray[WeaponIndex]]
+			setname = setname .. '.' .. WeaponArray[WeaponIndex]
 		end
-		equip(equipSet)
 	elseif Armor == 'MDT' then
 		equipSet = sets.MDT
+		setname = "sets.MDT"
 		if equipSet[WeaponArray[WeaponIndex]] then
 			equipSet = equipSet[WeaponArray[WeaponIndex]]
+			setname = setname .. '.' .. WeaponArray[WeaponIndex]
 		end
-		equip(equipSet)
 	elseif Armor == 'Scarlet' then
 		equip(sets.Scarlet)
+		setname = "sets.Scarlet"
 	elseif new == 'Engaged' then
 		equipSet = sets.TP
+		setname = "sets.TP"
 		if equipSet[WeaponArray[WeaponIndex]] then
 			equipSet = equipSet[WeaponArray[WeaponIndex]]
+			setname = setname .. '.' .. WeaponArray[WeaponIndex]
 		end
 		if Armor == 'Hybrid' and equipSet["Hybrid"] then
 			equipSet = equipSet["Hybrid"]
+			setname = setname .. '.' .. Armor
 		end
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
+			setname = setname .. '.' .. player.sub_job
 		end
 		if equipSet[AccArray[AccIndex]] then
 			equipSet = equipSet[AccArray[AccIndex]]
+			setname = setname .. '.' .. AccArray[AccIndex]
 		end
 		if (buffactive["Aftermath: Lv.1"] or buffactive["Aftermath: LV.2"]) and equipSet["AM"] then
 			equipSet = equipSet["AM"]
+			setname = setname .. '.AM' 
 		end
 		if buffactive["Aftermath: Lv.3"] and equipSet["AM3"] then
 			equipSet = equipSet["AM3"]
+			setname = setname .. '.AM3'
 		end	
 		if buffactive["Last Resort"] and ((buffactive.Haste and buffactive.March == 2) or (buffactive.Embrava and (buffactive.March == 2 or (buffactive.March and buffactive.Haste) or (buffactive.March and buffactive['Mighty Guard']) or (buffactive['Mighty Guard'] and buffactive.Haste))) or (buffactive[580] and (buffactive.March or buffactive.Haste or buffactive.Embrava or buffactive['Mighty Guard']))) and equipSet["HighHaste"] then
 			equipSet = equipSet["HighHaste"]
+			setname = setname .. '.HighHaste'
 		end
 		if Samurai_Roll == 'ON' and equipSet["STP"] then
 			equipSet = equipSet["STP"]
+			setname = setname .. '.STP'
 		end
-		equip(equipSet)
 	else
 		equipSet = sets.Idle
+		setname = "sets.Idle"
 		if equipSet[IdleArray[IdleIndex]] then
 			equipSet = equipSet[IdleArray[IdleIndex]]
+			setname = setname .. '.' .. IdleArray[IdleIndex]
 		end
 		if equipSet[WeaponArray[WeaponIndex]] then
 			equipSet = equipSet[WeaponArray[WeaponIndex]]
+			setname = setname .. '.' .. WeaponArray[WeaponIndex]
 		end
 		if equipSet[player.sub_job] then
 			equipSet = equipSet[player.sub_job]
+			setname = setname .. '.' .. player.sub_job
 		end
 		 -- Equip Ygnas's Resolve +1 During Reive --
 		if buffactive['Reive Mark'] then
@@ -302,11 +352,11 @@ function status_change(new,old)
 		if world.area:endswith('Adoulin') then
 			equipSet = set_combine(equipSet,{body="Councilor's Garb"})
 		end
-		equip(equipSet)
 	end
 	if Twilight == 'Twilight' then
 		equip(sets.Twilight)
 	end
+	equipgearset()
 end
 
 function buff_change(buff,gain)
@@ -449,6 +499,14 @@ function self_command(command)
 		aftermath_warning(command[2])
 	elseif command[1]:match('^SC%d$') then
 		send_command('//' .. sc_map[command])
+	elseif command[1] == 'GearDebug' then
+		if GearDebug == true then
+			GearDebug = false
+			add_to_chat(123,'Gear Debug: [False]')
+		else
+			GearDebug = true
+			add_to_chat(158,'Gear Debug: [True]')
+		end
 	end
 end
 
@@ -477,6 +535,13 @@ function set_macro_page(set,book)
 		send_command('@input /macro book '..tostring(book)..';wait .1;input /macro set '..tostring(set))
 	else
 		send_command('@input /macro set '..tostring(set))
+	end
+end
+
+function equipgearset()
+	equip(equipSet)
+	if GearDebug == true and setname ~= "" then 
+		add_to_chat(122,'Set: ['..setname..']')
 	end
 end
 

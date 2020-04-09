@@ -1,30 +1,30 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
----------------------------------------------------------------- CALADBOLG SETS -----------------------------------------------------------------------------------
+---------------------------------------------------------------- Lycurgos SETS -----------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------	
 
-sets.Idle.Regen.Caladbolg = set_combine(
+sets.Idle.Regen.Lycurgos = set_combine(
     sets.Idle.Regen,{
-        main="Caladbolg"
+        main="Lycurgos"
     }
 )
-sets.Idle.Movement.Caladbolg = set_combine(
+sets.Idle.Movement.Lycurgos = set_combine(
     sets.Idle.Movement,{
-        main="Caladbolg"
+        main="Lycurgos"
     }
 )
-sets.Idle.Refresh.Caladbolg = set_combine(
+sets.Idle.Refresh.Lycurgos = set_combine(
     sets.Idle.Refresh,{
-        main="Caladbolg"
+        main="Lycurgos"
     }
 )
-sets.Idle.Regain.Caladbolg = set_combine(
+sets.Idle.Regain.Lycurgos = set_combine(
     sets.Idle.Regain,{
-        main="Caladbolg"
+        main="Lycurgos"
     }
 )
-sets.PDT.Caladbolg = set_combine(
+sets.PDT.Lycurgos = set_combine(
     sets.PDT,{
-        main="Caladbolg",
+        main="Lycurgos",
         ammo="Ginsen",
         head="Sulevia's Mask +2",
         body="Valorous Mail",
@@ -40,9 +40,9 @@ sets.PDT.Caladbolg = set_combine(
         back=Ankou.ACC,
     }
 )
--- Caladbolg(AM Down) TP Sets --
-sets.TP.Caladbolg = {
-    main="Caladbolg",
+-- Lycurgos(AM Down) TP Sets --
+sets.TP.Lycurgos = {
+    main="Lycurgos",
     sub="Utu Grip",
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
@@ -54,13 +54,13 @@ sets.TP.Caladbolg = {
     waist="Ioskeha Belt",
     left_ear="Brutal Earring",
     right_ear="Cessance Earring",
-    left_ring="Hetairoi Ring",
+    left_ring="warp Ring",
     right_ring="Petrov Ring",
     back=Ankou.ACC,
 }		
     
-sets.TP.Caladbolg.MidACC = set_combine(
-    sets.TP.Caladbolg,{
+sets.TP.Lycurgos.MidACC = set_combine(
+    sets.TP.Lycurgos,{
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
@@ -68,8 +68,8 @@ sets.TP.Caladbolg.MidACC = set_combine(
     }
 ) 
     
-sets.TP.Caladbolg.HighACC = set_combine(
-    sets.TP.Caladbolg.MidACC,{
+sets.TP.Lycurgos.HighACC = set_combine(
+    sets.TP.Lycurgos.MidACC,{
         head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -79,37 +79,37 @@ sets.TP.Caladbolg.HighACC = set_combine(
     }
 )
     
--- Caladbolg(AM Down: High Haste) TP Sets --
-sets.TP.Caladbolg.HighHaste = set_combine(
-    sets.TP.Caladbolg,{
+-- Lycurgos(AM Down: High Haste) TP Sets --
+sets.TP.Lycurgos.HighHaste = set_combine(
+    sets.TP.Lycurgos,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.MidACC.HighHaste = set_combine(
-    sets.TP.Caladbolg.MidACC,{
+sets.TP.Lycurgos.MidACC.HighHaste = set_combine(
+    sets.TP.Lycurgos.MidACC,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.HighACC.HighHaste = set_combine(
-    sets.TP.Caladbolg.HighACC,{
+sets.TP.Lycurgos.HighACC.HighHaste = set_combine(
+    sets.TP.Lycurgos.HighACC,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",
     }
 )
--- Caladbolg(AM Down: SAM Roll) TP Sets --
-sets.TP.Caladbolg.STP = set_combine(
-    sets.TP.Caladbolg,{
+-- Lycurgos(AM Down: SAM Roll) TP Sets --
+sets.TP.Lycurgos.STP = set_combine(
+    sets.TP.Lycurgos,{
         right_ear="Cessance earring",
         right_ring="Warp Ring",
     }
 )
-sets.TP.Caladbolg.MidACC.STP = set_combine(
-    sets.TP.Caladbolg.MidACC,{
+sets.TP.Lycurgos.MidACC.STP = set_combine(
+    sets.TP.Lycurgos.MidACC,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.HighACC.STP = set_combine(
-    sets.TP.Caladbolg.HighACC,{
+sets.TP.Lycurgos.HighACC.STP = set_combine(
+    sets.TP.Lycurgos.HighACC,{
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
@@ -117,27 +117,27 @@ sets.TP.Caladbolg.HighACC.STP = set_combine(
     }
 )
 
--- Caladbolg(AM Down: High Haste + SAM Roll) TP Sets --
-sets.TP.Caladbolg.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.STP,{
+-- Lycurgos(AM Down: High Haste + SAM Roll) TP Sets --
+sets.TP.Lycurgos.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.MidACC.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.MidACC.STP,{
+sets.TP.Lycurgos.MidACC.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.MidACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.HighACC.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.HighACC.STP,{
+sets.TP.Lycurgos.HighACC.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.HighACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
 
--- Caladbolg(AM Up) TP Sets --
-sets.TP.Caladbolg.AM = set_combine(
-    sets.TP.Caladbolg,{
-    main="Caladbolg",
+-- Lycurgos(AM Up) TP Sets --
+sets.TP.Lycurgos.AM = set_combine(
+    sets.TP.Lycurgos,{
+    main="Lycurgos",
     sub="Utu Grip",
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
@@ -155,16 +155,16 @@ sets.TP.Caladbolg.AM = set_combine(
     }
 )
     
-sets.TP.Caladbolg.MidACC.AM = set_combine(
-    sets.TP.Caladbolg.AM,{
+sets.TP.Lycurgos.MidACC.AM = set_combine(
+    sets.TP.Lycurgos.AM,{
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
     
-sets.TP.Caladbolg.HighACC.AM = set_combine(
-    sets.TP.Caladbolg.MidACC.AM,{
+sets.TP.Lycurgos.HighACC.AM = set_combine(
+    sets.TP.Lycurgos.MidACC.AM,{
         head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -174,8 +174,8 @@ sets.TP.Caladbolg.HighACC.AM = set_combine(
     }
 )
 
-sets.TP.Caladbolg.AM3 = set_combine(
-    sets.TP.Caladbolg,{
+sets.TP.Lycurgos.AM3 = set_combine(
+    sets.TP.Lycurgos,{
         ammo="Ginsen",
         head="Flam. Zucchetto +2",
         body="Valorous Mail",
@@ -191,16 +191,16 @@ sets.TP.Caladbolg.AM3 = set_combine(
         back=Ankou.ACC,
     }
 )
-sets.TP.Caladbolg.MidACC.AM3 = set_combine(
-    sets.TP.Caladbolg.AM3,{
+sets.TP.Lycurgos.MidACC.AM3 = set_combine(
+    sets.TP.Lycurgos.AM3,{
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
     
-sets.TP.Caladbolg.HighACC.AM3 = set_combine(
-    sets.TP.Caladbolg.MidACC.AM3,{
+sets.TP.Lycurgos.HighACC.AM3 = set_combine(
+    sets.TP.Lycurgos.MidACC.AM3,{
         head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -210,37 +210,37 @@ sets.TP.Caladbolg.HighACC.AM3 = set_combine(
     }
 )
 
--- Caladbolg(AM Up: High Haste) TP Sets --
-sets.TP.Caladbolg.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.AM,{
+-- Lycurgos(AM Up: High Haste) TP Sets --
+sets.TP.Lycurgos.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.AM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.MidACC.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.AM.MidACC,{
+sets.TP.Lycurgos.MidACC.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.AM.MidACC,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.HighACC.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.HighACC.AM,{
+sets.TP.Lycurgos.HighACC.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.HighACC.AM,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",
     }
 )
 
--- Caladbolg(AM Up: SAM Roll) TP Sets --
-sets.TP.Caladbolg.AM.STP = set_combine(
-    sets.TP.Caladbolg.STP,{
+-- Lycurgos(AM Up: SAM Roll) TP Sets --
+sets.TP.Lycurgos.AM.STP = set_combine(
+    sets.TP.Lycurgos.STP,{
         right_ear="Cessance earring",
     }
 )
-sets.TP.Caladbolg.MidACC.AM.STP = set_combine(
-    sets.TP.Caladbolg.MidACC.AM,{
+sets.TP.Lycurgos.MidACC.AM.STP = set_combine(
+    sets.TP.Lycurgos.MidACC.AM,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.HighACC.AM.STP = set_combine(
-    sets.TP.Caladbolg.HighACC.AM,{
+sets.TP.Lycurgos.HighACC.AM.STP = set_combine(
+    sets.TP.Lycurgos.HighACC.AM,{
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
@@ -248,48 +248,48 @@ sets.TP.Caladbolg.HighACC.AM.STP = set_combine(
     }
 )
 
--- Caladbolg(AM Up: High Haste + SAM Roll) TP Sets --
-sets.TP.Caladbolg.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.HighHaste.STP,{
+-- Lycurgos(AM Up: High Haste + SAM Roll) TP Sets --
+sets.TP.Lycurgos.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.HighHaste.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.MidACC.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.MidACC.STP,{
+sets.TP.Lycurgos.MidACC.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.MidACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.HighACC.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.HighACC.STP,{
+sets.TP.Lycurgos.HighACC.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.HighACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
     
--- Caladbolg /SAM TP Sets -------------------------------------------------------------------
+-- Lycurgos /SAM TP Sets -------------------------------------------------------------------
 
--- Caladbolg(AM Down) TP Sets --  /SAM
+-- Lycurgos(AM Down) TP Sets --  /SAM
 --[ACC: 1150 STP: 61]--
-sets.TP.Caladbolg.SAM = {
-    main="Caladbolg",
+sets.TP.Lycurgos.SAM = {
+    main="Lycurgos",
     sub="Utu Grip",
     ammo="Ginsen",
     head="Flam. Zucchetto +2",
     body="Valorous Mail",
-    hands="Flamma Manopolas +2",
+    hands="Sulevia's Gauntlets +2",
     legs="Ignominy Flanchard +3",
     feet="Flam. Gambieras +2",
     neck="Abyssal Beads +2",
     waist="Ioskeha Belt",
     left_ear="Brutal Earring",
     right_ear="Cessance Earring",
-    left_ring="Petrov Ring",
+    left_ring="Hetairoi Ring",
     right_ring="Niqmaddu Ring",
     back=Ankou.ACC,
 } 
     
 --[ACC: 1184 STP: 63]--	
-sets.TP.Caladbolg.SAM.MidACC = set_combine(
-    sets.TP.Caladbolg.SAM,{
+sets.TP.Lycurgos.SAM.MidACC = set_combine(
+    sets.TP.Lycurgos.SAM,{
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
@@ -301,8 +301,8 @@ sets.TP.Caladbolg.SAM.MidACC = set_combine(
 ) 
     
 --[ACC: 1264 STP: 27]--		
-sets.TP.Caladbolg.SAM.HighACC = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC,{
+sets.TP.Lycurgos.SAM.HighACC = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC,{
         head="Ignominy Burgonet +3",
         neck="Abyssal Beads +2",
         body="Ignominy Cuirass +3",
@@ -313,22 +313,22 @@ sets.TP.Caladbolg.SAM.HighACC = set_combine(
     }
 )
 
-sets.TP.Caladbolg.SAM.AM = set_combine(
-    sets.TP.Caladbolg.SAM,{
+sets.TP.Lycurgos.SAM.AM = set_combine(
+    sets.TP.Lycurgos.SAM,{
         -- Stuff goes here --
     }
 )
     
-sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
-    sets.TP.Caladbolg.SAM.AM,{
+sets.TP.Lycurgos.SAM.MidACC.AM = set_combine(
+    sets.TP.Lycurgos.SAM.AM,{
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
         left_ring="Chirich Ring",
     }
 ) 
     
-sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM,{
+sets.TP.Lycurgos.SAM.HighACC.AM = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM,{
         head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -338,14 +338,14 @@ sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
     }
 )
 
--- Caladbolg(AM3 Up) /SAM TP Sets --
-sets.TP.Caladbolg.SAM.AM3 = set_combine(
-    sets.TP.Caladbolg.SAM,{
+-- Lycurgos(AM3 Up) /SAM TP Sets --
+sets.TP.Lycurgos.SAM.AM3 = set_combine(
+    sets.TP.Lycurgos.SAM,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
-    sets.TP.Caladbolg.SAM.AM3,{
+sets.TP.Lycurgos.SAM.MidACC.AM3 = set_combine(
+    sets.TP.Lycurgos.SAM.AM3,{
         ammo="Seething Bomblet +1",
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
@@ -354,8 +354,8 @@ sets.TP.Caladbolg.SAM.MidACC.AM3 = set_combine(
         left_ring="Regal Ring",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM3 = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM3,{
+sets.TP.Lycurgos.SAM.HighACC.AM3 = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM3,{
         head="Ignominy Burgonet +3",
         body="Ignominy Cuirass +3",
         hands="Ignominy Gauntlets +3",
@@ -364,55 +364,55 @@ sets.TP.Caladbolg.SAM.HighACC.AM3 = set_combine(
     }
 )
 
--- Caladbolg(AM Down: High Haste) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM,{
+-- Lycurgos(AM Down: High Haste) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC,{
+sets.TP.Lycurgos.SAM.MidACC.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC,{
+sets.TP.Lycurgos.SAM.HighACC.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",
     }
 )
 
--- Caladbolg(AM3 Up: High Haste) /SAM TP Sets --
-sets.TP.Caladbolg.SAM.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.AM3,{
+-- Lycurgos(AM3 Up: High Haste) /SAM TP Sets --
+sets.TP.Lycurgos.SAM.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.AM3,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.AM3.HighHaste,{
+sets.TP.Lycurgos.SAM.MidACC.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.AM3.HighHaste,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM3.HighHaste,{
+sets.TP.Lycurgos.SAM.HighACC.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM3.HighHaste,{
         -- Stuff goes here --
     }
 )
 
 
--- Caladbolg(AM Down: SAM Roll) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.STP = set_combine(
-    sets.TP.Caladbolg.SAM,{
+-- Lycurgos(AM Down: SAM Roll) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.STP = set_combine(
+    sets.TP.Lycurgos.SAM,{
         right_ear="Cessance earring",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.STP = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC,{
+sets.TP.Lycurgos.SAM.MidACC.STP = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC,{
+sets.TP.Lycurgos.SAM.HighACC.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC,{
         ammo="Seething Bomblet +1",
         -- neck="Lissome Necklace",
         ear1="Mache Earring",
@@ -420,51 +420,51 @@ sets.TP.Caladbolg.SAM.HighACC.STP = set_combine(
     }
 )
 
--- Caladbolg(AM Down: High Haste + SAM Roll) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.STP,{
+-- Lycurgos(AM Down: High Haste + SAM Roll) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.STP,{
+sets.TP.Lycurgos.SAM.MidACC.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.STP,{
+sets.TP.Lycurgos.SAM.HighACC.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
 
--- Caladbolg(AM3 Up: High Haste + SAM Roll) /SAM TP Sets --
-sets.TP.Caladbolg.SAM.AM3.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighHaste,{
+-- Lycurgos(AM3 Up: High Haste + SAM Roll) /SAM TP Sets --
+sets.TP.Lycurgos.SAM.AM3.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighHaste,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM3.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.HighHaste,{
+sets.TP.Lycurgos.SAM.MidACC.AM3.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.HighHaste,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.HighHaste,{
+sets.TP.Lycurgos.SAM.HighACC.AM3.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.HighHaste,{
         -- Stuff goes here --
     }
 )
 
--- Caladbolg(AM Up) TP Sets -- /SAM
+-- Lycurgos(AM Up) TP Sets -- /SAM
 --[ACC: 1150 STP: 61]--
-sets.TP.Caladbolg.SAM.AM = set_combine(
-    sets.TP.Caladbolg.SAM,{
+sets.TP.Lycurgos.SAM.AM = set_combine(
+    sets.TP.Lycurgos.SAM,{
         -- Stuff goes here --
     }
 )
     
 --[ACC: 1184 STP: 63]--		
-sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
-    sets.TP.Caladbolg.SAM.AM,{
+sets.TP.Lycurgos.SAM.MidACC.AM = set_combine(
+    sets.TP.Lycurgos.SAM.AM,{
         body="Emicho Haubert +1",
         hands="Emicho Gauntlets +1",
         right_ear="Cessance earring",
@@ -473,8 +473,8 @@ sets.TP.Caladbolg.SAM.MidACC.AM = set_combine(
 ) 
 
 --[ACC: 1264 STP: 27]--		
-sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM,{
+sets.TP.Lycurgos.SAM.HighACC.AM = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM,{
         head="Ignominy Burgonet +3",
         neck="Lissome Necklace",
         body="Ignominy Cuirass +3",
@@ -484,54 +484,54 @@ sets.TP.Caladbolg.SAM.HighACC.AM = set_combine(
     }
 )
 
--- Caladbolg(AM Up: High Haste) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.AM,{
+-- Lycurgos(AM Up: High Haste) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.AM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM,{
+sets.TP.Lycurgos.SAM.MidACC.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.AM,{
+sets.TP.Lycurgos.SAM.HighACC.AM.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.AM,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",
     }
 )
--- Caladbolg(AM Up: High Haste) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.AM,{
+-- Lycurgos(AM Up: High Haste) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.AM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM,{
+sets.TP.Lycurgos.SAM.MidACC.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM3.HighHaste = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.AM,{
+sets.TP.Lycurgos.SAM.HighACC.AM3.HighHaste = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.AM,{
         ammo="Seething Bomblet +1",
         waist="Kentarch Belt +1",
     }
 )
 
--- Caladbolg(AM Up: SAM Roll) TP Sets -- /SAM
-sets.TP.Caladbolg.SAM.AM.STP = set_combine(
-    sets.TP.Caladbolg.SAM.STP,{
+-- Lycurgos(AM Up: SAM Roll) TP Sets -- /SAM
+sets.TP.Lycurgos.SAM.AM.STP = set_combine(
+    sets.TP.Lycurgos.SAM.STP,{
         right_ear="Cessance earring",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM.STP = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.AM,{
+sets.TP.Lycurgos.SAM.MidACC.AM.STP = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.AM,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.AM,{
+sets.TP.Lycurgos.SAM.HighACC.AM.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.AM,{
         ammo="Seething Bomblet +1",
         neck="Lissome Necklace",
         ear1="Mache Earring",
@@ -539,65 +539,51 @@ sets.TP.Caladbolg.SAM.HighACC.AM.STP = set_combine(
     }
 )
 
--- Caladbolg(AM Up: High Haste + SAM Roll) TP Sets --
-sets.TP.Caladbolg.SAM.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighHaste.STP,{
+-- Lycurgos(AM Up: High Haste + SAM Roll) TP Sets --
+sets.TP.Lycurgos.SAM.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighHaste.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.MidACC.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.MidACC.STP,{
+sets.TP.Lycurgos.SAM.MidACC.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.MidACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
-sets.TP.Caladbolg.SAM.HighACC.AM.HighHaste.STP = set_combine(
-    sets.TP.Caladbolg.SAM.HighACC.STP,{
+sets.TP.Lycurgos.SAM.HighACC.AM.HighHaste.STP = set_combine(
+    sets.TP.Lycurgos.SAM.HighACC.STP,{
         waist="Windbuffet Belt +1",
     }
 )
 
 --- Hybrid Sets---
-sets.TP.Caladbolg.Hybrid = {
-    main="Caladbolg", 
+sets.TP.Lycurgos.Hybrid = {
+    main="Lycurgos", 
     ammo="Seething Bomblet +1",
-    left_ring="Warp Ring",
 }
-sets.TP.Caladbolg.Hybrid.MidACC = set_combine(
-    sets.TP.Caladbolg.Hybrid,{
+sets.TP.Lycurgos.Hybrid.MidACC = set_combine(
+    sets.TP.Lycurgos.Hybrid,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.Hybrid.HighACC = set_combine(
-    sets.TP.Caladbolg.Hybrid.MidACC,{
+sets.TP.Lycurgos.Hybrid.HighACC = set_combine(
+    sets.TP.Lycurgos.Hybrid.MidACC,{
         -- Stuff goes here --
     }
 )
 
 -- Hybrid /SAM Hybrid Sets
-sets.TP.Caladbolg.Hybrid.SAM = {
-    main="Caladbolg",
-    sub="Utu Grip",
-    ammo="Ginsen",
-    head="Hjarrandi Helm",
-    body="Hjarrandi Breast.",
-    hands="Flam. Manopolas +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
-    neck="Abyssal Beads +2",
-    waist="Ioskeha Belt",
-    left_ear="Dedition Earring",
-    right_ear="Cessance Earring",
-    left_ring="Petrov Ring",
-    right_ring="Niqmaddu Ring",
-    back=Ankou.STP,
+sets.TP.Lycurgos.Hybrid.SAM = {
+    main="Lycurgos", 
+    ammo="Seething Bomblet +1",
 }
-sets.TP.Caladbolg.Hybrid.SAM.MidACC = set_combine(
-    sets.TP.Caladbolg.Hybrid.SAM,{
+sets.TP.Lycurgos.Hybrid.SAM.MidACC = set_combine(
+    sets.TP.Lycurgos.Hybrid.SAM,{
         -- Stuff goes here --
     }
 )
-sets.TP.Caladbolg.Hybrid.SAM.HighACC = set_combine(
-    sets.TP.Caladbolg.Hybrid.SAM.MidACC,{
+sets.TP.Lycurgos.Hybrid.SAM.HighACC = set_combine(
+    sets.TP.Lycurgos.Hybrid.SAM.MidACC,{
         -- Stuff goes here --
     }
 )

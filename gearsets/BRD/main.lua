@@ -70,7 +70,7 @@ sets.precast.FC.Cure = set_combine(
 
 sets.precast.FC.Curaga = sets.precast.FC.Cure
 
-sets.precast.FC.Dispelga = set_combine({main="Daybreak", sub="Ammurapi Shield"}, sets.precast.FC)
+sets.precast.FC["Dispelga"] = set_combine(sets.precast.FC,{main="Daybreak", sub="Ammurapi Shield"})
 
 sets.precast.FC.Stoneskin = set_combine(
     sets.precast.FC, {
@@ -88,7 +88,6 @@ sets.precast.FC['Enhancing Magic'] = set_combine(
 sets.precast.FC.BardSong = {
     main=Kali.D,
     sub="Genmei Shield",
-    range=Linos.FC,
     head="Fili Calot +1",
     neck="Orunmila's Torque",
     ear1="Aoidos' Earring",
@@ -103,25 +102,7 @@ sets.precast.FC.BardSong = {
     feet=Telchine.Feet.BardSong
 }
 
-sets.precast.FC['Honor March'] = {
-    main=Kali.D,
-    sub="Genmei Shield",
-    range="Marsyas",
-    head="Fili Calot +1",
-    neck="Orunmila's Torque",
-    ear1="Aoidos' Earring",
-    ear2="Loquacious Earring",
-    body="Inyanga Jubbah +2",
-    hands="Leyline Gloves",
-    ring1="Defending Ring",
-    ring2="Kishar Ring",
-    back=Intarabus.FC,
-    waist="Witful Belt",
-    legs="Ayanmo Cosciales +2",
-    feet=Telchine.Feet.BardSong
-}
-
--- set_combine(sets.precast.FC.BardSong, {range="Marsyas",})
+sets.precast.FC["Honor March"] = set_combine(sets.precast.FC.BardSong,{range="Marsyas"})
 
 sets.precast.Lullaby = sets.precast.FC.BardSong
 
@@ -130,7 +111,6 @@ sets.precast.FC.Daurdabla = set_combine(
         range=info.ExtraSongInstrument
     }
 )
-    
 
 -- Precast sets to enhance JAs
 
@@ -149,7 +129,7 @@ sets.midcast.Ballad =   { legs="Fili Rhingrave +1" }
 sets.midcast.Minuet =   { body="Fili Hongreline +1" }
 sets.midcast.March  =   { hands="Fili Manchettes +1" }
 sets.midcast['Honor March'] = set_combine(sets.midcast.March,{range="Marsyas"})
-sets.midcast.Minne  =   {}
+sets.midcast.Minne  =   { legs="Mousai Seraweels" }
 sets.midcast.Carol  =   { hands="Mousai Gages"}
 sets.midcast.Paeon =    {}
 sets.midcast.Mazurka =  { range="Marsyas" }
@@ -169,7 +149,7 @@ sets.midcast['Horde Lullaby II'] = sets.midcast['Horde Lullaby']
 --sets.midcast['Horde Lullaby II'].AoE = {range="Blurred Harp +1"}
 
 sets.midcast.SongEffect = {
-    main=Kali.D,
+    main="Carnwenhan",
     sub="Genmei Shield",
     range="Gjallarhorn",
     head="Fili Calot +1",
@@ -187,7 +167,7 @@ sets.midcast.SongEffect = {
 }
 
 sets.midcast.SongDebuff = {
-    main=Kali.D,
+    main="Daybreak",
     sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +3",
@@ -205,7 +185,7 @@ sets.midcast.SongDebuff = {
 }
 
 sets.midcast.Lullaby = {
-    main=Kali.D,
+    main="Carnwenhan",
     sub="Ammurapi Shield",
     range="Gjallarhorn",
     head="Brioso Roundlet +3",
@@ -315,9 +295,26 @@ sets.midcast['Enfeebling Magic'] = {
     feet="Brioso Slippers +3"
 }
 
+sets.midcast["Dispelga"] = {
+    main="Daybreak", 
+    sub="Ammurapi Shield",
+    head="Brioso Roundlet +3",
+    neck="Moonbow Whistle +1",
+    ear1="Digni. Earring",
+    ear2="Regal Earring",
+    body="Brioso Justaucorps +2",
+    hands="Brioso Cuffs +3",
+    ring1="Stikini Ring",
+    ring2="Stikini Ring",
+    back=Intarabus.FC,
+    waist="Luminary Sash",
+    legs="Brioso Cannions +3",
+    feet="Brioso Slippers +3" 
+}
+
 -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 sets.idle = {
-    main="Sangoma",
+    main="Daybreak",
     sub="Genmei Shield",
     range=Linos.PDT,
     head="Inyanga Tiara +2",
@@ -390,7 +387,7 @@ sets.engaged = {
     main="Tauret",
     range=Linos.MA,
     head="Ayanmo Zucchetto +2",
-    neck="Sanctity Necklace",
+    neck="Lissome Necklace",
     ear1="Cessance Earring",
     ear2="Telos Earring",
     body="Ayanmo Corazza +2",
@@ -398,7 +395,7 @@ sets.engaged = {
     ring1="Petrov Ring",
     ring2="Hetairoi Ring",
     back="Xucau Mantle",
-    waist="Grunfeld Rope",
+    waist="Sailfi belt +1",
     legs="Jokushu Haidate",
     feet="Ayanmo Gambieras +2"
 }
@@ -460,13 +457,14 @@ sets.precast.WS = {
 
 
 -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
---sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS) 
+sets.precast.WS['Rudra\'s Storm'] = set_combine(sets.precast.WS) 
 
---sets.precast.WS['Rudras Storm'] = sets.precast.WS['Rudra\'s Storm']
+sets.precast.WS['Rudras Storm'] = sets.precast.WS['Rudra\'s Storm']
 
---sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS)
+sets.precast.WS['Mordant Rime'] = set_combine(sets.precast.WS)
 
---sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS)
+
+sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS)
 
 --sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {ring2="Stormsoul Ring"})
 
@@ -488,18 +486,18 @@ sets.precast.WS = {
 --     feet="Ayanmo Gambieras +2"
 -- }
 
---sets.precast.WS['Savage Blade'] = {
---    range=Linos.WSD,
---    head="Ayanmo Zucchetto +2",
---    neck="Fotia Gorget",
---    ear1="Moonshade Earring",
---    ear2="Brutal Earring",
---    body="Bihu Justaucorps +1",
---    hands="Ayanmo Manopolas +2",
---    ring1="Apate Ring",
---    ring2="Thundersoul Ring",
---    back="Atheling Mantle",
---    waist="Fotia Belt",
---    legs="Querkening Brais",
---    feet="Ayanmo Gambieras +2"
---}
+sets.precast.WS['Savage Blade'] = {
+    range=Linos.WSD,
+    head="Ayanmo Zucchetto +2",
+    neck="Fotia Gorget",
+    ear1="Moonshade Earring",
+    ear2="Brutal Earring",
+    body="Bihu Justaucorps +1",
+    hands="Ayanmo Manopolas +2",
+    ring1="Apate Ring",
+    ring2="Thundersoul Ring",
+    back="Atheling Mantle",
+    waist="Fotia Belt",
+    legs="Querkening Brais",
+    feet="Ayanmo Gambieras +2"
+}
