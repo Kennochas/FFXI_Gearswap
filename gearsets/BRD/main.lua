@@ -331,22 +331,40 @@ sets.idle = {
     feet="Fili Cothurnes +1"
 }
 
+sets.idle.town = {
+    main="Carnwenhan",
+    sub="Genmei Shield",
+    range=Linos.PDT,
+    head="Inyanga Tiara +2",
+    neck="Loricate Torque +1",
+    ear1="Etiolation Earring",
+    ear2="Genmei Earring",
+    body="Inyanga Jubbah +2",
+    hands="Inyan. Dastanas +2",
+    ring1="Defending Ring",
+    ring2="Inyanga Ring",
+    back=Intarabus.Idle,
+    waist="Flume Belt",
+    legs="Brioso Cannions +3",
+    feet="Fili Cothurnes +1"
+}
+
 sets.idle.PDT = {
     main="Daybreak",
     sub="Genmei Shield",
     range=Linos.PDT,
-    head="Ayanmo Zucchetto +2",
+    head="Inyanga Tiara +2",
     neck="Loricate Torque +1",
     ear1="Etiolation Earring",
-    ear2="Odnowa Earring +1",
-    body="Ayanmo Corazza +2",
-    hands="Ayanmo Manopolas +2",
+    ear2="Genmei Earring",
+    body="Inyanga Jubbah +2",
+    hands="Inyan. Dastanas +2",
     ring1="Defending Ring",
-    ring2="Ayanmo Ring",
-    back=Intarabus.TP,
+    ring2="Inyanga Ring",
+    back=Intarabus.Idle,
     waist="Flume Belt",
-    legs="Ayanmo Cosciales +2",
-    feet="Fili Cothurnes +1"
+    legs="Brioso Cannions +3",
+    feet="Inyan. Crackows +2"
 }
 
 sets.idle.DPS = {  
