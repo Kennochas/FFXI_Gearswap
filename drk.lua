@@ -380,6 +380,23 @@ function buff_change(buff,gain)
 		add_to_chat(123, 'Samurai Roll: [Non Perfect Roll Build]')
 		Samurai_Roll = 'Off'
 	end
+
+	if buff == 'doom' then
+		if gain then
+			send_command('@input /p Doomed.')
+		else
+			send_command('@input /p Doom off.')
+		end
+	end
+
+	if buff == 'charm' then
+		if gain then
+            send_command('@input /p Charmed!')
+        else
+            send_command('@input /p Charm off.')
+		end
+	end
+
 	-- Equip Berserker's Torque When You Are Asleep & Have 200+ HP --
 	if buff == "sleep" and gain and player.hp > 200  then 
 		add_to_chat(123,'Sleep: [Waking up]')

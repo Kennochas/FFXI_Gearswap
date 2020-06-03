@@ -51,8 +51,7 @@ Odyssean.Feet.FC    = { name="Odyssean Greaves", augments={'Attack+20','Weapon s
 sets.Idle = {
     sub="Utu Grip",
     ammo="Staunch Tathlum",
-    head="Sulevia's Mask +2",
-    body="Makora Meikogai",
+    body="Lugra Cloak +1",
     hands="Sulevia's Gauntlets +2",
     legs="Carmine cuisses +1",
     feet="Sulev. Leggings +2",
