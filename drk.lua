@@ -37,6 +37,8 @@ function select_default_macro_book()
 			set_macro_page(3, 7)
 		elseif WeaponArray[WeaponIndex] == 'Lycurgos' then
 			set_macro_page(5, 7)
+    elseif WeaponArray[WeaponIndex] == 'FatherTime' then
+			set_macro_page(6, 7)
 		end
 	-- Warrior subjob macro books
 	elseif player.sub_job == 'WAR' then
@@ -50,13 +52,15 @@ function select_default_macro_book()
 			set_macro_page(2,7)
 		elseif WeaponArray[WeaponIndex] == 'Ragnarok' then
 			set_macro_page(1,7)
+    elseif WeaponArray[WeaponIndex] == 'FatherTime' then
+			set_macro_page(1,7)
 		end
 	end
 end
 
 function get_sets()
 	-- Debug Variable that is used to print out gear when in debugmode
-	GearDebug = false
+	GearDebug = true
 
 	-- Include the gearsets from another file. There is just so much we use two files.
 
@@ -66,6 +70,7 @@ function get_sets()
 	-- Weapon Specific Gearsets
 	include('gearsets/DRK/Anguta.lua')
 	include('gearsets/DRK/Apocalypse.lua')
+  include('gearsets/DRK/FatherTime.lua')
 	include('gearsets/DRK/Caladbolg.lua')
 	-- include('gearsets/DRK/Liberator.lua')
 	-- include('gearsets/DRK/Ragnarok.lua')
@@ -80,7 +85,7 @@ function get_sets()
 
 	--Can Delete Any Weapons/Sets That You Don't Need Or Replace/Add The New Weapons That You Want To Use. --
 	WeaponIndex = 1
-	WeaponArray = {"Caladbolg","Apocalypse","Anguta","Lycurgos"} --,"Liberator","Ragnarok",
+	WeaponArray = {"Caladbolg","Apocalypse","Anguta", "FatherTime", "Lycurgos"} --,"Liberator","Ragnarok",
 	IdleIndex = 1
 	IdleArray = {"Movement","Regen","Refresh","Regain"} -- Default Idle Set Is Movement --
 	DarkSealIndex = 0 --Index for Dark Seal headpiece Potency(0) vs Duration(1)
@@ -89,6 +94,11 @@ function get_sets()
 	Samurai_Roll = 'Off' -- Set Default SAM Roll ON or OFF Here --
 	target_distance = 6 -- Set Default Distance Here --
 	select_default_macro_book() -- Change Default Macro Book At The End --
+
+	no_swap_gear = S{"Warp Ring", "Dim. Ring (Dem)", "Dim. Ring (Holla)", "Dim. Ring (Mea)",
+					"Trizek Ring", "Echad Ring", "Facility Ring", "Capacity Ring",
+					"Era. Bul. Pouch", "Dev. Bul. Pouch", "Chr. Bul. Pouch", "Quelling B. Quiver",
+					"Yoichi's Quiver", "Artemis's Quiver", "Chrono Quiver"}
 end
 
 function pretarget(spell,action)
@@ -356,6 +366,7 @@ function status_change(new,old)
 	if Twilight == 'Twilight' then
 		equip(sets.Twilight)
 	end
+	check_gear()
 	equipgearset()
 end
 
@@ -391,7 +402,11 @@ function buff_change(buff,gain)
 
 	if buff == 'charm' then
 		if gain then
-            send_command('@input /p Charmed!')
+			if buffactive['aftermath: lv.3'] then
+				send_command('@input /p I am charmed and I have AM3, Good luck with that!')
+			else
+				send_command('@input /p Charmed!')
+			end
         else
             send_command('@input /p Charm off.')
 		end
@@ -566,6 +581,24 @@ function aftermath_warning(argument)
 	add_to_chat(100,'Aftermath Lv.3 : [WEARING OFF IN '..argument..' SECONDS]')
 end
 
+function check_gear()
+    if no_swap_gear:contains(player.equipment.left_ring) then
+        disable("ring1")
+    else
+        enable("ring1")
+    end
+    if no_swap_gear:contains(player.equipment.right_ring) then
+        disable("ring2")
+    else
+        enable("ring2")
+    end
+    if no_swap_gear:contains(player.equipment.waist) then
+        disable("waist")
+    else
+        enable("waist")
+    end
+end
+
 -- This function allows us to detect a perfect samurai roll
 windower.register_event('action',function(act)
 	if act.category == 6 and act.param == 109 then
@@ -584,5 +617,21 @@ windower.register_event('action',function(act)
 				Samurai_Roll = "On"
 			end
 		end
+	end
+end)
+
+-- This enables gear after a zone change if a warp ring was used, etc.
+windower.register_event('zone change',function()
+	if no_swap_gear:contains(player.equipment.left_ring) then
+		enable("ring1")
+		equipgearset()
+	end
+	if no_swap_gear:contains(player.equipment.right_ring) then
+		enable("ring2")
+		equipgearset()
+	end
+	if no_swap_gear:contains(player.equipment.waist) then
+		enable("waist")
+		equipgearset()
 	end
 end)

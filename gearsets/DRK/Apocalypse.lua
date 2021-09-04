@@ -354,8 +354,21 @@ sets.TP.Apocalypse.SAM.HighACC.AM.HighHaste.STP = set_combine(
 
 --- Hybrid Sets---
 sets.TP.Apocalypse.Hybrid = {
-    main="Apocalypse", 
-    ammo="Seething Bomblet +1",
+  main="Apocalypse", 
+  sub="Utu Grip",
+  ammo="Ginsen",
+  head="Sakpata's Helm",
+  body="Sakpata's Breastplate",
+  hands="Sakpata's Gauntlets",
+  legs="Ig. Flanchard +3",
+  feet="Sakpata's Leggings",
+  neck="Abyssal Beads +2",
+  waist="Ioskeha Belt",
+  left_ear="Dedition Earring",
+  right_ear="Cessance Earring",
+  left_ring="Petrov Ring",
+  right_ring="Niqmaddu Ring",
+  back=Ankou.STP,
 }
 sets.TP.Apocalypse.Hybrid.MidACC = set_combine(
     sets.TP.Apocalypse.Hybrid,{
@@ -373,11 +386,11 @@ sets.TP.Apocalypse.Hybrid.SAM = {
     main="Apocalypse", 
     sub="Utu Grip",
     ammo="Ginsen",
-    head="Hjarrandi Helm",
-    body="Hjarrandi Breast.",
-    hands="Flam. Manopolas +2",
+    head="Sakpata's Helm",
+    body="Sakpata's Breastplate",
+    hands="Sakpata's Gauntlets",
     legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
+    feet="Sakpata's Leggings",
     neck="Abyssal Beads +2",
     waist="Ioskeha Belt",
     left_ear="Dedition Earring",

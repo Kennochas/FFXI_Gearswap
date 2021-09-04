@@ -12,11 +12,20 @@ sets.Idle.Movement.Caladbolg = set_combine(
         main="Caladbolg"
     }
 )
-sets.Idle.Refresh.Caladbolg = set_combine(
-    sets.Idle.Refresh,{
-        main="Caladbolg"
-    }
-)
+sets.Idle.Refresh.Caladbolg = {
+  neck="Vim Torque +1",
+  body="Lugra Cloak +1",
+  ammo="Staunch Tathlum", -- 2 DT
+  hands="Sakpata's gauntlets", -- 8 DT
+  legs="Carmine cuisses +1",
+  feet="Sakpata's Leggings", -- 6 DT
+  waist="Flume Belt", -- 4 PDT
+  left_ear="Infused Earring",
+  right_ear="Odnowa Earring +1",
+  left_ring="Karieyh Ring",
+  right_ring="Defending Ring", -- 10 DT
+  back=Ankou.ACC, -- 5DT
+}
 sets.Idle.Regain.Caladbolg = set_combine(
     sets.Idle.Regain,{
         main="Caladbolg"
@@ -578,11 +587,11 @@ sets.TP.Caladbolg.Hybrid.SAM = {
     main="Caladbolg",
     sub="Utu Grip",
     ammo="Ginsen",
-    head="Hjarrandi Helm",
-    body="Hjarrandi Breast.",
-    hands="Flam. Manopolas +2",
-    legs="Ig. Flanchard +3",
-    feet="Flam. Gambieras +2",
+    head="Sakpata's Helm",
+    body="Sakpata's Breastplate",
+    hands="Sakpata's Gauntlets",
+    legs="Ignominy Flanchard +3",
+    feet="Sakpata's Leggings",
     neck="Abyssal Beads +2",
     waist="Ioskeha Belt",
     left_ear="Dedition Earring",

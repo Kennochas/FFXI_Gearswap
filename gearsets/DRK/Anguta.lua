@@ -210,6 +210,18 @@ sets.TP.Anguta.SAM.HighACC.HighHaste.STP = set_combine(
 sets.TP.Anguta.Hybrid = {
     main="Anguta", 
     ammo="Seething Bomblet +1",
+    head="Sakpata's Helm",
+    body="Sakpata's Breastplate",
+    hands="Sakpata's Gauntlets",
+    legs="Ignominy Flanchard +3",
+    feet="Sakpata's Leggings",
+    neck="Abyssal Beads +2",
+    waist="Ioskeha Belt",
+    left_ear="Dedition Earring",
+    right_ear="Cessance Earring",
+    left_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
+    back=Ankou.STP,
 }
 sets.TP.Anguta.Hybrid.MidACC = set_combine(
     sets.TP.Anguta.Hybrid,{
@@ -226,6 +238,18 @@ sets.TP.Anguta.Hybrid.HighACC = set_combine(
 sets.TP.Anguta.Hybrid.SAM = {
     main="Anguta", 
     ammo="Seething Bomblet +1",
+    head="Sakpata's Helm",
+    body="Sakpata's Breastplate",
+    hands="Sakpata's Gauntlets",
+    legs="Ignominy Flanchard +3",
+    feet="Sakpata's Leggings",
+    neck="Abyssal Beads +2",
+    waist="Ioskeha Belt",
+    left_ear="Dedition Earring",
+    right_ear="Cessance Earring",
+    left_ring="Petrov Ring",
+    right_ring="Niqmaddu Ring",
+    back=Ankou.STP,
 }
 sets.TP.Anguta.Hybrid.SAM.MidACC = set_combine(
     sets.TP.Anguta.Hybrid.SAM,{
